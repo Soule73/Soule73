@@ -76,7 +76,7 @@ Feel free to reach out if you have any questions or if you'd like to collaborate
       <a href="https://github.com/search?q=user%3ADenverCoder1+language%3Amarkdown"><img alt="Markdown" src="https://img.shields.io/badge/Markdown-000000.svg?logo=markdown&logoColor=white&style=plastic"></a>
   </p>
 
-  <h3>🧰 📚 Frameworks, Platforms and Libraries</h3>
+  <h3>🧰 Frameworks, Platforms and Libraries</h3>
 
   <p>
       <a href="#"><img alt="Laravel" src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white&style=plastic"></a>
