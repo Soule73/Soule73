@@ -55,9 +55,17 @@ I'm **Soulé Soumaré**, a passionate and dedicated web developer currently purs
 
 Feel free to reach out if you have any questions or if you'd like to collaborate on a project!
 
-![Soule73's GitHub stats](https://github-readme-stats.vercel.app/api?username=Soule73&show_icons=true&theme=gotham)
 
-![trophy](https://github-profile-trophy.vercel.app/?username=Soule73&row=2&column=4&margin-w=15&margin-h=15)
+<table>
+  <tr>
+    <td>
+      ![Soule73's GitHub stats](https://github-readme-stats.vercel.app/api?username=Soule73&show_icons=true&theme=gotham)
+    </td>
+    <td>
+      ![Soule73's GitHub stats](https://github-readme-stats.vercel.app/api?username=Soule73&show_icons=true&theme=gotham)
+    </td>
+  </tr>
+</table>
 <!--
 **Soule73/Soule73** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
