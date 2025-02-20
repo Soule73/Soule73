@@ -55,11 +55,6 @@ I'm **Soulé Soumaré**, a passionate and dedicated web developer currently purs
 
 Feel free to reach out if you have any questions or if you'd like to collaborate on a project!
 
-![Soule73's GitHub stats](https://github-readme-stats.vercel.app/api?username=Soule73&show_icons=true&theme=gotham)
-
-![trophy](https://github-profile-trophy.vercel.app/?username=Soule73&column=6&margin-w=15&margin-h=15&no-frame=true&theme=kimbie_dark&title=-Stars,-Followers,-Issues,-PullRequest,-Reviews)
-
-
 <details> 
   <summary><h2>📊 Stats and Activity</h2></summary>
 
@@ -67,19 +62,28 @@ Feel free to reach out if you have any questions or if you'd like to collaborate
 
   <!-- GitHub Readme Streak Stats - https://github.com/Soule73/github-readme-streak-stats -->
   <p>
-    <a href="https://github.com/Soule73/github-readme-streak-stats">
+    <a href="#">
       <!-- Use https://streak-stats.demolab.com or self-host with your own Vercel app - visit https://git.io/streak-stats for instructions -->
-      <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Soule73's streak" src="https://github-readme-streak-stats-eight.vercel.app/?user=Soule73&theme=monokai-metallian&hide_border=true&short_numbers=true"/>
+      <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Soule73's streak" 
+        src="https://github-readme-streak-stats-eight.vercel.app/?user=Soule73&theme=monokai-metallian&hide_border=true&short_numbers=true"/>
+    </a>
+    <a href="#">
+      <img src="https://github-profile-trophy.vercel.app/?username=Soule73&column=2&margin-w=15&margin-h=15&no-frame=true&theme=kimbie_dark&title=-Stars,-Followers,-Issues,-PullRequest,-Reviews" />
     </a>
     <p>🔥 Get streak stats for your profile at <a href="https://git.io/streak-stats">git.io/streak-stats</a></p>
   </p>
 
-    <h3>💻 GitHub Profile Stats</h3>
+  <h3>💻 GitHub Profile Stats</h3>
 
   <!-- https://github.com/anuraghazra/github-readme-stats -->
 
-  <a href="https://github.com/anuraghazra/github-readme-stats"><img alt="Soule73's Github Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=Soule73&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/></a>
-  <a href="https://github.com/anuraghazra/github-readme-stats"><img alt="Soule73's Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=Soule73&langs_count=8&layout=compact&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866&hide=Jupyter%20Notebook,Roff" height="192px"/></a>
+  <a href="#">
+  <img alt="Soule73's Github Stats" 
+                src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=Soule73&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/>
+  </a>
+  <a href="#">
+    <img alt="Soule73's Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=Soule73&langs_count=8&layout=compact&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866&hide=Jupyter%20Notebook,Roff" height="192px"/>
+  </a>
   <br/>
 
   <b>Note:</b> Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
