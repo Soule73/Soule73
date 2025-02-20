@@ -122,7 +122,7 @@ Feel free to reach out if you have any questions or if you'd like to collaborate
         <img alt="Next JS" src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white&style=plastic">
       </a>
       <a href="#">
-        <img alt="Alpine.js" src="https://img.shields.io/badge/alpinejs-white.svg?style=for-the-badge&logo=alpinedotjs&logoColor=%238BC0D0style=plastic">
+        <img alt="Alpine.js" src="https://img.shields.io/badge/alpinejs-white.svg?style=for-the-badge&logo=alpinedotjs&logoColor=%238BC0D0&style=plastic">
       </a>
       <a href="#">
       <img alt="Tailwind CSS" src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white&style=plastic">
