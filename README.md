@@ -55,6 +55,10 @@ I'm **Soulé Soumaré**, a passionate and dedicated web developer currently purs
 
 Feel free to reach out if you have any questions or if you'd like to collaborate on a project!
 
+📈 my github stats
+
+<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=Soule73&show_icons=true&theme=gotham" alt="abhisheknaiidu" />
+
 <!--
 **Soule73/Soule73** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
