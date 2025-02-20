@@ -1,10 +1,10 @@
 ## Hi there 👋
 
-I'm *Soulé Soumaré*, a passionate and dedicated web developer currently pursuing a Master's degree in IT, Development, and Big Data at IRIS, Paris. I'm actively seeking an apprenticeship starting in September 2025 to apply my web development skills and contribute to innovative projects.
+I'm **Soulé Soumaré**, a passionate and dedicated web developer currently pursuing a Master's degree in IT, Development, and Big Data at IRIS, Paris. I'm actively seeking an apprenticeship starting in September 2025 to apply my web development skills and contribute to innovative projects.
 
 ### 🛠️ Skills & Technologies
 
-- **Languages:* PHP, Java,SQL, JavaScript, TypeScript, HTML, CSS
+- **Languages:** PHP, Java,SQL, JavaScript, TypeScript, HTML, CSS
 - **Frameworks/Technologies:** Laravel, Jakarta EE, NextJS, React, WordPress, Node.js
 - **Databases:** MySQL, MongoDB
 - **Tools:** Docker, GitHub, Git, GitLab
