@@ -107,7 +107,7 @@ Feel free to reach out if you have any questions or if you'd like to collaborate
         <img alt="Livewire" src="https://img.shields.io/badge/livewire-%234e56a6.svg?style=for-the-badge&logo=livewire&logoColor=white&style=plastic">
       </a>
       <a href="#">
-        <img alt="Filament" src="https://img.shields.io/badge/Filament-FFAA00?style=for-the-badge&logoColor=%23000000">
+        <img alt="Filament" src="https://img.shields.io/badge/Filament-FFAA00?style=for-the-badge&logoColor=%23000000&style=plastic">
       </a>
       <a href="#">
         <img alt="Node.js" src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white&style=plastic">
@@ -122,7 +122,7 @@ Feel free to reach out if you have any questions or if you'd like to collaborate
         <img alt="Next JS" src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white&style=plastic">
       </a>
       <a href="#">
-        <img alt="Alpine.js" src="https://img.shields.io/badge/alpinejs-white.svg?style=for-the-badge&logo=alpinedotjs&logoColor=%238BC0D0">
+        <img alt="Alpine.js" src="https://img.shields.io/badge/alpinejs-white.svg?style=for-the-badge&logo=alpinedotjs&logoColor=%238BC0D0style=plastic">
       </a>
       <a href="#">
       <img alt="Tailwind CSS" src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white&style=plastic">
@@ -134,7 +134,7 @@ Feel free to reach out if you have any questions or if you'd like to collaborate
       <img alt="Wordpress" src="https://img.shields.io/badge/Wordpress-21759B?logo=wordpress&logoColor=white&style=plastic">
       </a>
       <a href="#">
-        <img alt="Apache Hadoop" src="https://img.shields.io/badge/Apache%20Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black">
+        <img alt="Apache Hadoop" src="https://img.shields.io/badge/Apache%20Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black&style=plastic">
       </a>
       <a href="#">
       <img alt="JUnit" src="https://custom-icon-badges.demolab.com/badge/JUnit-25A162.svg?logo=check-circle&logoColor=white&style=plastic">
@@ -155,7 +155,7 @@ Feel free to reach out if you have any questions or if you'd like to collaborate
   <p>
       <a href="#"><img alt="MySQL" src="https://img.shields.io/badge/MySQL-00f.svg?logo=mysql&logoColor=white&style=plastic"></a>
       <a href="#"><img alt="MongoDB" src ="https://img.shields.io/badge/MongoDB-4ea94b.svg?logo=mongodb&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Firebase" src ="https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34">
+      <a href="#"><img alt="Firebase" src ="https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34&style=plastic">
       </a>
       <a href="#"><img alt="Vercel" src="https://img.shields.io/badge/Vercel-000000.svg?logo=vercel&logoColor=white&style=plastic"></a>
       <a href="#"><img alt="Render" src="https://img.shields.io/badge/Render-00979D.svg?logo=render&logoColor=white&style=plastic"></a>
