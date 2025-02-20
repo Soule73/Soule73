@@ -40,8 +40,8 @@ I'm **Soulé Soumaré**, a passionate and dedicated web developer currently purs
 
 ### 📫 How to Reach Me
 
-- **Email:** soule.soumare@mediaschool.me
-- **LinkedIn:** Soulé Soumaré
+- **Email:** [soule.soumare@mediaschool.me](mailto:soule.soumare@mediaschool.me)
+- **LinkedIn:** [Soulé Soumaré](https://www.linkedin.com/in/soulé-soumaré)
 - **GitHub:** Soule73
 
 ### 😄 Pronouns
