@@ -42,6 +42,7 @@ I'm **Soulé Soumaré**, a passionate and dedicated web developer currently purs
 
 - **Email:** [soule.soumare@mediaschool.me](mailto:soule.soumare@mediaschool.me)
 - **LinkedIn:** [Soulé Soumaré](https://www.linkedin.com/in/soulé-soumaré)
+- **Blog:** [sds-codeur.com](https://sds-codeur.com)
 - **GitHub:** Soule73
 
 ### 😄 Pronouns
