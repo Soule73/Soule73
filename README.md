@@ -1,3 +1,8 @@
+<p align="center">
+  <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=0B39F3&width=435&lines=Full+Stack+Developer;Always+learning+new+things;Master's+degree+in+IT%2C+Development%2C+and+Big+Data+at+IRIS" alt="Typing SVG" /></a>
+</p>
+
 ## Hi there 👋
 
 I'm **Soulé Soumaré**, a passionate and dedicated web developer currently pursuing a Master's degree in IT, Development, and Big Data at IRIS, Paris. I'm actively seeking an apprenticeship starting in September 2025 to apply my web development skills and contribute to innovative projects.
