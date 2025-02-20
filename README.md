@@ -57,7 +57,7 @@ Feel free to reach out if you have any questions or if you'd like to collaborate
 
 ![Soule73's GitHub stats](https://github-readme-stats.vercel.app/api?username=Soule73&show_icons=true&theme=gotham)
 
-![trophy](https://github-profile-trophy.vercel.app/?username=Soule73&column=6&margin-w=15&margin-h=15)
+![trophy](https://github-profile-trophy.vercel.app/?username=Soule73&column=6&margin-w=15&margin-h=15&no-frame=true&theme=kimbie_dark)
 
 <!--
 **Soule73/Soule73** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -72,4 +72,6 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
+
+https://github.com/abhisheknaiidu/awesome-github-profile-readme?tab=readme-ov-file#tools
 -->
