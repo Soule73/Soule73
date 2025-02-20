@@ -72,7 +72,7 @@ Feel free to reach out if you have any questions or if you'd like to collaborate
   </p>
   <p>
     <a href="#">
-      <img src="https://github-profile-trophy.vercel.app/?username=Soule73&column=2&margin-w=15&margin-h=15&no-frame=true&theme=onestar&title=-Stars,-Followers,-Issues,-PullRequest,-Reviews" />
+      <img src="https://github-profile-trophy.vercel.app/?username=Soule73&column=4&margin-w=15&margin-h=15&no-frame=true&theme=onedark&title=-Stars,-Followers,-Issues,-PullRequest,-Reviews" />
     </a>
   </p>
 
