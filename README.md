@@ -2,14 +2,14 @@
 
 I'm **Soulé Soumaré**, a passionate and dedicated web developer currently pursuing a Master's degree in IT, Development, and Big Data at IRIS, Paris. I'm actively seeking an apprenticeship starting in September 2025 to apply my web development skills and contribute to innovative projects.
 
-### 🛠️ Skills & Technologies
+<!--### 🛠️ Skills & Technologies
 
 - **Languages:** PHP, Java,SQL, JavaScript, TypeScript, HTML, CSS
 - **Frameworks/Technologies:** Laravel, Jakarta EE, NextJS, React, WordPress, Node.js
 - **Databases:** MySQL, MongoDB
 - **Tools:** Docker, GitHub, Git, GitLab
 - **Others:** REST APIs, Unit Testing
-
+-->
 ### 📚 Education
 
 - **Master's Degree (2024-2026):** Expert IT, Development and Big Data at IRIS, Paris
@@ -76,7 +76,7 @@ Feel free to reach out if you have any questions or if you'd like to collaborate
       <a href="https://github.com/search?q=user%3ADenverCoder1+language%3Amarkdown"><img alt="Markdown" src="https://img.shields.io/badge/Markdown-000000.svg?logo=markdown&logoColor=white&style=plastic"></a>
   </p>
 
-  <h3>🧰 Frameworks, Platforms and Libraries</h3>
+  <h3>🧰 📚 Frameworks, Platforms and Libraries</h3>
 
   <p>
       <a href="#"><img alt="Laravel" src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white&style=plastic"></a>
@@ -112,6 +112,7 @@ Feel free to reach out if you have any questions or if you'd like to collaborate
   <h3>💻 Software and Tools</h3>
 
   <p>
+      <a href="#"><img alt="Docker" src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white&style=plastic"></a>
       <a href="#"><img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?logo=visual-studio-code&logoColor=white&style=plastic"></a>
       <a href="#"><img alt="IntelliJ IDEA" src="https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white&style=plastic"></a>
       <a href="#"><img alt="Git" src="https://img.shields.io/badge/Git-F05033.svg?logo=git&logoColor=white&style=plastic"></a>
