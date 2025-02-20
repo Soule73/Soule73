@@ -67,10 +67,13 @@ Feel free to reach out if you have any questions or if you'd like to collaborate
       <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Soule73's streak" 
         src="https://github-readme-streak-stats-eight.vercel.app/?user=Soule73&theme=codeSTACKr&hide_border=true&short_numbers=true"/>
     </a>
+    
+   <!-- <p>🔥 Get streak stats for your profile at <a href="https://git.io/streak-stats">git.io/streak-stats</a></p>-->
+  </p>
+  <p>
     <a href="#">
-      <img src="https://github-profile-trophy.vercel.app/?username=Soule73&column=2&margin-w=15&margin-h=15&no-frame=true&theme=codeSTACKr&title=-Stars,-Followers,-Issues,-PullRequest,-Reviews" />
+      <img src="https://github-profile-trophy.vercel.app/?username=Soule73&column=2&margin-w=15&margin-h=15&no-frame=true&theme=onestar&title=-Stars,-Followers,-Issues,-PullRequest,-Reviews" />
     </a>
-    <p>🔥 Get streak stats for your profile at <a href="https://git.io/streak-stats">git.io/streak-stats</a></p>
   </p>
 
   <h3>💻 GitHub Profile Stats</h3>
