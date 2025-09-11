@@ -1,0 +1,23 @@
+# Fichiers à ignorer lors du déploiement Vercel
+
+# Développement
+node_modules
+.git
+*.log
+
+# Build temporaires
+dist-ssr
+*.local
+
+# Documentation
+DEPLOY.md
+SCRIPTS.md
+*.md
+
+# IDE
+.vscode
+.idea
+
+# Test et développement local
+.env.local
+.env.development
