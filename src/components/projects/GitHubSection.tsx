@@ -90,6 +90,7 @@ const GitHubSection = () => {
                                     alt="GitHub Stats"
                                     width={500}
                                     height={200}
+                                    unoptimized
                                     className="w-full"
                                 />
                             </div>
@@ -99,6 +100,7 @@ const GitHubSection = () => {
                                     alt="Top Languages"
                                     width={500}
                                     height={200}
+                                    unoptimized
                                     className="w-full"
                                 />
                             </div>

@@ -8,22 +8,30 @@ const Footer = () => {
         {
             name: 'React',
             badge: 'https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB',
-            color: 'from-cyan-400 to-blue-500'
+            color: 'from-cyan-400 to-blue-500',
+            width: 81,
+            height: 28
         },
         {
             name: 'Next.js',
             badge: 'https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white',
-            color: 'from-gray-700 to-black'
+            color: 'from-gray-700 to-black',
+            width: 81,
+            height: 28
         },
         {
             name: 'TypeScript',
             badge: 'https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white',
-            color: 'from-blue-600 to-indigo-600'
+            color: 'from-blue-600 to-indigo-600',
+            width: 117,
+            height: 28
         },
         {
             name: 'Tailwind CSS',
             badge: 'https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white',
-            color: 'from-teal-400 to-cyan-500'
+            color: 'from-teal-400 to-cyan-500',
+            width: 142,
+            height: 28
         }
     ]
 
@@ -55,9 +63,10 @@ const Footer = () => {
                                     <Image
                                         src={tech.badge}
                                         alt={tech.name}
-                                        width={96}
-                                        height={24}
-                                        className="h-6 group-hover:scale-105 transition-transform duration-200 rounded"
+                                        width={tech.width}
+                                        height={tech.height}
+                                        unoptimized
+                                        className="group-hover:scale-105 transition-transform duration-200 rounded"
                                     />
                                     <span className="font-semibold text-gray-700 dark:text-gray-200 group-hover:gradient-text transition-all duration-300">
                                         {tech.name}

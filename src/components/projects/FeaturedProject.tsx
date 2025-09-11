@@ -9,7 +9,7 @@ interface FeaturedProjectProps {
 const FeaturedProject = ({ project, className }: FeaturedProjectProps) => {
     return (
         <div
-            className={`group relative glass dark:glass-dark rounded-3xl overflow-hidden hover-lift hover-glow 
+            className={`group relative glass dark:glass-dark rounded-3xl overflow-hidden hover-lift
                 max-w-4xl
                 transition-all duration-700 animate-fade-in-up ${className}`}
         >
