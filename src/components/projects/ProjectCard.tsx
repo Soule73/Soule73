@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Project } from './types'
 
 interface ProjectCardProps {
@@ -11,10 +12,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         >
             {/* Image */}
             <div className="relative overflow-hidden h-48">
-                <img
+                <Image
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
 

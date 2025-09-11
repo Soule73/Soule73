@@ -1,4 +1,5 @@
 import { HeartIcon } from "@heroicons/react/24/solid"
+import Image from "next/image"
 
 const Footer = () => {
     const currentYear = new Date().getFullYear()
@@ -86,9 +87,11 @@ const Footer = () => {
                                 className={`group glass dark:glass-dark rounded-xl p-3 hover-lift transition-all duration-300 animate-fade-in-up delay-${index * 100}`}
                             >
                                 <div className="flex items-center space-x-3">
-                                    <img
+                                    <Image
                                         src={tech.badge}
                                         alt={tech.name}
+                                        width={96}
+                                        height={24}
                                         className="h-6 group-hover:scale-105 transition-transform duration-200 rounded"
                                     />
                                     <span className="font-semibold text-gray-700 dark:text-gray-200 group-hover:gradient-text transition-all duration-300">

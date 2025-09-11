@@ -1,5 +1,7 @@
 import { CodeBracketIcon } from '@heroicons/react/24/outline'
 
+import Image from 'next/image'
+
 const GitHubSection = () => {
     return (
         <div className="my-4 md:my-8 lg:my-12 px-4">
@@ -9,7 +11,7 @@ const GitHubSection = () => {
                     <span>Plus de projets sur GitHub</span>
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                    Découvrez l'ensemble de mes contributions et projets open source
+                    Découvrez l&apos;ensemble de mes contributions et projets open source
                 </p>
             </div>
 
@@ -23,9 +25,11 @@ const GitHubSection = () => {
                         <div className="flex justify-center mb-6">
                             <div className="relative">
                                 <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white/20 shadow-xl">
-                                    <img
+                                    <Image
                                         src="https://github.com/Soule73.png"
                                         alt="Soule Soumare GitHub"
+                                        width={96}
+                                        height={96}
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
@@ -81,16 +85,20 @@ const GitHubSection = () => {
                         {/* GitHub Stats Cards */}
                         <div className="grid md:grid-cols-2 gap-4 mt-8">
                             <div className="glass dark:glass-dark rounded-xl p-4">
-                                <img
+                                <Image
                                     src="https://github-readme-stats.vercel.app/api?username=Soule73&show_icons=true&theme=transparent&hide_border=true&text_color=6B7280&icon_color=8B5CF6&title_color=3B82F6"
                                     alt="GitHub Stats"
+                                    width={500}
+                                    height={200}
                                     className="w-full"
                                 />
                             </div>
                             <div className="glass dark:glass-dark rounded-xl p-4">
-                                <img
+                                <Image
                                     src="https://github-readme-stats.vercel.app/api/top-langs/?username=Soule73&layout=compact&theme=transparent&hide_border=true&text_color=6B7280&title_color=3B82F6"
                                     alt="Top Languages"
+                                    width={500}
+                                    height={200}
                                     className="w-full"
                                 />
                             </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import {
     CodeBracketIcon,
     ComputerDesktopIcon,
@@ -342,9 +343,11 @@ const Skills = () => {
                                         {/* Info compétence */}
                                         <div className="flex justify-between items-center mb-3">
                                             <div className="flex items-center space-x-3">
-                                                <img
+                                                <Image
                                                     src={skill.badge}
                                                     alt={skill.name}
+                                                    width={96}
+                                                    height={24}
                                                     className="h-6 group-hover:scale-105 transition-transform rounded duration-200"
                                                 />
                                             </div>
@@ -438,7 +441,7 @@ const Skills = () => {
                             </h3>
 
                             <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                                La technologie évolue rapidement, et je m'efforce de rester à jour avec les
+                                La technologie évolue rapidement, et je m&apos;efforce de rester à jour avec les
                                 <span className="gradient-text font-semibold"> dernières tendances</span> et
                                 <span className="gradient-text font-semibold"> meilleures pratiques</span> du développement.
                             </p>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Project } from './types'
 
 interface FeaturedProjectProps {
@@ -14,10 +15,11 @@ const FeaturedProject = ({ project, className }: FeaturedProjectProps) => {
         >
             {/* Image avec overlay */}
             <div className="relative overflow-hidden h-64">
-                <img
+                <Image
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 {/* Overlay dégradé */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
