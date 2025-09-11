@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { projects, getCategories } from './projects/projectsData'
-import ProjectFilters from './projects/ProjectFilters'
+import React from 'react'
+import { projects } from './projects/projectsData'
 import FeaturedProject from './projects/FeaturedProject'
 import GitHubSection from './projects/GitHubSection'
 import CallToAction from './projects/CallToAction'
