@@ -90,11 +90,11 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
                 </div>
 
                 {/* Menu Mobile avec animation */}
-                <div className={`lg:hidden transition-all duration-500 ease-in-out ${isMenuOpen
+                <div className={`lg:hidden transition-all duration-500 ease-in-out  ${isMenuOpen
                     ? 'max-h-96 opacity-100 py-4'
                     : 'max-h-0 opacity-0 py-0'
                     } overflow-hidden`}>
-                    <div className="glass dark:glass-dark rounded-2xl mx-4 p-4 space-y-2">
+                    <div className="bg-white dark:bg-gray-800 rounded-2xl mx-4 p-4 space-y-2">
                         {menuItems.map((item, index) => (
                             <a
                                 key={item.name}

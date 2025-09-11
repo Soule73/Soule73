@@ -12,19 +12,16 @@ const ProfileAvatar = ({
     priority = false
 }: ProfileAvatarProps) => {
     return (
-        <div className={`relative ${className}`}>
+        <div className={`relative overflow-hidden rounded-full ${className}`}>
             <Image
                 src="https://github.com/Soule73.png"
                 alt="Soule73 - Développeur Full Stack"
                 width={size}
                 height={size}
                 priority={priority}
-                className="rounded-full object-cover profile-image-glow"
+                className="rounded-full object-cover profile-image-glow w-full h-full"
                 style={{
-                    width: 'auto',
-                    height: 'auto',
-                    maxWidth: `${size}px`,
-                    maxHeight: `${size}px`,
+                    aspectRatio: '1 / 1',
                 }}
             />
 

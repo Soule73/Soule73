@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { projects, getCategories } from './projects/projectsData'
 import ProjectFilters from './projects/ProjectFilters'
 import FeaturedProject from './projects/FeaturedProject'
-// import ProjectCard from './projects/ProjectCard'
 import GitHubSection from './projects/GitHubSection'
 import CallToAction from './projects/CallToAction'
 
@@ -46,7 +45,7 @@ const Projects: React.FC = () => {
                             }`}>
                             {filteredProjects.map((project, index) => {
                                 const isLast = index === filteredProjects.length - 1
-                                const colSpan = isLast && filteredProjects.length % 2 === 1 ? 'col-span-2' : ''
+                                const colSpan = isLast && filteredProjects.length % 2 === 1 ? 'md:col-span-2' : ''
                                 return <FeaturedProject
                                     className={colSpan}
                                     key={project.id} project={project} />
