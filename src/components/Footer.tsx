@@ -4,41 +4,6 @@ import Image from "next/image"
 const Footer = () => {
     const currentYear = new Date().getFullYear()
 
-    const quickLinks = [
-        { name: 'Accueil', href: '#home', emoji: '🏠' },
-        { name: 'À propos', href: '#about', emoji: '👨‍💻' },
-        { name: 'Compétences', href: '#skills', emoji: '💡' },
-        { name: 'Projets', href: '#projects', emoji: '🚀' },
-        { name: 'Contact', href: '#contact', emoji: '💌' },
-    ]
-
-    const socialLinks = [
-        {
-            name: 'GitHub',
-            url: 'https://github.com/soule73',
-            emoji: '🐙',
-            color: 'from-gray-700 to-gray-900'
-        },
-        {
-            name: 'LinkedIn',
-            url: 'https://linkedin.com/in/soule73',
-            emoji: '💼',
-            color: 'from-blue-600 to-blue-700'
-        },
-        {
-            name: 'Twitter',
-            url: 'https://twitter.com/soule73',
-            emoji: '🐦',
-            color: 'from-sky-400 to-blue-500'
-        },
-        {
-            name: 'Discord',
-            url: 'https://discord.com/users/soule73',
-            emoji: '💬',
-            color: 'from-indigo-500 to-purple-600'
-        }
-    ]
-
     const technologies = [
         {
             name: 'React',

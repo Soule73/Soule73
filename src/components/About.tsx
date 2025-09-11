@@ -95,7 +95,7 @@ const About = () => {
                     </div>
                     <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
                         Découvrez mon parcours, mes <span className="gradient-text font-semibold">passions</span> et
-                        ce qui m'inspire dans le <span className="gradient-text font-semibold">développement Full Stack</span>
+                        ce qui m&apos;inspire dans le <span className="gradient-text font-semibold">développement Full Stack</span>
                     </p>
                 </div>
 
@@ -152,15 +152,15 @@ const About = () => {
                                     <CodeBracketIcon className="w-6 h-6 text-purple-500 mt-0.5 flex-shrink-0" />
                                     <span>
                                         Spécialisé dans le <span className="gradient-text font-semibold">développement Full Stack web et mobile</span>,
-                                        je maîtrise React, React Native, Node.js et l'écosystème JavaScript moderne. Je conçois des
-                                        <span className="gradient-text font-semibold"> applications robustes</span> de bout en bout avec une attention particulière à l'UX.
+                                        je maîtrise React, React Native, Node.js et l&apos;écosystème JavaScript moderne. Je conçois des
+                                        <span className="gradient-text font-semibold"> applications robustes</span> de bout en bout avec une attention particulière à l&apos;UX.
                                     </span>
                                 </p>
                                 <p className="flex items-start space-x-3">
                                     <SparklesIcon className="w-6 h-6 text-indigo-500 mt-0.5 flex-shrink-0" />
                                     <span>
-                                        Animé par l'<span className="gradient-text font-semibold">innovation technologique</span>,
-                                        j'adopte une approche pragmatique pour délivrer des
+                                        Animé par l&apos;<span className="gradient-text font-semibold">innovation technologique</span>,
+                                        j&apos;adopte une approche pragmatique pour délivrer des
                                         <span className="gradient-text font-semibold"> solutions performantes</span> qui répondent aux besoins métier.
                                     </span>
                                 </p>

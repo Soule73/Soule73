@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import ProfileAvatar from './ProfileAvatar'
 import {
     RocketLaunchIcon,
@@ -15,12 +15,12 @@ const Hero = () => {
     const [isVisible, setIsVisible] = useState(false)
     const heroRef = useRef<HTMLElement>(null)
 
-    const titles = [
+    const titles = useMemo(() => [
         'Développeur Full Stack',
-        'Créateur d\'Expériences',
+        'Créateur d&apos;Expériences',
         'Passionné de Code',
         'Innovation & Design'
-    ]
+    ], [])
 
     useEffect(() => {
         setIsVisible(true)
@@ -45,7 +45,7 @@ const Hero = () => {
 
         const timeout = setTimeout(typeWriter, 500)
         return () => clearTimeout(timeout)
-    }, [currentIndex])
+    }, [currentIndex, titles])
 
     const scrollToSection = (sectionId: string) => {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
@@ -110,7 +110,7 @@ const Hero = () => {
                         <div className="inline-flex items-center space-x-3">
                             <HandRaisedIcon className="w-6 h-6 text-yellow-500" />
                             <p className="text-lg lg:text-xl text-gray-700 dark:text-gray-300 font-medium">
-                                Salut ! Moi c'est
+                                Salut ! Moi c&apos;est
                             </p>
                         </div>
                     </div>

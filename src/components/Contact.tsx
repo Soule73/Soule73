@@ -92,7 +92,7 @@ const Contact = () => {
 
         try {
             // Tentative 1: API Vercel en développement ou production
-            let apiUrl = '/api/contact';
+            const apiUrl = '/api/contact';
 
             console.log('Envoi du formulaire avec les données:', formData);
             console.log('URL de l\'API:', apiUrl);
@@ -251,7 +251,7 @@ const Contact = () => {
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
                                 Que vous ayez une <span className="gradient-text font-semibold">idée révolutionnaire</span>,
                                 une question technique ou simplement envie de dire bonjour,
-                                je suis toujours ravi d'<span className="gradient-text font-semibold">échanger</span> !
+                                je suis toujours ravi d&apos;<span className="gradient-text font-semibold">échanger</span> !
                             </p>
 
                             {/* Disponibilités */}
@@ -494,7 +494,7 @@ const Contact = () => {
                                         <div className="flex items-center space-x-3 text-red-600 dark:text-red-400">
                                             <XCircleIcon className="w-6 h-6" />
                                             <div>
-                                                <p className="font-bold">Erreur lors de l'envoi</p>
+                                                <p className="font-bold">Erreur lors de l&apos;envoi</p>
                                                 <p className="text-sm opacity-80">Veuillez réessayer ou me contacter directement</p>
                                             </div>
                                         </div>

@@ -10,8 +10,16 @@ const transporter = nodemailer.createTransport({
     },
 });
 
+// Interface pour les données du formulaire
+interface ContactFormData {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+}
+
 // Validation des champs
-function validateContactForm(data: any) {
+function validateContactForm(data: ContactFormData) {
     const errors: string[] = [];
 
     if (!data.name || data.name.trim().length < 2) {
