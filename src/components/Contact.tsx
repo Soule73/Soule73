@@ -6,13 +6,11 @@ import {
     LightBulbIcon,
     RocketLaunchIcon,
     CheckCircleIcon,
-    XCircleIcon,
-    SparklesIcon
+    XCircleIcon
 } from '@heroicons/react/24/outline'
-import {
-    EnvelopeIcon as EnvelopeIconSolid
-} from '@heroicons/react/24/solid'
-import { contactInfo, socialLinks } from './contacts/solialLinks'
+import { Input } from './Input'
+import ContactInfo from './contacts/ContactInfo'
+import SocialLinks from './contacts/SocialLinks'
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -160,7 +158,6 @@ const Contact = () => {
                 {/* En-tête */}
                 <div className="text-center mb-20">
                     <div className="inline-flex items-center space-x-4  mb-2 md:mb-4 lg:mb-6">
-                        <EnvelopeIconSolid className="w-8 h-8 text-blue-500 animate-pulse-scale" />
                         <h2 className="text-5xl lg:text-6xl font-black gradient-text">Contact</h2>
                     </div>
                     <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -181,75 +178,13 @@ const Contact = () => {
                                 une question technique ou simplement envie de dire bonjour,
                                 je suis toujours ravi d&apos;<span className="gradient-text font-semibold">échanger</span> !
                             </p>
-
-                            {/* Disponibilités */}
-                            <div className="glass dark:glass-dark rounded-2xl p-4 mb-6">
-                                <div className="flex items-center space-x-3 mb-2">
-                                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                                    <span className="font-bold text-gray-800 dark:text-gray-200">Disponible maintenant</span>
-                                </div>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 ml-6">
-                                    Nouveau projet • Consultation • Freelance
-                                </p>
-                            </div>
                         </div>
 
                         {/* Informations de contact */}
-                        <div className="space-y-4">
-                            {contactInfo.map((info, index) => (
-                                <a
-                                    key={index}
-                                    href={info.link}
-                                    className={`group glass dark:glass-dark rounded-2xl p-6 hover-lift  transition-all duration-500 block animate-fade-in-up delay-${index * 100}`}
-                                >
-                                    <div className="flex items-center space-x-4">
-                                        <div className={`relative w-16 h-16 bg-gradient-to-r ${info.color} rounded-2xl flex items-center justify-center text-white group-hover:animate-pulse-scale shadow-lg`}>
-                                            {info.icon}
-                                            <div className="absolute inset-0 bg-white/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                        </div>
-                                        <div className="flex-1">
-                                            <h4 className="font-bold text-gray-800 dark:text-gray-200 mb-1 group-hover:gradient-text transition-all duration-300">
-                                                {info.title}
-                                            </h4>
-                                            <p className="text-gray-600 dark:text-gray-400 font-semibold mb-1">
-                                                {info.value}
-                                            </p>
-                                            <p className="text-sm text-gray-500 dark:text-gray-500">
-                                                {info.description}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            ))}
-                        </div>
+                        <ContactInfo />
 
                         {/* Réseaux sociaux */}
-                        <div className="glass dark:glass-dark rounded-2xl p-6 ">
-                            <h4 className="text-xl font-bold gradient-text mb-6">Suivez-moi <SparklesIcon className="inline w-5 h-5 ml-1" /></h4>
-                            <div className="grid grid-cols-2 gap-3">
-                                {socialLinks.map((social, index) => (
-                                    <a
-                                        key={index}
-                                        href={social.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className={`group glass dark:glass-dark rounded-xl p-4 hover-lift transition-all duration-300 animate-fade-in-up delay-${index * 100}`}
-                                        aria-label={social.name}
-                                    >
-                                        <div className="flex items-center space-x-1">
-                                            <div className={`w-10 h-10 p-2 bg-gradient-to-r ${social.color} rounded-lg flex items-center justify-center text-white group-hover:animate-bounce shadow-lg`}>
-                                                {social.icon}
-                                            </div>
-                                            <span className="font-bold text-gray-700 dark:text-gray-200
-                                            text-xs md:text-lg  
-                                            group-hover:gradient-text transition-all duration-300">
-                                                {social.name}
-                                            </span>
-                                        </div>
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
+                        <SocialLinks />
                     </div>
 
                     {/* Formulaire de contact */}
@@ -257,7 +192,7 @@ const Contact = () => {
                         <div className="glass dark:glass-dark rounded-3xl p-8 lg:p-10 ">
                             <div className="text-center mb-8">
                                 <h3 className="text-3xl font-black gradient-text mb-4">
-                                    Envoyez-moi un message <EnvelopeIcon className="inline w-8 h-8 ml-2" />
+                                    Envoyez-moi un message
                                 </h3>
                                 <p className="text-gray-600 dark:text-gray-300">
                                     Remplissez le formulaire et je vous répondrai dans les plus brefs délais
@@ -266,128 +201,60 @@ const Contact = () => {
 
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
-                                    <div className="group">
-                                        <label htmlFor="name" className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-3">
-                                            <span className="flex items-center space-x-2">
-                                                <UserIcon className="w-4 h-4" />
-                                                <span>Nom complet</span>
-                                            </span>
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="name"
-                                            name="name"
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            required
-                                            className={`w-full px-4 py-4 glass dark:glass-dark rounded-2xl border-0 focus:ring-2 transition-all duration-300 text-gray-800 dark:text-gray-200 placeholder:text-gray-500 ${errors.name
-                                                ? 'focus:ring-red-500 ring-2 ring-red-500'
-                                                : 'focus:ring-indigo-500'
-                                                }`}
-                                            placeholder="Votre nom complet"
-                                        />
-                                        {errors.name && (
-                                            <p className="mt-2 text-sm text-red-600 dark:text-red-400 flex items-center space-x-1">
-                                                <XCircleIcon className="w-4 h-4" />
-                                                <span>{errors.name}</span>
-                                            </p>
-                                        )}
-                                    </div>
-                                    <div className="group">
-                                        <label htmlFor="email" className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-3">
-                                            <span className="flex items-center space-x-2">
-                                                <EnvelopeIcon className="w-4 h-4" />
-                                                <span>Adresse email</span>
-                                            </span>
-                                        </label>
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            required
-                                            className={`w-full px-4 py-4 glass dark:glass-dark rounded-2xl border-0 focus:ring-2 transition-all duration-300 text-gray-800 dark:text-gray-200 placeholder:text-gray-500 ${errors.email
-                                                ? 'focus:ring-red-500 ring-2 ring-red-500'
-                                                : 'focus:ring-indigo-500'
-                                                }`}
-                                            placeholder="votre.email@exemple.com"
-                                        />
-                                        {errors.email && (
-                                            <p className="mt-2 text-sm text-red-600 dark:text-red-400 flex items-center space-x-1">
-                                                <XCircleIcon className="w-4 h-4" />
-                                                <span>{errors.email}</span>
-                                            </p>
-                                        )}
-                                    </div>
-                                </div>
-
-                                <div className="group">
-                                    <label htmlFor="subject" className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-3">
-                                        <span className="flex items-center space-x-2">
-                                            <LightBulbIcon className="w-4 h-4" />
-                                            <span>Sujet</span>
-                                        </span>
-                                    </label>
-                                    <input
+                                    <Input
                                         type="text"
-                                        id="subject"
-                                        name="subject"
-                                        value={formData.subject}
+                                        name="name"
+                                        value={formData.name}
                                         onChange={handleChange}
-                                        required
-                                        className={`w-full px-4 py-4 glass dark:glass-dark rounded-2xl border-0 focus:ring-2 transition-all duration-300 text-gray-800 dark:text-gray-200 placeholder:text-gray-500 ${errors.subject
-                                            ? 'focus:ring-red-500 ring-2 ring-red-500'
-                                            : 'focus:ring-indigo-500'
-                                            }`}
-                                        placeholder="Sujet de votre message"
+                                        placeholder="Votre nom complet"
+                                        label="Nom complet"
+                                        icon={<UserIcon className="w-4 h-4" />}
+                                        error={errors.name}
                                     />
-                                    {errors.subject && (
-                                        <p className="mt-2 text-sm text-red-600 dark:text-red-400 flex items-center space-x-1">
-                                            <XCircleIcon className="w-4 h-4" />
-                                            <span>{errors.subject}</span>
-                                        </p>
-                                    )}
-                                </div>
-
-                                <div className="group">
-                                    <label htmlFor="message" className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-3">
-                                        <span className="flex items-center space-x-2">
-                                            <ChatBubbleLeftRightIcon className="w-4 h-4" />
-                                            <span>Message</span>
-                                        </span>
-                                    </label>
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        value={formData.message}
+                                    <Input
+                                        type="text"
+                                        name="email"
+                                        value={formData.email}
                                         onChange={handleChange}
-                                        required
-                                        rows={6}
-                                        className={`w-full px-4 py-4 glass dark:glass-dark rounded-2xl border-0 focus:ring-2 transition-all duration-300 text-gray-800 dark:text-gray-200 placeholder:text-gray-500 resize-none ${errors.message
-                                            ? 'focus:ring-red-500 ring-2 ring-red-500'
-                                            : 'focus:ring-indigo-500'
-                                            }`}
-                                        placeholder="Décrivez votre projet, vos besoins ou posez votre question..."
-                                    ></textarea>
-                                    {errors.message && (
-                                        <p className="mt-2 text-sm text-red-600 dark:text-red-400 flex items-center space-x-1">
-                                            <XCircleIcon className="w-4 h-4" />
-                                            <span>{errors.message}</span>
-                                        </p>
-                                    )}
+                                        placeholder="Votre adresse email"
+                                        label="Adresse email"
+                                        icon={<EnvelopeIcon className="w-4 h-4" />}
+                                        error={errors.email}
+                                    />
+
                                 </div>
 
+                                <Input
+                                    type="text"
+                                    name="name"
+                                    value={formData.subject}
+                                    onChange={handleChange}
+                                    placeholder="Sujet de votre message"
+                                    label="Sujet"
+                                    icon={<LightBulbIcon className="w-4 h-4" />}
+                                    error={errors.subject}
+                                />
+                                <Input
+                                    type="text"
+                                    name="name"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    placeholder="Décrivez votre projet, vos besoins ou posez votre question..."
+                                    label="Message"
+                                    icon={<ChatBubbleLeftRightIcon className="w-4 h-4" />}
+                                    isTextarea={true}
+                                    error={errors.message}
+                                />
                                 {/* Bouton d'envoi */}
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className={`group relative w-full py-4 px-6 font-bold text-lg rounded-2xl overflow-hidden transition-all duration-500 ${isSubmitting
+                                    className={`group relative cursor-pointer w-full py-4 px-6 font-bold text-lg rounded-2xl overflow-hidden transition-all duration-500 ${isSubmitting
                                         ? 'opacity-70 cursor-not-allowed'
                                         : 'hover-lift '
                                         }`}
                                 >
-                                    <div className="relative z-10 flex items-center justify-center space-x-3 text-white">
+                                    <div className="relative z-10 flex items-center justify-center space-x-1 text-white">
                                         {isSubmitting ? (
                                             <>
                                                 <svg className="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24">
@@ -399,7 +266,7 @@ const Contact = () => {
                                         ) : (
                                             <>
                                                 <RocketLaunchIcon className="w-6 h-6 group-hover:animate-bounce" />
-                                                <span>Envoyer le message</span>
+                                                <span className=' text-xs md:text-lg'>Envoyer le message</span>
                                             </>
                                         )}
                                     </div>
@@ -438,5 +305,6 @@ const Contact = () => {
         </section>
     )
 }
+
 
 export default Contact

@@ -1,11 +1,8 @@
-import Image from 'next/image'
 import {
     CodeBracketIcon,
     ComputerDesktopIcon,
     CogIcon,
     WrenchScrewdriverIcon,
-    LightBulbIcon,
-    AcademicCapIcon,
     DevicePhoneMobileIcon,
     LinkIcon,
     BeakerIcon,

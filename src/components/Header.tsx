@@ -31,7 +31,7 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
             : 'bg-transparent py-4'
             }`}>
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16">
+                <div className="flex justify-end lg:justify-between items-center h-16">
 
                     {/* Navigation Desktop */}
                     <div className="hidden lg:flex items-center space-x-1">
@@ -50,7 +50,7 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
                     </div>
 
                     {/* Actions */}
-                    <div className="flex items-center space-x-3">
+                    <div className="flex justify-end items-center space-x-3">
                         {/* Theme Toggle avec style glassmorphism */}
                         <button
                             onClick={toggleTheme}
@@ -90,26 +90,35 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
                 </div>
 
                 {/* Menu Mobile avec animation */}
-                <div className={`lg:hidden transition-all duration-500 ease-in-out  ${isMenuOpen
-                    ? 'max-h-96 opacity-100 py-4'
-                    : 'max-h-0 opacity-0 py-0'
-                    } overflow-hidden`}>
-                    <div className="bg-white dark:bg-gray-800 rounded-2xl mx-4 p-4 space-y-2">
-                        {menuItems.map((item, index) => (
-                            <a
-                                key={item.name}
-                                href={item.href}
-                                onClick={() => setIsMenuOpen(false)}
-                                className={`flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-700 dark:text-gray-200 hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300 animate-slide-in-left delay-${index * 100}`}
-                            >
-                                <span className="font-medium">{item.name}</span>
-                            </a>
-                        ))}
-                    </div>
-                </div>
+                <MobileMenu isOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} menuItems={menuItems} />
             </div>
         </header>
     )
+}
+
+const MobileMenu = ({ isOpen, setIsMenuOpen, menuItems }: {
+    isOpen: boolean;
+    setIsMenuOpen: (open: boolean) => void;
+    menuItems: { name: string; href: string }[]
+}) => {
+    return (
+        <div className={`lg:hidden transition-all duration-500 ease-in-out  ${isOpen
+            ? 'max-h-96 opacity-100 py-4'
+            : 'max-h-0 opacity-0 py-0'
+            } overflow-hidden`}>
+            <div className="bg-white dark:bg-gray-800 rounded-2xl mx-4 p-4 space-y-2">
+                {menuItems.map((item, index) => (
+                    <a
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-700 dark:text-gray-200 hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300 animate-slide-in-left delay-${index * 100}`}
+                    >
+                        <span className="font-medium">{item.name}</span>
+                    </a>
+                ))}
+            </div>
+        </div>)
 }
 
 export default Header

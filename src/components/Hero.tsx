@@ -119,10 +119,7 @@ const Hero = () => {
                             <CodeBracketIcon className="w-6 h-6 text-indigo-500" />
                             <p className=" text-base sm:text-2xl lg:text-3xl font-bold text-gray-700 dark:text-gray-200"
                             >
-                                <span
-                                    dangerouslySetInnerHTML={{ __html: displayedText }}
-                                >
-                                </span>
+                                {displayedText}
                                 <span className="animate-pulse text-indigo-500 ml-1">|</span>
                             </p>
                         </div>
@@ -142,9 +139,9 @@ const Hero = () => {
                             onClick={() => scrollToSection('projects')}
                             className="group relative px-8 py-4 glass dark:glass-dark rounded-2xl font-bold text-base lg:text-lg overflow-hidden hover-lift hover-glow transition-all duration-300 w-full sm:w-auto"
                         >
-                            <div className="relative z-10 flex items-center justify-center space-x-3 text-gray-700 dark:text-gray-200 group-hover:text-white">
+                            <div className="relative z-10 flex items-center justify-center space-x-1 text-gray-700 dark:text-gray-200 group-hover:text-white">
                                 <RocketLaunchIcon className="w-5 h-5" />
-                                <span>Découvrir mes projets</span>
+                                <span className=' text-xs md:text-lg'>Découvrir mes projets</span>
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                         </button>

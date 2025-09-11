@@ -16,7 +16,7 @@ const contactInfo = [
         value: '+33 7 75 77 92 34',
         link: 'tel:+33775779234',
         color: 'from-green-500 to-emerald-500',
-        description: 'Disponible 9h-18h'
+        description: 'Disponible à tout moment'
     },
     {
         icon: <MapPinIcon className="w-6 h-6" />,

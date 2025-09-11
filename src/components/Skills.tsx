@@ -15,12 +15,10 @@ const Skills = () => {
                 <div className="absolute top-1/2 left-1/2 w-36 h-36 bg-pink-500/10 rounded-3xl animate-pulse-scale delay-300 blur-xl"></div>
             </div>
 
-            <div className="relative z-10 section-center">
+            <div className="relative z-10 section-center  pt-4 sm:pt-8 md:pt-12 lg:pt-14">
                 {/* En-tête */}
                 <div className="text-center mb-4 md:mb-8 lg:mb-12">
-                    <div className="inline-flex items-center space-x-4  mb-8">
-                        <h2 className="text-5xl lg:text-6xl font-black gradient-text">Compétences</h2>
-                    </div>
+                    <h2 className="mb-4 text-3xl md:text-5xl lg:text-6xl font-black gradient-text">Compétences</h2>
                     <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
                         <span className="gradient-text font-semibold">Technologies</span> et outils que je maîtrise pour créer des
                         <span className="gradient-text font-semibold"> solutions innovantes</span>
@@ -28,7 +26,7 @@ const Skills = () => {
                 </div>
 
                 {/* Catégories de compétences */}
-                <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-20 px-4">
+                <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-4 md:-8 lg:mb-12 md:px-4">
                     {skillCategories.map((category, categoryIndex) => (
                         <div
                             key={categoryIndex}
@@ -113,9 +111,9 @@ const Skills = () => {
                 </div>
 
                 {/* Compétences additionnelles */}
-                <div className="mb-4 md:mb-8 lg:md-12 px-4">
-                    <div className="text-center mb-2 md:mb-4 lg:md-6">
-                        <h3 className="text-3xl font-black gradient-text mb-6">
+                <div className="my-4 md:my-8 lg:my-12 px-4">
+                    <div className="text-center my-2 md:my-4 lg:my-6">
+                        <h3 className=" text-2xl md:text-4xl lg:text-5xl gradient-text font-black gradient-text mb-6">
                             Autres compétences
                         </h3>
                         <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -143,8 +141,8 @@ const Skills = () => {
                 </div>
 
                 {/* Section apprentissage */}
-                <div className="text-center px-4">
-                    <div className="relative glass dark:glass-dark rounded-3xl p-8 lg:p-12  overflow-hidden max-w-4xl mx-auto">
+                <div className="text-center md:px-4">
+                    <div className="relative glass dark:glass-dark rounded-3xl p-8 lg:p-12  overflow-hidden max-w-4xl mx-auto my-4 md:my-8 lg:my-12 ">
                         {/* Arrière-plan animé */}
                         <div className="absolute inset-0 gradient-animated opacity-20 rounded-3xl"></div>
 

@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image'
 import type { ReactElement } from 'react'
 
 export interface ProjectCredentials {
@@ -20,7 +21,7 @@ export interface Project {
     id: number
     title: string
     description: string
-    image: string
+    image: StaticImageData,
     technologies: string[]
     category: string
     demoUrl: string
@@ -28,7 +29,6 @@ export interface Project {
     playStoreDriverUrl?: string
     githubUrl: string
     featured: boolean
-    icon: ReactElement
     color: string
     status: string
     credentials?: ProjectCredentials
