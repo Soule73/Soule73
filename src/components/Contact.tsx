@@ -203,6 +203,7 @@ const Contact = () => {
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <Input
                                         type="text"
+                                        id='name'
                                         name="name"
                                         value={formData.name}
                                         onChange={handleChange}
@@ -213,6 +214,7 @@ const Contact = () => {
                                     />
                                     <Input
                                         type="text"
+                                        id='email'
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
@@ -226,7 +228,8 @@ const Contact = () => {
 
                                 <Input
                                     type="text"
-                                    name="name"
+                                    id='subject'
+                                    name="subject"
                                     value={formData.subject}
                                     onChange={handleChange}
                                     placeholder="Sujet de votre message"
@@ -236,7 +239,8 @@ const Contact = () => {
                                 />
                                 <Input
                                     type="text"
-                                    name="name"
+                                    id='message'
+                                    name="message"
                                     value={formData.message}
                                     onChange={handleChange}
                                     placeholder="Décrivez votre projet, vos besoins ou posez votre question..."

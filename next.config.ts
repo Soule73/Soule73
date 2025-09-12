@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
+
+const isDev = process.env.NODE_ENV === 'development';
+
 const nextConfig: NextConfig = {
+  pageExtensions: isDev ? ['js', 'jsx', 'ts', 'tsx', 'dev.js', 'dev.ts', 'dev.jsx', 'dev.tsx'] : ['js', 'jsx', 'ts', 'tsx'],
   images: {
     remotePatterns: [
       {
