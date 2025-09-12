@@ -1,0 +1,95 @@
+const template = `<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouveau message - Version simple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin: -20px -20px 20px -20px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .field {
+            padding: 10px;
+        }
+
+        .field strong {
+            color: #4CAF50;
+        }
+
+        .message {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 4px;
+            white-space: pre-wrap;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Nouveau Message Portfolio</h1>
+        </div>
+
+        <div class="field">
+            <strong>Nom :</strong> {{name}}
+        </div>
+
+        <div class="field">
+            <strong>Email :</strong> {{email}}
+        </div>
+
+        <div class="field">
+            <strong>Sujet :</strong> {{subject}}
+        </div>
+
+        <div class="field">
+            <strong>Message :</strong>
+            <div class="message">{{message}}</div>
+        </div>
+
+        <div class="footer">
+            <p>Reçu le {{timestamp}}</p>
+            <p><a href="mailto:{{email}}?subject=Re: {{subject}}">Répondre à ce message</a></p>
+        </div>
+    </div>
+</body>
+
+</html>`;
+
+export default template;

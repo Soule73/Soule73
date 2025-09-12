@@ -1,5 +1,4 @@
-import fs from 'fs';
-import path from 'path';
+// Plus besoin de fs et path pour la lecture de fichiers
 
 /**
  * Interface pour les variables du template d'email
@@ -14,14 +13,17 @@ export interface EmailTemplateVariables {
 }
 
 /**
- * Classe pour gérer les templates d'email (similaire à Blade Laravel)
+ * Interface pour les templates d'email
+ */
+interface EmailTemplate {
+    default: string;
+}
+
+/**
+ * Classe pour gérer les templates d'email (compatible Vercel)
  */
 export class EmailTemplateEngine {
-    private templatesDir: string;
-
-    constructor(templatesDir: string = 'src/templates/emails') {
-        this.templatesDir = path.resolve(process.cwd(), templatesDir);
-    }
+    private templateCache: Map<string, string> = new Map();
 
     /**
      * Charge et compile un template avec les variables fournies
@@ -31,15 +33,8 @@ export class EmailTemplateEngine {
      */
     async render(templateName: string, variables: EmailTemplateVariables): Promise<string> {
         try {
-            const templatePath = path.join(this.templatesDir, `${templateName}.html`);
-
-            // Vérifier que le fichier existe
-            if (!fs.existsSync(templatePath)) {
-                throw new Error(`Template "${templateName}" non trouvé à : ${templatePath}`);
-            }
-
-            // Lire le contenu du template
-            let templateContent = fs.readFileSync(templatePath, 'utf-8');
+            // Charger le template
+            let templateContent = await this.loadTemplate(templateName);
 
             // Ajouter des variables par défaut
             const defaultVariables: Partial<EmailTemplateVariables> = {
@@ -64,6 +59,46 @@ export class EmailTemplateEngine {
         } catch (error) {
             console.error('Erreur lors du rendu du template:', error);
             throw new Error(`Impossible de rendre le template "${templateName}": ${(error as Error).message}`);
+        }
+    }
+
+    /**
+     * Charge un template depuis les modules (compatible Vercel)
+     * @param templateName Nom du template
+     * @returns Contenu du template
+     */
+    private async loadTemplate(templateName: string): Promise<string> {
+        // Vérifier le cache d'abord
+        if (this.templateCache.has(templateName)) {
+            return this.templateCache.get(templateName)!;
+        }
+
+        try {
+            // Essayer de charger le template comme un module
+            const templateModule = await this.importTemplate(templateName);
+            const content = templateModule.default;
+
+            // Mettre en cache
+            this.templateCache.set(templateName, content);
+            return content;
+        } catch (error) {
+            throw new Error(`Template "${templateName}" non trouvé. Templates disponibles: ${this.getAvailableTemplates().join(', ')}`);
+        }
+    }
+
+    /**
+     * Importe dynamiquement un template
+     * @param templateName Nom du template
+     * @returns Module du template
+     */
+    private async importTemplate(templateName: string): Promise<EmailTemplate> {
+        switch (templateName) {
+            case 'contact-form':
+                return await import('@/templates/emails/contact-form.js');
+            case 'contact-form-simple':
+                return await import('@/templates/emails/contact-form-simple.js');
+            default:
+                throw new Error(`Template "${templateName}" non supporté`);
         }
     }
 
@@ -106,18 +141,10 @@ export class EmailTemplateEngine {
      * @returns Liste des noms de templates
      */
     getAvailableTemplates(): string[] {
-        try {
-            if (!fs.existsSync(this.templatesDir)) {
-                return [];
-            }
-
-            return fs.readdirSync(this.templatesDir)
-                .filter(file => file.endsWith('.html'))
-                .map(file => file.replace('.html', ''));
-        } catch (error) {
-            console.error('Erreur lors de la lecture des templates:', error);
-            return [];
-        }
+        return [
+            'contact-form',
+            'contact-form-simple'
+        ];
     }
 
     /**
@@ -126,12 +153,9 @@ export class EmailTemplateEngine {
      * @returns true si le template existe
      */
     templateExists(templateName: string): boolean {
-        const templatePath = path.join(this.templatesDir, `${templateName}.html`);
-        return fs.existsSync(templatePath);
+        return this.getAvailableTemplates().includes(templateName);
     }
-}
-
-/**
+}/**
  * Instance singleton du moteur de template
  */
 export const emailTemplateEngine = new EmailTemplateEngine();
