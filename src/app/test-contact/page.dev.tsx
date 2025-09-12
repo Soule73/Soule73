@@ -26,7 +26,7 @@ export default function TestContactPage() {
 
     const [isLoading, setIsLoading] = useState(false);
     const [response, setResponse] = useState<ApiResponse | null>(null);
-    const [showEmailPreview, setShowEmailPreview] = useState(false);
+    // const [showEmailPreview, setShowEmailPreview] = useState(false);
 
     // Données de test pré-remplies
     const fillTestData = () => {
@@ -108,8 +108,8 @@ Jean Dupont`
                         🧪 Test du Formulaire de Contact
                     </h1>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        Cette page permet de tester l'API de contact et de prévisualiser les templates d'email
-                        en temps réel sans avoir besoin d'envoyer de vrais emails.
+                        Cette page permet de tester l&apos;API de contact et de prévisualiser les templates d&apos;email
+                        en temps réel sans avoir besoin d&apos;envoyer de vrais emails.
                     </p>
                 </div>
 
@@ -242,7 +242,7 @@ Jean Dupont`
                         {!response && (
                             <div className="text-center py-12 text-gray-500">
                                 <div className="text-6xl mb-4">🎯</div>
-                                <p>Remplissez le formulaire et cliquez sur "Tester l'envoi" pour voir le résultat.</p>
+                                <p>Remplissez le formulaire et cliquez sur &quot;Tester l&apos;envoi&quot; pour voir le résultat.</p>
                             </div>
                         )}
 
@@ -250,8 +250,8 @@ Jean Dupont`
                             <div className="space-y-4">
                                 {/* Status */}
                                 <div className={`p-4 rounded-md ${response.success
-                                        ? 'bg-green-50 border border-green-200'
-                                        : 'bg-red-50 border border-red-200'
+                                    ? 'bg-green-50 border border-green-200'
+                                    : 'bg-red-50 border border-red-200'
                                     }`}>
                                     <div className="flex items-center">
                                         <div className={`text-2xl mr-3 ${response.success ? 'text-green-600' : 'text-red-600'
@@ -275,7 +275,7 @@ Jean Dupont`
                                 {response.details && response.details.length > 0 && (
                                     <div className="bg-yellow-50 border border-yellow-200 rounded-md p-4">
                                         <h4 className="font-medium text-yellow-800 mb-2">
-                                            📋 Détails de l'erreur :
+                                            📋 Détails de l&apos;erreur :
                                         </h4>
                                         <ul className="text-sm text-yellow-700 space-y-1">
                                             {response.details.map((detail, index) => (
