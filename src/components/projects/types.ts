@@ -17,6 +17,14 @@ export interface ProjectDetails {
     responsibilities?: string[]
 }
 
+export interface ProjectUrl {
+    name: string
+    url: string
+    icon: ReactElement
+    type: 'primary' | 'secondary' | 'store'
+    className?: string
+}
+
 export interface Project {
     id: number
     title: string
@@ -24,15 +32,18 @@ export interface Project {
     image: StaticImageData,
     technologies: string[]
     category: string
-    demoUrl: string
-    playStoreUrl?: string
-    playStoreDriverUrl?: string
-    githubUrl: string
+    urls: ProjectUrl[]
     featured: boolean
     color: string
     status: string
     credentials?: ProjectCredentials
     details?: ProjectDetails
+
+    // Deprecated - kept for backward compatibility
+    demoUrl?: string
+    playStoreUrl?: string
+    playStoreDriverUrl?: string
+    githubUrl?: string
 }
 
 export interface Category {

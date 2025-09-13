@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import type { Project } from './types'
-import { githubIcon, playStoreIcon } from '../svg'
 
 interface FeaturedProjectProps {
     project: Project
@@ -73,38 +72,103 @@ const FeaturedProject = ({ project, className }: FeaturedProjectProps) => {
 
                 {/* Actions */}
                 <div className="space-y-3">
-                    {/* Ligne principale avec démo et GitHub */}
-                    <div className="flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-4 md:space-y-0">
-                        <a
-                            href={project.demoUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex-1 w-full group relative glass dark:glass-dark rounded-2xl px-6 py-3 font-bold overflow-hidden hover-lift transition-all duration-300"
-                        >
-                            <div className="relative z-10 flex items-center justify-center space-x-2 text-gray-700 dark:text-gray-200 group-hover:text-white">
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
-                                <span>Voir</span>
+                    {/* URLs principales et secondaires */}
+                    {project.urls && project.urls.length > 0 && (
+                        <div className="space-y-3">
+                            {/* URLs principales et secondaires */}
+                            <div className="flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-4 md:space-y-0">
+                                {project.urls
+                                    .filter(url => url.type === 'primary' || url.type === 'secondary')
+                                    .map((url, index) => (
+                                        <a
+                                            key={index}
+                                            href={url.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={`flex-1 w-full group relative ${url.type === 'primary'
+                                                    ? 'glass dark:glass-dark rounded-2xl px-6 py-3 font-bold overflow-hidden hover-lift transition-all duration-300'
+                                                    : 'flex items-center justify-center space-x-2 px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-bold rounded-2xl hover:border-indigo-500 hover:text-indigo-500 transition-all duration-300 hover-lift'
+                                                }`}
+                                        >
+                                            {url.type === 'primary' ? (
+                                                <>
+                                                    <div className="relative z-10 flex items-center justify-center space-x-2 text-gray-700 dark:text-gray-200 group-hover:text-white">
+                                                        {url.icon}
+                                                        <span>{url.name}</span>
+                                                    </div>
+                                                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    {url.icon}
+                                                    <span>{url.name}</span>
+                                                </>
+                                            )}
+                                        </a>
+                                    ))}
                             </div>
-                            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                        </a>
 
-                        {project.githubUrl !== '#' && (
-                            <a
-                                href={project.githubUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex-1 w-full flex items-center justify-center space-x-2 px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-bold rounded-2xl hover:border-indigo-500 hover:text-indigo-500 transition-all duration-300 hover-lift"
-                            >
-                                {githubIcon}
-                                <span>Code</span>
-                            </a>
-                        )}
-                    </div>
+                            {/* URLs de stores */}
+                            {project.urls.filter(url => url.type === 'store').length > 0 && (
+                                <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-x-4 md:space-y-0">
+                                    {project.urls
+                                        .filter(url => url.type === 'store')
+                                        .map((url, index) => (
+                                            <a
+                                                key={index}
+                                                href={url.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={`md:flex-1 w-full flex items-center justify-center space-x-2 px-4 py-2 text-white font-bold rounded-xl transition-all duration-300 hover-lift text-sm ${url.className || 'bg-green-600 hover:bg-green-700'
+                                                    }`}
+                                            >
+                                                {url.icon}
+                                                <span>{url.name}</span>
+                                            </a>
+                                        ))}
+                                </div>
+                            )}
+                        </div>
+                    )}
 
-                    {/* Ligne secondaire pour les liens Play Store */}
-                    {(project.playStoreUrl || project.playStoreDriverUrl) && (
+                    {/* Fallback pour l'ancienne structure (rétrocompatibilité) */}
+                    {(!project.urls || project.urls.length === 0) && (project.demoUrl || project.githubUrl) && (
+                        <div className="flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-4 md:space-y-0">
+                            {project.demoUrl && (
+                                <a
+                                    href={project.demoUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex-1 w-full group relative glass dark:glass-dark rounded-2xl px-6 py-3 font-bold overflow-hidden hover-lift transition-all duration-300"
+                                >
+                                    <div className="relative z-10 flex items-center justify-center space-x-2 text-gray-700 dark:text-gray-200 group-hover:text-white">
+                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                        <span>Voir</span>
+                                    </div>
+                                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                                </a>
+                            )}
+
+                            {project.githubUrl && project.githubUrl !== '#' && (
+                                <a
+                                    href={project.githubUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex-1 w-full flex items-center justify-center space-x-2 px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-bold rounded-2xl hover:border-indigo-500 hover:text-indigo-500 transition-all duration-300 hover-lift"
+                                >
+                                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                    </svg>
+                                    <span>Code</span>
+                                </a>
+                            )}
+                        </div>
+                    )}
+
+                    {/* Fallback pour les anciens liens Play Store */}
+                    {(!project.urls || project.urls.filter(url => url.type === 'store').length === 0) && (project.playStoreUrl || project.playStoreDriverUrl) && (
                         <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-x-4 md:space-y-0">
                             {project.playStoreUrl && (
                                 <a
@@ -113,7 +177,9 @@ const FeaturedProject = ({ project, className }: FeaturedProjectProps) => {
                                     rel="noopener noreferrer"
                                     className="md:flex-1 w-full flex items-center justify-center space-x-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-all duration-300 hover-lift text-sm"
                                 >
-                                    {playStoreIcon}
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                                    </svg>
                                     <span>App Client</span>
                                 </a>
                             )}
@@ -124,7 +190,9 @@ const FeaturedProject = ({ project, className }: FeaturedProjectProps) => {
                                     rel="noopener noreferrer"
                                     className="md:flex-1 w-full flex items-center justify-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all duration-300 hover-lift text-sm"
                                 >
-                                    {playStoreIcon}
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                                    </svg>
                                     <span>App Livreur</span>
                                 </a>
                             )}
