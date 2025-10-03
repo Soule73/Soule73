@@ -3,13 +3,14 @@
 import { useRef } from 'react'
 import usePDFExport from '@/hooks/usePDFExport'
 import profileImage from '@/assets/sds.jpg'
-import { cvData, cvLabels, skillCategories } from '@/data/cvData'
+import { cvData, cvLabels } from '@/data/cvData'
 import './CV.css'
 import {
     BriefcaseIcon,
     AcademicCapIcon,
     CodeBracketIcon,
-    LanguageIcon
+    LanguageIcon,
+    SparklesIcon
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -78,7 +79,16 @@ const CV = () => {
                                 </div>
                                 <div className="cv-header-info">
                                     <h1 className="cv-name">{cvData.personalInfo.name}</h1>
-                                    <h2 className="cv-title">{cvData.personalInfo.title}</h2>
+                                    <div className="cv-professional-info">
+
+                                        {cvData.personalInfo.searchingFor && (
+                                            <span className="cv-searching-for">{cvData.personalInfo.searchingFor.label}</span>
+                                        )}
+                                        <span className="cv-title">{cvData.personalInfo.title}</span>
+                                        {cvData.personalInfo.availableFrom && (
+                                            <span className="cv-available-from">({cvData.personalInfo.availableFrom})</span>
+                                        )}
+                                    </div>
                                     <div className="cv-contact-grid">
                                         {cvData.personalInfo.contact.map((contact, index) => (
                                             <div className="cv-contact-item" key={index}>
@@ -86,7 +96,15 @@ const CV = () => {
                                                 {contact.type === 'email' ? (
                                                     <a href={`mailto:${contact.value}`} rel='noopener noreferrer'>{contact.value}</a>
                                                 ) : contact.type === 'website' ? (
-                                                    <a href={contact.value} target="_blank" rel="noopener noreferrer">
+                                                    <a
+                                                        href={
+                                                            contact.value.startsWith('http://') || contact.value.startsWith('https://')
+                                                                ? contact.value
+                                                                : `https://${contact.value}`
+                                                        }
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                    >
                                                         {contact.value}
                                                     </a>
                                                 ) : (
@@ -143,12 +161,12 @@ const CV = () => {
                                         {cvLabels.sections.skills}
                                     </h2>
                                     <div className="cv-skills-compact">
-                                        {cvData.skills.map((category) => (
+                                        {cvData.skills.filter((category) => category.show).map((category) => (
                                             <div key={category.name} className="cv-skill-row">
                                                 <span className="cv-skill-label">{category.name}</span>
-                                                <span className="cv-skill-separator">: </span>
+                                                <span className="cv-skill-separator"> : </span>
                                                 <span className="cv-skill-list">
-                                                    {category.skillItems.map((skill) =>
+                                                    {category.skills.filter((skill) => skill.show).map((skill) =>
                                                         `${skill.name}`
                                                     ).join(', ')}
                                                 </span>
@@ -200,7 +218,7 @@ const CV = () => {
                                 {/* Qualités */}
                                 <section>
                                     <h2 className="cv-section-title">
-                                        <BriefcaseIcon className="cv-section-icon" />
+                                        <SparklesIcon className="cv-section-icon" />
                                         Qualités
                                     </h2>
                                     <div className="cv-qualities-list">

@@ -87,10 +87,37 @@ body {
 }
 
 .cv-title {
-    font-size: 1.25rem;
     font-weight: 300;
-    margin-bottom: 1rem;
+}
+
+.cv-professional-info {
+    font-size: 1.25rem;
     color: white;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.cv-available-from {
+    font-style: italic;
+}
+
+.cv-available-from::before,
+.cv-available-from::after {
+    content: ' ';
+    margin-left: 0.4rem;
+
+}
+
+.cv-searching-for {
+    font-weight: 700;
+}
+
+.cv-searching-for::after {
+    content: '-';
+    margin: 0 0.4rem;
+    font-size: 1rem;
 }
 
 .cv-contact-grid {
@@ -237,6 +264,8 @@ body {
 
 .cv-company {
     font-weight: 500;
+    font-size: 0.875rem;
+
 }
 
 .cv-location {
@@ -272,10 +301,7 @@ body {
 
 /* Compétences compactes pour économiser l'espace */
 .cv-skills-compact {
-    /* background-color: var(--bg-light);
-    border-radius: 0.5rem; */
     padding-bottom: 1rem;
-
 }
 
 .cv-skill-row {

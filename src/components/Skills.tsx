@@ -2,7 +2,8 @@ import Image from 'next/image'
 import {
     AcademicCapIcon
 } from '@heroicons/react/24/outline'
-import { additionalSkills, skillCategories } from './skills/skills'
+import { cvData } from '@/data/cvData'
+import { createElement } from 'react'
 
 const Skills = () => {
 
@@ -27,7 +28,7 @@ const Skills = () => {
 
                 {/* Catégories de compétences */}
                 <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-4 md:-8 lg:mb-12 md:px-4">
-                    {skillCategories.map((category, categoryIndex) => (
+                    {cvData.skills.filter((category) => category.show).map((category, categoryIndex) => (
                         <div
                             key={categoryIndex}
                             className={`glass dark:glass-dark rounded-3xl p-8 hover-lift 
@@ -41,11 +42,13 @@ const Skills = () => {
                                     <div className="relative w-16 h-16 glass dark:glass-dark rounded-2xl flex items-center justify-center 
                                    
                                     ">
-                                        {category.icon}
+                                        {category.icon
+                                            ? createElement(category.icon, { className: 'w-8 h-8 text-indigo-500' })
+                                            : <AcademicCapIcon className="w-8 h-8 text-indigo-500" />}
                                     </div>
                                 </div>
                                 <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">
-                                    {category.title}
+                                    {category.name}
                                 </h3>
                                 <p className="text-gray-600 dark:text-gray-400 text-sm">
                                     {category.description}
@@ -54,7 +57,7 @@ const Skills = () => {
 
                             {/* Liste des compétences */}
                             <div className="space-y-6">
-                                {category.skills.map((skill, skillIndex) => (
+                                {category.skills.filter((skill) => skill.show).map((skill, skillIndex) => (
                                     <div key={skillIndex} className="group">
                                         {/* Info compétence */}
                                         <div className="flex justify-between items-center mb-3">
@@ -122,14 +125,14 @@ const Skills = () => {
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-                        {additionalSkills.map((skill, index) => (
+                        {cvData.additionalSkills.filter((skill) => skill.show).map((skill, index) => (
                             <div
                                 key={index}
                                 className={`group glass dark:glass-dark rounded-2xl px-6 py-3 hover-lift  transition-all duration-300 cursor-pointer animate-fade-in-up delay-${index * 50}`}
                             >
                                 <div className="flex items-center space-x-3">
                                     <span className="text-indigo-500 group-hover:animate-bounce">
-                                        {skill.icon}
+                                        {createElement(skill.icon, { className: 'w-5 h-5' })}
                                     </span>
                                     <span className="font-semibold text-gray-700 dark:text-gray-200 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-500 group-hover:to-purple-600 transition-all duration-300">
                                         {skill.name}

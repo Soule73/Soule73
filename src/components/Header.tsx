@@ -11,11 +11,11 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
     const [scrolled, setScrolled] = useState(false)
 
     const menuItems = [
-        { name: 'Accueil', href: '#home' },
-        { name: 'À propos', href: '#about' },
-        { name: 'Compétences', href: '#skills' },
-        { name: 'Projets', href: '#projects' },
-        { name: 'Contact', href: '#contact' },
+        { name: 'Accueil', href: '/#home' },
+        { name: 'À propos', href: '/#about' },
+        { name: 'Compétences', href: '/#skills' },
+        { name: 'Projets', href: '/#projects' },
+        { name: 'Contact', href: '/#contact' },
         { name: 'CV', href: '/cv' },
     ]
 
@@ -28,10 +28,9 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
     }, [])
 
     return (
-        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-            ? 'glass dark:glass-dark shadow-lg py-2'
-            : 'bg-transparent py-4'
+        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-2 ${scrolled ? 'bg-white dark:bg-gray-900 ' : 'bg-transparent'
             }`}>
+
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="flex justify-end lg:justify-between items-center h-16">
 

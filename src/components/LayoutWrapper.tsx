@@ -1,9 +1,8 @@
 'use client'
 
-import { useState, useEffect, Suspense } from 'react'
+import { useState, useEffect } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-// import Analytics from '@/components/Analytics'
 
 interface LayoutWrapperProps {
     children: React.ReactNode
