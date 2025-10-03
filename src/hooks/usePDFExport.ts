@@ -55,7 +55,6 @@ export const usePDFExport = () => {
                   margin: 0 !important;
                   padding: 0 !important;
                   page-break-inside: avoid;
-                  overflow: hidden;
               }
 
               :root {
@@ -180,8 +179,8 @@ export const usePDFExport = () => {
                   font-size: 1.25rem;
                   font-weight: 700;
                   color: var(--text-dark);
-                  margin-bottom: 2rem;
-                  padding-bottom: 0.75rem;
+                  margin-bottom: 0.75rem;
+                  padding-bottom: 0.1rem;
                   border-bottom: 2px solid var(--primary-blue);
                   display: flex;
                   align-items: center;
@@ -196,22 +195,12 @@ export const usePDFExport = () => {
               }
 
               /* Section Profil */
-.cv-profile-section {
-    margin-bottom: 1rem;
-    padding: 1.5rem 1.5rem 0 1.5rem;
-    background-color: var(--bg-light);
-    border-radius: 0.5rem;
-    page-break-inside: avoid;
-}
-
-              .cv-profile-title {
-                  margin-bottom: 1.5rem;
-                  font-size: 1.25rem;
-                  font-weight: 700;
-                  color: var(--text-dark);
-                  border-bottom: 2px solid var(--primary-blue);
-                  padding-bottom: 0.75rem;
-              }
+                .cv-profile-section {
+                    margin-bottom: 1rem;
+                    padding: 0.5rem 1.5rem 0 1.5rem;
+                    border-radius: 0.5rem;
+                    page-break-inside: avoid;
+                }
 
               .cv-profile-text {
                   line-height: 1.6;
@@ -225,7 +214,7 @@ export const usePDFExport = () => {
               .cv-timeline {
                   display: flex;
                   flex-direction: column;
-                  gap: 2rem;
+                  gap: 0.5rem;
               }
 
               .cv-timeline-item {
@@ -235,11 +224,20 @@ export const usePDFExport = () => {
                   page-break-inside: avoid;
                   margin-bottom: 1.5rem;
               }
+            
+              .cv-timeline-item-last {
+                position: relative;
+                padding-left: 1.5rem;
+                border-left: 2px solid var(--border-color);
+                page-break-inside: avoid;
+                margin-bottom: 0;
+            }
 
-              .cv-timeline-item::before {
-                  content: '';
-                  position: absolute;
-                  width: 1rem;
+            .cv-timeline-item-last::before,
+            .cv-timeline-item::before {
+                content: '';
+                position: absolute;
+                width: 1rem;
                   height: 1rem;
                   background-color: var(--primary-blue);
                   border-radius: 50%;
@@ -252,7 +250,6 @@ export const usePDFExport = () => {
                   flex-direction: row;
                   justify-content: space-between;
                   align-items: flex-start;
-                  margin-bottom: 0.3rem;
               }
 
               .cv-job-title {
@@ -265,9 +262,7 @@ export const usePDFExport = () => {
               .cv-period {
                   font-size: 0.8rem;
                   color: var(--text-light);
-                  background-color: var(--bg-light);
                   padding: 0.25rem 0.75rem;
-                  border-radius: 9999px;
                   white-space: nowrap;
               }
 
@@ -288,10 +283,12 @@ export const usePDFExport = () => {
               }
 
               .cv-description-list {
-                  color: var(--text-medium);
-                  padding-left: 0;
-                  list-style: none;
-                  margin: 0;
+                font-size: 0.9rem;
+                line-height: 1.5;
+                color: var(--text-medium);
+                padding-left: 0;
+                list-style: none;
+                margin: 0;
               }
 
               .cv-description-list li {
@@ -301,10 +298,15 @@ export const usePDFExport = () => {
               }
 
               .cv-description-list li::before {
-                  content: '-';
-                  color: var(--primary-blue);
-                  margin-right: 0.5rem;
-                  flex-shrink: 0;
+                    content: '';
+                    width: 0.5rem;
+                    height: 0.2rem;
+                    margin-top: 0.25rem;
+                    background-color: var(--primary-blue);
+                    color: var(--primary-blue);
+                    margin-right: 0.5rem;
+                    margin-top: 0.6rem;
+                    flex-shrink: 0;
               }
 
               /* Compétences compactes pour économiser l'espace */
@@ -346,9 +348,10 @@ export const usePDFExport = () => {
 
               /* Sidebar */
               .cv-sidebar {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 2.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                margin-bottom: 1rem;
               }
 
               /* Formation */
@@ -375,6 +378,7 @@ export const usePDFExport = () => {
               .cv-school {
                   color: var(--primary-blue);
                   font-weight: 500;
+                  font-size: 0.7rem;
                   margin-bottom: 0.55rem;
               }
 
@@ -397,31 +401,28 @@ export const usePDFExport = () => {
                   margin: 0;
               }
 
-              /* Langues */
-              .cv-languages-list {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 1rem;
-              }
+                /* Langues */
+                .cv-languages-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.3rem;
+                }
 
-              .cv-language-item {
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-              }
+                .cv-language-item {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
 
-              .cv-language-name {
-                  font-weight: 500;
-                  color: var(--text-dark);
-              }
+                .cv-language-name {
+                    font-weight: 500;
+                    color: var(--text-dark);
+                }
 
-              .cv-language-level {
-                  font-size: 0.875rem;
-                  color: var(--text-light);
-                  background-color: var(--bg-light);
-                  padding: 0.25rem 0.5rem;
-                  border-radius: 0.25rem;
-              }
+                .cv-language-level {
+                    font-size: 0.875rem;
+                    color: var(--text-light);
+                }
 
               /* Print styles pour optimiser l'export PDF A4 */
               @media print {
@@ -472,6 +473,7 @@ export const usePDFExport = () => {
                       gap: 1rem !important;
                       margin: 0 !important;
                       padding: 0 !important;
+                      margin-bottom: 1rem !important;
                   }
 
                   .cv-section {
@@ -484,8 +486,8 @@ export const usePDFExport = () => {
 
                   .cv-section-title {
                       font-size: 1rem !important;
-                      margin-bottom: 1rem !important;
-                      padding-bottom: 0.5rem !important;
+                      margin-bottom: 0.75rem !important;
+                      padding-bottom: 0.1rem !important;
                       margin: 0 0 1rem 0 !important;
                       border-bottom: 1.5px solid var(--primary-blue) !important;
                   }

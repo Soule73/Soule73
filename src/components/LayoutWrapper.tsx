@@ -3,7 +3,7 @@
 import { useState, useEffect, Suspense } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import Analytics from '@/components/Analytics'
+// import Analytics from '@/components/Analytics'
 
 interface LayoutWrapperProps {
     children: React.ReactNode
@@ -32,9 +32,9 @@ const LayoutWrapper = ({ children }: LayoutWrapperProps) => {
                     {children}
                 </main>
                 <Footer />
-                <Suspense fallback={null}>
+                {/* <Suspense fallback={null}>
                     <Analytics />
-                </Suspense>
+                </Suspense> */}
             </div>
         </div>
     )

@@ -3,7 +3,7 @@
 import { useRef } from 'react'
 import usePDFExport from '@/hooks/usePDFExport'
 import profileImage from '@/assets/sds.jpg'
-import { cvData, cvLabels } from '@/data/cvData'
+import { cvData, cvLabels, skillCategories } from '@/data/cvData'
 import './CV.css'
 import {
     BriefcaseIcon,
@@ -94,55 +94,6 @@ const CV = () => {
                                                 )}
                                             </div>
                                         ))}
-                                        {/* <div className="cv-contact-item">
-                                        <span>Téléphone : </span>
-                                        <span>{cvData.personalInfo.contact.phone}</span>
-                                    </div>
-                                    <div className="cv-contact-item">
-                                        <span>Email : </span>
-                                        <a
-                                            href={`mailto:${cvData.personalInfo.contact.email}`}
-                                        >
-                                            {cvData.personalInfo.contact.email}
-                                        </a>
-                                    </div>
-                                    <div className="cv-contact-item">
-                                        <span>Adresse : </span>
-                                        <span>{cvData.personalInfo.contact.location}</span>
-                                    </div>
-                                    <div className="cv-contact-item">
-                                        <span>Portfolio : </span>
-                                        <a
-                                            href={cvData.personalInfo.contact.website}
-                                            target="_blank"
-                                            className='cv-contact-website'
-                                            rel="noopener noreferrer"
-                                        >
-                                            {cvData.personalInfo.contact.website}
-                                        </a>
-                                    </div>
-                                    <div className="cv-contact-item">
-                                        <span>LinkedIn :</span>
-                                        <a
-                                            href={cvData.personalInfo.contact.linkedin}
-                                            target="_blank"
-                                            className='cv-contact-website'
-                                            rel="noopener noreferrer"
-                                        >
-                                            {cvData.personalInfo.contact.linkedin}
-                                        </a>
-                                    </div>
-                                    <div className="cv-contact-item">
-                                        <span>GitHub :</span>
-                                        <a
-                                            href={cvData.personalInfo.contact.github}
-                                            target="_blank"
-                                            className='cv-contact-website'
-                                            rel="noopener noreferrer"
-                                        >
-                                            {cvData.personalInfo.contact.github}
-                                        </a>
-                                    </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -150,11 +101,9 @@ const CV = () => {
 
 
                         {/* Section Profil */}
-                        <div className=" cv-profile-section">
-                            <h2 className="cv-section-title cv-profile-title">Profil</h2>
-                            <div className="cv-section-content">
-                                <p className="cv-profile-text">{cvData.personalInfo.profile}</p>
-                            </div>
+                        <div className="cv-profile-section">
+                            <h2 className="cv-section-title">Profil</h2>
+                            <p className="cv-profile-text">{cvData.personalInfo.profile}</p>
                         </div>
                         {/* Content */}
                         <div className="cv-content">
@@ -166,8 +115,9 @@ const CV = () => {
                                         {cvLabels.sections.experience}
                                     </h2>
                                     <div className="cv-timeline">
-                                        {cvData.experience.map((exp, index) => (
-                                            <div key={index} className="cv-timeline-item">
+                                        {cvData.experience.map((exp, index) => {
+                                            const isLast = index === cvData.experience.length - 1
+                                            return (<div key={index} className={` ${isLast ? 'cv-timeline-item-last' : 'cv-timeline-item'}`}>
                                                 <div className="cv-timeline-header">
                                                     <h3 className="cv-job-title">{exp.jobTitle}</h3>
                                                     <span className="cv-period">{exp.period}</span>
@@ -181,8 +131,8 @@ const CV = () => {
                                                         <li key={i}>{desc}</li>
                                                     ))}
                                                 </ul>
-                                            </div>
-                                        ))}
+                                            </div>)
+                                        })}
                                     </div>
                                 </section>
 
@@ -193,61 +143,24 @@ const CV = () => {
                                         {cvLabels.sections.skills}
                                     </h2>
                                     <div className="cv-skills-compact">
-                                        <div className="cv-skill-row">
-                                            <span className="cv-skill-label">{cvLabels.skillCategories.frontend}</span>
-                                            <span className="cv-skill-list">
-                                                {cvData.skills.frontend.map((skill) =>
-                                                    `${skill.name}`
-                                                ).join(', ')}
-                                            </span>
-                                        </div>
-                                        <div className="cv-skill-row">
-                                            <span className="cv-skill-label">{cvLabels.skillCategories.backend}</span>
-                                            <span className="cv-skill-list">
-                                                {cvData.skills.backend.map((skill) =>
-                                                    `${skill.name}`
-                                                ).join(', ')}
-                                            </span>
-                                        </div>
-                                        <div className="cv-skill-row">
-                                            <span className="cv-skill-label">{cvLabels.skillCategories.databases}</span>
-                                            <span className="cv-skill-list">
-                                                {cvData.skills.databases.map((skill) =>
-                                                    `${skill.name}`
-                                                ).join(', ')}
-                                            </span>
-                                        </div>
-                                        <div className="cv-skill-row">
-                                            <span className="cv-skill-label">{cvLabels.skillCategories.devops}</span>
-                                            <span className="cv-skill-list">
-                                                {cvData.skills.devops.map((skill) =>
-                                                    `${skill.name}`
-                                                ).join(', ')}
-                                            </span>
-                                        </div>
-                                        <div className="cv-skill-row">
-                                            <span className="cv-skill-label">{cvLabels.skillCategories.mobile}</span>
-                                            <span className="cv-skill-list">
-                                                {cvData.skills.mobile.map((skill) =>
-                                                    `${skill.name}`
-                                                ).join(', ')}
-                                            </span>
-                                        </div>
-                                        <div className="cv-skill-row">
-                                            <span className="cv-skill-label">{cvLabels.skillCategories.cms}</span>
-                                            <span className="cv-skill-list">
-                                                {cvData.skills.cms.map((skill) =>
-                                                    `${skill.name}`
-                                                ).join(', ')}
-                                            </span>
-                                        </div>
+                                        {cvData.skills.map((category) => (
+                                            <div key={category.name} className="cv-skill-row">
+                                                <span className="cv-skill-label">{category.name}</span>
+                                                <span className="cv-skill-separator">: </span>
+                                                <span className="cv-skill-list">
+                                                    {category.skillItems.map((skill) =>
+                                                        `${skill.name}`
+                                                    ).join(', ')}
+                                                </span>
+                                            </div>
+                                        ))}
                                     </div>
                                 </section>
                             </div>
 
                             <div className="cv-sidebar">
                                 {/* Formation */}
-                                <section className="cv-section">
+                                <section>
                                     <h2 className="cv-section-title">
                                         <AcademicCapIcon className="cv-section-icon" />
                                         {cvLabels.sections.education}
@@ -270,7 +183,7 @@ const CV = () => {
                                 </section>
 
                                 {/* Langues */}
-                                <section className="cv-section">
+                                <section>
                                     <h2 className="cv-section-title">
                                         <LanguageIcon className="cv-section-icon" />
                                         {cvLabels.sections.languages}
@@ -282,6 +195,20 @@ const CV = () => {
                                                 <span className="cv-language-level">{lang.level}</span>
                                             </div>
                                         ))}
+                                    </div>
+                                </section>
+                                {/* Qualités */}
+                                <section>
+                                    <h2 className="cv-section-title">
+                                        <BriefcaseIcon className="cv-section-icon" />
+                                        Qualités
+                                    </h2>
+                                    <div className="cv-qualities-list">
+                                        <ul className="cv-description-list">
+                                            {cvData.qualities.map((quality, index) => (
+                                                <li key={index}>{quality}</li>
+                                            ))}
+                                        </ul>
                                     </div>
                                 </section>
                             </div>

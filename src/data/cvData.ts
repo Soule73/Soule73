@@ -2,9 +2,10 @@
 export interface CVData {
     personalInfo: PersonalInfo
     experience: Experience[]
-    skills: Skills
+    skills: SkillCategory[]
     education: Education[]
     languages: Language[]
+    qualities: string[]
 }
 
 type ContactType = {
@@ -69,6 +70,60 @@ export interface Language {
     name: string
     level: string
 }
+
+export const skillCategories: SkillCategory[] = [
+    {
+        name: "Frontend", skillItems: [
+            { name: "HTML", level: 95 },
+            { name: "CSS", level: 90 },
+            { name: "JavaScript", level: 88 },
+            { name: "TypeScript", level: 85 },
+            { name: "React", level: 90 },
+            { name: "Tailwind CSS", level: 92 }
+        ]
+    },
+    {
+        name: "Backend", skillItems: [
+            { name: "PHP", level: 88 },
+            { name: "Laravel", level: 85 },
+            { name: "Symfony", level: 80 },
+            { name: "Java", level: 82 },
+            { name: "Spring Boot", level: 85 },
+            { name: "Next.js", level: 85 },
+            { name: "Node.js", level: 88 },
+            { name: "Express", level: 85 }
+        ]
+    },
+    {
+        name: "Bases de données", skillItems: [
+            { name: "MySQL", level: 90 },
+            { name: "PostgreSQL", level: 85 },
+            { name: "MongoDB", level: 80 },
+            { name: "Elasticsearch", level: 75 }
+        ]
+    },
+    {
+        name: "DevOps & Outils", skillItems: [
+            { name: "Git", level: 95 },
+            { name: "GitHub", level: 90 },
+            { name: "GitLab", level: 85 },
+            { name: "Docker", level: 78 },
+            { name: "VS Code", level: 98 }
+        ]
+    },
+    {
+        name: "Mobile", skillItems: [
+            { name: "Flutter", level: 80 },
+            { name: "Dart", level: 78 }
+        ]
+    },
+    {
+        name: "CMS & Design", skillItems: [
+            { name: "WordPress", level: 85 },
+            { name: "Elementor", level: 80 }
+        ]
+    }
+];
 
 // Données du CV
 export const cvData: CVData = {
@@ -148,49 +203,7 @@ export const cvData: CVData = {
             ]
         }
     ],
-
-    skills: {
-        frontend: [
-            { name: "HTML", level: 95 },
-            { name: "CSS", level: 90 },
-            { name: "JavaScript", level: 88 },
-            { name: "TypeScript", level: 85 },
-            { name: "React", level: 90 },
-            { name: "Tailwind CSS", level: 92 }
-        ],
-        backend: [
-            { name: "PHP", level: 88 },
-            { name: "Laravel", level: 85 },
-            { name: "Symfony", level: 80 },
-            { name: "Java", level: 82 },
-            { name: "Spring Boot", level: 85 },
-            { name: "Next.js", level: 85 },
-            { name: "Node.js", level: 88 },
-            { name: "Express", level: 85 }
-        ],
-        databases: [
-            { name: "MySQL", level: 90 },
-            { name: "PostgreSQL", level: 85 },
-            { name: "MongoDB", level: 80 },
-            { name: "Elasticsearch", level: 75 }
-        ],
-        devops: [
-            { name: "Git", level: 95 },
-            { name: "GitHub", level: 90 },
-            { name: "GitLab", level: 85 },
-            { name: "Docker", level: 78 },
-            { name: "VS Code", level: 98 }
-        ],
-        mobile: [
-            { name: "Flutter", level: 80 },
-            { name: "Dart", level: 78 }
-        ],
-        cms: [
-            { name: "WordPress", level: 85 },
-            { name: "Elementor", level: 80 }
-        ]
-    },
-
+    skills: skillCategories,
     education: [
         {
             degree: "Master, Expert IT, Développement & Big Data",
@@ -211,6 +224,12 @@ export const cvData: CVData = {
     languages: [
         { name: "Français", level: "Courant" },
         { name: "Anglais", level: "Niveau professionnel" },
+    ],
+    qualities: [
+        "Travail en équipe",
+        "Résolution de problèmes",
+        "Adaptabilité",
+        "Communication"
     ]
 }
 
@@ -225,21 +244,5 @@ export const cvLabels = {
     buttons: {
         exportPDF: "Télécharger le CV (PDF)",
     },
-    skillCategories: {
-        frontend: "Frontend",
-        backend: "Backend",
-        databases: "Bases de données",
-        devops: "DevOps & Outils",
-        mobile: "Mobile",
-        cms: "CMS & Design"
-    }
 }
 
-export const skillCategories: SkillCategory[] = [
-    { name: "Frontend", skillItems: cvData.skills.frontend },
-    { name: "Backend", skillItems: cvData.skills.backend },
-    { name: "Bases de données", skillItems: cvData.skills.databases },
-    { name: "DevOps & Outils", skillItems: cvData.skills.devops },
-    { name: "Mobile", skillItems: cvData.skills.mobile },
-    { name: "CMS & Design", skillItems: cvData.skills.cms }
-];
