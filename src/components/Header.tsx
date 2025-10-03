@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 interface HeaderProps {
     isDark: boolean
@@ -15,6 +16,7 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
         { name: 'Compétences', href: '#skills' },
         { name: 'Projets', href: '#projects' },
         { name: 'Contact', href: '#contact' },
+        { name: 'CV', href: '/cv' },
     ]
 
     useEffect(() => {
@@ -35,18 +37,37 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
 
                     {/* Navigation Desktop */}
                     <div className="hidden lg:flex items-center space-x-1">
-                        {menuItems.map((item, index) => (
-                            <a
-                                key={item.name}
-                                href={item.href}
-                                className={`group relative px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 hover-lift animate-fade-in-up delay-${index * 100}`}
-                            >
-                                <div className="relative z-10 flex items-center space-x-2 text-gray-700 dark:text-gray-200 group-hover:text-white">
-                                    <span>{item.name}</span>
-                                </div>
-                                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </a>
-                        ))}
+                        {menuItems.map((item, index) => {
+                            if (item.href.startsWith('/')) {
+                                // Lien Next.js pour les pages
+                                return (
+                                    <Link
+                                        key={item.name}
+                                        href={item.href}
+                                        className={`group relative px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 hover-lift animate-fade-in-up delay-${index * 100}`}
+                                    >
+                                        <div className="relative z-10 flex items-center space-x-2 text-gray-700 dark:text-gray-200 group-hover:text-white">
+                                            <span>{item.name}</span>
+                                        </div>
+                                        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    </Link>
+                                )
+                            } else {
+                                // Lien d'ancrage pour les sections
+                                return (
+                                    <a
+                                        key={item.name}
+                                        href={item.href}
+                                        className={`group relative px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 hover-lift animate-fade-in-up delay-${index * 100}`}
+                                    >
+                                        <div className="relative z-10 flex items-center space-x-2 text-gray-700 dark:text-gray-200 group-hover:text-white">
+                                            <span>{item.name}</span>
+                                        </div>
+                                        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    </a>
+                                )
+                            }
+                        })}
                     </div>
 
                     {/* Actions */}
@@ -107,16 +128,33 @@ const MobileMenu = ({ isOpen, setIsMenuOpen, menuItems }: {
             : 'max-h-0 opacity-0 py-0'
             } overflow-hidden`}>
             <div className="bg-white dark:bg-gray-800 rounded-2xl mx-4 p-4 space-y-2">
-                {menuItems.map((item, index) => (
-                    <a
-                        key={item.name}
-                        href={item.href}
-                        onClick={() => setIsMenuOpen(false)}
-                        className={`flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-700 dark:text-gray-200 hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300 animate-slide-in-left delay-${index * 100}`}
-                    >
-                        <span className="font-medium">{item.name}</span>
-                    </a>
-                ))}
+                {menuItems.map((item, index) => {
+                    if (item.href.startsWith('/')) {
+                        // Lien Next.js pour les pages
+                        return (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                onClick={() => setIsMenuOpen(false)}
+                                className={`flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-700 dark:text-gray-200 hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300 animate-slide-in-left delay-${index * 100}`}
+                            >
+                                <span className="font-medium">{item.name}</span>
+                            </Link>
+                        )
+                    } else {
+                        // Lien d'ancrage pour les sections
+                        return (
+                            <a
+                                key={item.name}
+                                href={item.href}
+                                onClick={() => setIsMenuOpen(false)}
+                                className={`flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-700 dark:text-gray-200 hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-300 animate-slide-in-left delay-${index * 100}`}
+                            >
+                                <span className="font-medium">{item.name}</span>
+                            </a>
+                        )
+                    }
+                })}
             </div>
         </div>)
 }
