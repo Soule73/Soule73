@@ -52,7 +52,7 @@ export default async function Image() {
                     fontSize: 20,
                     opacity: 0.8
                 }}>
-                    <div>3+ ans d'expérience</div>
+                    <div>3+ ans d&apos;expérience</div>
                     <div>TypeScript & Node.js, PHP (Laravel/Symfony)</div>
                     <div>React & Next.js, Java (Spring Boot)</div>
                 </div>

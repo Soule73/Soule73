@@ -5,7 +5,7 @@ import {
     CodeBracketIcon
 } from '@heroicons/react/24/outline'
 import type { Project, Category } from './types'
-import { githubIcon, playStoreIcon, webIcon, mobileIcon, desktopIcon, appleIcon } from '../svg'
+import { githubIcon, playStoreIcon, webIcon } from '../svg'
 
 import dataviseImage from '../../assets/images/datavise-preview.jpeg'
 import hudhudImage from '../../assets/images/hudhud-preview.png'

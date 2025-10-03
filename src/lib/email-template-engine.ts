@@ -81,7 +81,7 @@ export class EmailTemplateEngine {
             // Mettre en cache
             this.templateCache.set(templateName, content);
             return content;
-        } catch (error) {
+        } catch {
             throw new Error(`Template "${templateName}" non trouvé. Templates disponibles: ${this.getAvailableTemplates().join(', ')}`);
         }
     }

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Analytics from '@/components/Analytics'
@@ -32,7 +32,9 @@ const LayoutWrapper = ({ children }: LayoutWrapperProps) => {
                     {children}
                 </main>
                 <Footer />
-                <Analytics />
+                <Suspense fallback={null}>
+                    <Analytics />
+                </Suspense>
             </div>
         </div>
     )

@@ -5,7 +5,7 @@ import { usePathname, useSearchParams } from 'next/navigation'
 
 declare global {
     interface Window {
-        gtag: (...args: any[]) => void
+        gtag: (...args: unknown[]) => void
     }
 }
 
@@ -56,13 +56,13 @@ export default function Analytics() {
         }
 
         // Track navigation events
-        const handleNavigation = (section: string) => {
-            event({
-                action: 'navigate',
-                category: 'Navigation',
-                label: section,
-            })
-        }
+        // const handleNavigation = (section: string) => {
+        //     event({
+        //         action: 'navigate',
+        //         category: 'Navigation',
+        //         label: section,
+        //     })
+        // }
 
         // Add global event listeners
         window.addEventListener('cv_download', handleCVDownload)
