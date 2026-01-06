@@ -35,14 +35,14 @@ Passionate, creative, and results-oriented Full Stack Developer. I love transfor
 - ✅ Continuous improvement of test coverage and code quality
 - ✅ Collaboration with Front-End team and code reviews
 
-### 📱 Mobile Developer & API @ HudHud Shipping (Freelance)
+### 📱 Mobile Developer & API @ [HudHud Shipping (Freelance)](https://play.google.com/store/apps/details?id=com.hudhud.customer)
 **March 2025 - August 2025 | Remote**
 - Complete development of **two Flutter mobile applications** (client and delivery)
 - Creation of a **REST API with Spring Boot** for delivery management
 - Development of an administration web application with **React**
 - Publication on **Google Play Store** and **App Store** with cloud deployment
 
-### 🌐 Web Developer & Administrator @ APSJ.org
+### 🌐 Web Developer & Administrator @ [APSJ.org](https://apsj.org/)
 **August 2024 - Nov 2025 | Remote**
 - Complete development of association website with **WordPress** and Elementor
 - Configuration and optimization of **MySQL** database
@@ -77,12 +77,8 @@ Passionate, creative, and results-oriented Full Stack Developer. I love transfor
 ### ⚛️ Frameworks & Libraries
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
-![Symfony](https://img.shields.io/badge/Symfony-000000?style=for-the-badge&logo=symfony&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
-![Twig](https://img.shields.io/badge/Twig-0094BC?style=for-the-badge&logo=twig&logoColor=white)
 
 ### 🗄️ Databases
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
@@ -94,52 +90,11 @@ Passionate, creative, and results-oriented Full Stack Developer. I love transfor
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![GitLab CI](https://img.shields.io/badge/GitLab%20CI-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white)
 
 ### 📱 Mobile
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-
----
-
-<details> 
-  <summary><h2>📊 Stats and Activity</h2></summary>
-
-  <h3>🔥 Streak Stats</h3>
-
-  <!-- GitHub Readme Streak Stats - https://github.com/Soule73/github-readme-streak-stats -->
-  <p>
-    <a href="#">
-      <!-- Use https://streak-stats.demolab.com or self-host with your own Vercel app - visit https://git.io/streak-stats for instructions -->
-      <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Soule73's streak" 
-        src="https://github-readme-streak-stats-eight.vercel.app/?user=Soule73&theme=codeSTACKr&hide_border=true&short_numbers=true"/>
-    </a>
-    
-   <!-- <p>🔥 Get streak stats for your profile at <a href="https://git.io/streak-stats">git.io/streak-stats</a></p>-->
-  </p>
-  <p>
-    <a href="#">
-      <img src="https://github-profile-trophy.vercel.app/?username=Soule73&column=4&margin-w=15&margin-h=15&no-frame=true&theme=onedark&title=-Stars,-Followers,-Issues,-PullRequest,-Reviews" />
-    </a>
-  </p>
-
-  <h3>💻 GitHub Profile Stats</h3>
-
-  <!-- https://github.com/anuraghazra/github-readme-stats -->
-
-  <a href="#">
-  <img alt="Soule73's Github Stats" 
-                src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=Soule73&show_icons=true&include_all_commits=true&count_private=true&theme=codeSTACKr&hide_border=true" height="192px"/>
-  </a>
-  <a href="#">
-    <img alt="Soule73's Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=Soule73&langs_count=8&layout=compact&theme=codeSTACKr&hide_border=true&hide=Jupyter%20Notebook,Roff" height="192px"/>
-  </a>
-  <br/>
-
-  <b>Note:</b> Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
-
-  <a href="https://github.com/ashutosh00710/github-readme-activity-graph"><img alt="Soule73's Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph/?username=Soule73&bg_color=1F222E&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true" /></a>
-
-  </details>
 
 ---
 
@@ -161,7 +116,7 @@ Passionate, creative, and results-oriented Full Stack Developer. I love transfor
 Testing & Quality: Jest, Vitest, Playwright, React Testing Library, E2E Testing, Test Coverage
 CI/CD: GitLab CI, GitHub Actions, Pipeline automation
 Front-End: React, TypeScript, Tailwind CSS, Responsive Design
-Back-End: PHP (Laravel, Symfony), Node.js
+Back-End: PHP (Laravel), Node.js
 Databases: MySQL, MongoDB
 Mobile: Flutter, Dart
 Soft Skills: Teamwork, Rigor, Adaptability, Communication
@@ -173,9 +128,9 @@ Soft Skills: Teamwork, Rigor, Adaptability, Communication
 
 - 🌐 **Portfolio**: [soulesoumare.dev](https://soulesoumare.dev)
 - 💼 **LinkedIn**: [soulé-soumaré](https://fr.linkedin.com/in/soulé-soumaré)
-- 📧 **Email**: sourtoumo@gmail.com
+- 📧 **Email**: [sourtoumo@gmail.com](mailto:sourtoumo@gmail.co)
 - 🐙 **GitHub**: [@Soule73](https://github.com/Soule73)
-- 📱 **Phone**: +33 7 75 77 92 34
+- 📱 **Phone**: [+33 7 75 77 92 34](tel:+33775779234)
 - 📍 **Location**: Paris, France
 
 ---
@@ -187,8 +142,6 @@ Soft Skills: Teamwork, Rigor, Adaptability, Communication
 - 🎯 My goal: become an expert in **software quality** and **front-end architecture**
 - 💬 Let's talk about **React**, **TypeScript**, **Testing** (Jest/Vitest), **CI/CD**
 - ⚡ Fun fact: I published two Flutter apps on stores in less than 6 months
-
----
 
 <div align="center">
 
