@@ -1,90 +1,105 @@
+<div align="center">
 
-<p align="center">
-  <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=0B39F3&width=435&lines=Full+Stack+Developer;Master's+degree+in+IT%2C+Development%2C;+and+Big+Data+at+IRIS;Always+learning+new+things" alt="Typing SVG" /></a>
-</p>
+# 👋 Hi there, I'm Soulé Soumaré
 
-## Hi there 👋
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=0B39F3&center=true&vCenter=true&width=600&lines=Full+Stack+Developer;Front-End+Intern+%40+Opensee;Master+Expert+IT+%40+IRIS+Paris;Passionate+about+Software+Quality)](https://git.io/typing-svg)
 
-I'm **Soulé Soumaré**, a passionate and dedicated web developer currently pursuing a Master's degree in IT, Development, and Big Data at IRIS, Paris. I'm actively seeking an apprenticeship starting in September 2025 to apply my web development skills and contribute to innovative projects.
+### 🚀 Full Stack Developer | 🎓 Master Expert IT | 🧪 Passionate about Testing & Quality
 
-<!--### 🛠️ Skills & Technologies
+</div>
 
-- **Languages:** PHP, Java,SQL, JavaScript, TypeScript, HTML, CSS
-- **Frameworks/Technologies:** Laravel, Jakarta EE, NextJS, React, WordPress, Node.js
-- **Databases:** MySQL, MongoDB
-- **Tools:** Docker, GitHub, Git, GitLab
-- **Others:** REST APIs, Unit Testing
--->
+---
 
-<details> 
+## 📍 About Me
 
-  <summary><h2>🛠️ My Favorite Tools</h2></summary>
-  <!-- Some badges are from https://github.com/Ileriayo/markdown-badges -->
+Passionate, creative, and results-oriented Full Stack Developer. I love transforming ideas into high-performing digital solutions, from web to mobile. Curious and autonomous, I have successfully delivered several innovative projects, combining technical expertise and product sense.
 
-  <h3>👨‍💻 Programming and Markup Languages</h3>
+🔹 **Current Position**: Front-End Developer Intern @ **Opensee** (Nov 2025 - June 2026)  
+🔹 **Education**: Master Expert IT, Development & Big Data @ **IRIS Paris**  
+🔹 **Focus**: Automated Testing (Jest, Playwright), React/TypeScript, CI/CD  
+🔹 **Location**: Paris, France 🇫🇷
 
-  <p>
-      <a href="https://github.com/search?q=user%3ASoule73+language%3Aphp"><img alt="PHP" src="https://img.shields.io/badge/PHP-777BB4.svg?logo=php&logoColor=white&style=plastic"></a>
-      <a href="https://github.com/search?q=user%3ASoule73+language%3Ajava"><img alt="Java" src="https://custom-icon-badges.demolab.com/badge/Java-007396.svg?logo=java&logoColor=white&style=plastic"></a>
-      <a href="https://github.com/search?q=user%3ADenverCoder1+language%3Akotlin"><img alt="Kotlin" src="https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white&style=plastic"></a>
-      <a href="https://github.com/search?q=user%3ADenverCoder1+language%3Adart"><img alt="Dart" src="https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white&style=plastic"></a>
-      <a href="https://github.com/search?q=user%3ASoule73+language%3Asql"><img alt="SQL" src="https://custom-icon-badges.demolab.com/badge/SQL-025E8C.svg?logo=database&logoColor=white&style=plastic"></a>
-      <a href="https://github.com/search?q=user%3ASoule73+language%3Apython"><img alt="Python" src="https://img.shields.io/badge/Python-14354C.svg?logo=python&logoColor=white&style=plastic"></a>
-      <a href="https://github.com/search?q=user%3ASoule73+language%3Ajavascript"><img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=javascript&logoColor=black"></a>
-      <a href="https://github.com/search?q=user%3ASoule73+language%3AtypeScript"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC.svg?logo=typescript&logoColor=white&style=plastic"></a>
-      <a href="https://github.com/search?q=user%3ASoule73+language%3Ahtml"><img alt="HTML" src="https://img.shields.io/badge/HTML-E34F26.svg?logo=html5&logoColor=white&style=plastic"></a>
-      <a href="https://github.com/search?q=user%3ASoule73+language%3Acss"><img alt="CSS" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white&style=plastic"></a>
-      <a href="https://github.com/search?q=user%3ADenverCoder1+language%3Amarkdown"><img alt="Markdown" src="https://img.shields.io/badge/Markdown-000000.svg?logo=markdown&logoColor=white&style=plastic"></a>
-  </p>
+[![Portfolio](https://img.shields.io/badge/Portfolio-0B39F3?style=for-the-badge&logo=google-chrome&logoColor=white)](https://soulesoumare.dev)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://fr.linkedin.com/in/soulé-soumaré)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sourtoumo@gmail.com)
 
-  <h3>🧰 📚 Frameworks, Platforms and Libraries</h3>
+---
 
-  <p>
-      <a href="#"><img alt="Laravel" src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Livewire" src="https://img.shields.io/badge/livewire-%234e56a6.svg?style=for-the-badge&logo=livewire&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Filament" src="https://img.shields.io/badge/Filament-FFAA00?style=for-the-badge&logoColor=%23000000&style=plastic"></a>
-      <a href="#"><img alt="Node.js" src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Express.js" src="https://img.shields.io/badge/Express.js-404d59.svg?logo=express&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="React" src="https://img.shields.io/badge/React-20232a.svg?logo=react&logoColor=%2361DAFB"></a>
-      <a href="#"><img alt="Next JS" src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Alpine.js" src="https://img.shields.io/badge/alpinejs-white.svg?style=for-the-badge&logo=alpinedotjs&logoColor=%238BC0D0&style=plastic"></a>
-      <a href="#"><img alt="Tailwind CSS" src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Flutter" src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Wordpress" src="https://img.shields.io/badge/Wordpress-21759B?logo=wordpress&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Apache Hadoop" src="https://img.shields.io/badge/Apache%20Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black&style=plastic"></a>
-      <a href="#"><img alt="JUnit" src="https://custom-icon-badges.demolab.com/badge/JUnit-25A162.svg?logo=check-circle&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Material Design" src="https://img.shields.io/badge/Material%20Design-0081CB.svg?logo=material-design&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="PHPUnit" src="https://custom-icon-badges.demolab.com/badge/PHPUnit-366488.svg?logo=test-tube&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Vite" src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white&style=plastic"></a>
-  </p>
+## 💼 Professional Experience
 
-  <h3>🗄️ Databases and Cloud Hosting</h3>
+### 🔵 Front-End Developer Intern @ [Opensee](https://opensee.io)
+**Nov 2025 - June 2026 | Paris, France**
+- ✅ Writing unit tests with **Jest** & **Vitest** for React components
+- ✅ Developing E2E tests with **Playwright** for user journeys
+- ✅ Monitoring and maintaining tests in **GitLab CI/CD** pipeline
+- ✅ Continuous improvement of test coverage and code quality
+- ✅ Collaboration with Front-End team and code reviews
 
-  <p>
-      <a href="#"><img alt="MySQL" src="https://img.shields.io/badge/MySQL-00f.svg?logo=mysql&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="MongoDB" src ="https://img.shields.io/badge/MongoDB-4ea94b.svg?logo=mongodb&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Firebase" src ="https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34&style=plastic"></a>
-      <a href="#"><img alt="Vercel" src="https://img.shields.io/badge/Vercel-000000.svg?logo=vercel&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Render" src="https://img.shields.io/badge/Render-00979D.svg?logo=render&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="GitHub Pages" src="https://img.shields.io/badge/GitHub%20Pages-327FC7.svg?logo=github&logoColor=white&style=plastic"></a>
-      
-  </p>
+### 📱 Mobile Developer & API @ HudHud Shipping (Freelance)
+**March 2025 - August 2025 | Remote**
+- Complete development of **two Flutter mobile applications** (client and delivery)
+- Creation of a **REST API with Spring Boot** for delivery management
+- Development of an administration web application with **React**
+- Publication on **Google Play Store** and **App Store** with cloud deployment
 
-  <h3>💻 Software and Tools</h3>
+### 🌐 Web Developer & Administrator @ APSJ.org
+**August 2024 - Nov 2025 | Remote**
+- Complete development of association website with **WordPress** and Elementor
+- Configuration and optimization of **MySQL** database
+- Deployment and management on Hostinger with **SEO** optimization
+- Continuous site administration and maintenance
 
-  <p>
-      <a href="#"><img alt="Docker" src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?logo=visual-studio-code&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="IntelliJ IDEA" src="https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Git" src="https://img.shields.io/badge/Git-F05033.svg?logo=git&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="GitLab" src="https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Android" src="https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white&style=plastic"></a>
-      <a href="#"><img alt="Android Studio" src="https://img.shields.io/badge/Android%20Studio-008678.svg?logo=android-studio&logoColor=white&style=plastic"></a>
-  </p>
+### 💡 Full Stack Developer @ Data Vise SaaS (Academic Project)
+**2024**
+- Development of a modern data visualization platform
+- **React/TypeScript** interface with responsive drag & drop dashboard
+- **Node.js/Express** backend with **Elasticsearch** integration
+- Robust authentication and role management system
 
-</details>
+---
+
+## 🛠️ Tech Stack
+
+### 🧪 Testing & Quality (Current Focus)
+![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
+![Testing Library](https://img.shields.io/badge/Testing%20Library-E33332?style=for-the-badge&logo=testing-library&logoColor=white)
+![GitLab CI](https://img.shields.io/badge/GitLab%20CI-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white)
+
+### 💻 Languages
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+### ⚛️ Frameworks & Libraries
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![Symfony](https://img.shields.io/badge/Symfony-000000?style=for-the-badge&logo=symfony&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+![Twig](https://img.shields.io/badge/Twig-0094BC?style=for-the-badge&logo=twig&logoColor=white)
+
+### 🗄️ Databases
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+
+### 🛠️ Tools & DevOps
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitLab](https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+
+### 📱 Mobile
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+
+---
 
 <details> 
   <summary><h2>📊 Stats and Activity</h2></summary>
@@ -125,59 +140,62 @@ I'm **Soulé Soumaré**, a passionate and dedicated web developer currently purs
   <a href="https://github.com/ashutosh00710/github-readme-activity-graph"><img alt="Soule73's Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph/?username=Soule73&bg_color=1F222E&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true" /></a>
 
   </details>
-<!--
- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-https://github.com/abhisheknaiidu/awesome-github-profile-readme?tab=readme-ov-file#tools
--->
 
-### 📚 Education
+---
 
-- **Master's Degree (2024-2026):** Expert IT, Development and Big Data at IRIS, Paris
-- **Bachelor's Degree (2021-2024):** Networks and Telecommunications at Institut Universitaire Professionnel, Nouakchott, Mauritanie
+## 🎓 Education
 
-### 💼 Professional Experience
+**Master Expert IT, Development & Big Data**  
+📍 IRIS Paris | 2024 - 2026 (ongoing)  
+*Specialization in full-stack web development, software architecture and database management*
 
-- **Developer and Site Manager at APSJ.org (Present)**
-  - Managed and maintained the WordPress site.
-  - Optimized SEO and resolved technical issues.
-  - Implemented new features via plugins.
+**Bachelor's Degree in Networks & Telecommunications**  
+📍 Institut Universitaire Professionnel (IUP), Mauritania | 2021 - 2024  
+*Training in computer networks, communication protocols and system administration*
 
-- **Mobile Developer at Novavision (07/24 - 09/24)**
-  - Developed three mobile applications (client, delivery, restaurant) using Flutter and Firebase for a restaurant ordering and delivery system.
+---
 
-- **Final Year Internship at MTNIMA (02/24 - 06/24)**
-  - Designed and developed a medical appointment management system, including a mobile app in Flutter and a web app with Laravel.
+## 🚀 Key Skills
 
-### 🌱 Currently Learning
+```yaml
+Testing & Quality: Jest, Vitest, Playwright, React Testing Library, E2E Testing, Test Coverage
+CI/CD: GitLab CI, GitHub Actions, Pipeline automation
+Front-End: React, TypeScript, Tailwind CSS, Responsive Design
+Back-End: PHP (Laravel, Symfony), Node.js
+Databases: MySQL, MongoDB
+Mobile: Flutter, Dart
+Soft Skills: Teamwork, Rigor, Adaptability, Communication
+```
 
-- Advanced techniques in Big Data and Machine Learning.
-- Enhancing my skills in modern web frameworks and cloud technologies.
+---
 
-### 🤝 Looking to Collaborate On
+## 📫 Contact
 
-- Open-source projects that make a difference.
-- Innovative web and mobile applications.
+- 🌐 **Portfolio**: [soulesoumare.dev](https://soulesoumare.dev)
+- 💼 **LinkedIn**: [soulé-soumaré](https://fr.linkedin.com/in/soulé-soumaré)
+- 📧 **Email**: sourtoumo@gmail.com
+- 🐙 **GitHub**: [@Soule73](https://github.com/Soule73)
+- 📱 **Phone**: +33 7 75 77 92 34
+- 📍 **Location**: Paris, France
 
-### 📫 How to Reach Me
+---
 
-- **Email:** [soule.soumare@mediaschool.me](mailto:soule.soumare@mediaschool.me)
-- **LinkedIn:** [Soulé Soumaré](https://www.linkedin.com/in/soulé-soumaré)
-- **Blog:** [sds-codeur.com](https://sds-codeur.com)
-- **GitHub:** Soule73
+## 💡 What I'm Up To
 
-### 😄 Pronouns
+- 🔭 I'm currently working on **automated testing** with **Jest**, **Vitest** and **Playwright** at **Opensee**
+- 🌱 I'm deepening my knowledge in **CI/CD** and **GitLab pipelines**
+- 🎯 My goal: become an expert in **software quality** and **front-end architecture**
+- 💬 Let's talk about **React**, **TypeScript**, **Testing** (Jest/Vitest), **CI/CD**
+- ⚡ Fun fact: I published two Flutter apps on stores in less than 6 months
 
-- He/Him
+---
 
-### ⚡ Fun Fact
+<div align="center">
 
-- I love reading and programming in my free time.
+### 🌟 Thanks for visiting!
 
-Feel free to reach out if you have any questions or if you'd like to collaborate on a project!
+<!-- ![Profile Views](https://komarev.com/ghpvc/?username=Soule73&color=0B39F3&style=for-the-badge) -->
+
+**⭐ Feel free to explore my repositories and contact me!**
+
+</div>

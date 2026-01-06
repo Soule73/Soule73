@@ -86,9 +86,25 @@ const CV = () => {
                                         )}
                                         <span className="cv-title">{cvData.personalInfo.title}</span>
                                         {cvData.personalInfo.availableFrom && (
-                                            <span className="cv-available-from">({cvData.personalInfo.availableFrom})</span>
+                                            <span className="cv-available-from">
+                                                ({cvData.personalInfo.availableFrom})</span>
                                         )}
                                     </div>
+                                    {cvData.status == 'available' && <div className="cv-professional-info">
+                                        {cvData.personalInfo.searchingFor?.rythm && (
+                                            <div className="cv-rythm">
+                                                Rythme : {cvData.personalInfo.searchingFor.rythm}</div>
+                                        )}
+
+                                        {cvData.personalInfo.searchingFor?.rythm && cvData.personalInfo.searchingFor?.duration && (
+                                            <span className="cv-separator">|</span>
+                                        )}
+
+                                        {cvData.personalInfo.searchingFor?.duration && (
+                                            <div className="cv-duration">
+                                                Durée : {cvData.personalInfo.searchingFor.duration}</div>
+                                        )}
+                                    </div>}
                                     <div className="cv-contact-grid">
                                         {cvData.personalInfo.contact.map((contact, index) => (
                                             <div className="cv-contact-item" key={index}>
@@ -161,17 +177,50 @@ const CV = () => {
                                         {cvLabels.sections.skills}
                                     </h2>
                                     <div className="cv-skills-compact">
-                                        {cvData.skills.filter((category) => category.show).map((category) => (
+                                        {/* {cvData.skills.filter((category) => category.show).map((category) => (
                                             <div key={category.name} className="cv-skill-row">
                                                 <span className="cv-skill-label">{category.name}</span>
-                                                <span className="cv-skill-separator"> : </span>
                                                 <span className="cv-skill-list">
                                                     {category.skills.filter((skill) => skill.show).map((skill) =>
                                                         `${skill.name}`
                                                     ).join(', ')}
                                                 </span>
                                             </div>
-                                        ))}
+                                        ))} */}
+                                        <div className="cv-skill-row">
+                                            <span className="cv-skill-label">Languages</span>
+                                            {/* <span className="cv-skill-separator"> : </span> */}
+                                            <span className="cv-skill-list">
+                                                JavaScript, TypeScript, Python, PHP, Java, SQL.
+                                            </span>
+                                        </div>
+                                        <div className="cv-skill-row">
+                                            <span className="cv-skill-label">Framworks</span>
+                                            {/* <span className="cv-skill-separator"> : </span> */}
+                                            <span className="cv-skill-list">
+                                                React.js, Tailwind CSS.
+                                            </span>
+                                        </div>
+                                        <div className="cv-skill-row">
+                                            <span className="cv-skill-label">Backend</span>
+                                            <span className="cv-skill-list">
+                                                Node.js, Express.js, Next.js, GraphQL.
+                                            </span>
+                                        </div>
+                                        <div className="cv-skill-row">
+                                            <span className="cv-skill-label">Base de données</span>
+                                            {/* <span className="cv-skill-separator"> : </span> */}
+                                            <span className="cv-skill-list">
+                                                MySQL, PostgreSQL, MongoDB.
+                                            </span>
+                                        </div>
+                                        <div className="cv-skill-row">
+                                            <span className="cv-skill-label">DevOps</span>
+                                            {/* <span className="cv-skill-separator"> : </span> */}
+                                            <span className="cv-skill-list">
+                                                Git, GitHub, GitLab, Docker, GitHub Actions, CI/CD.
+                                            </span>
+                                        </div>
                                     </div>
                                 </section>
                             </div>

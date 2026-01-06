@@ -3,6 +3,7 @@ import React from "react"
 
 // Données centralisées du CV pour faciliter l'édition
 export interface CVData {
+    status: 'available' | 'unavailable' | 'open-to-offers',
     personalInfo: PersonalInfo
     experience: Experience[]
     skills: SkillCategory[]
@@ -114,7 +115,8 @@ const skillCategories: SkillCategory[] = [
                 color: 'from-red-500 to-orange-500',
                 badge: 'https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white&fontSize=14',
                 width: 54,
-                height: 16, show: true
+                height: 16,
+                show: false
             },
             {
                 name: 'TypeScript',
@@ -156,27 +158,28 @@ const skillCategories: SkillCategory[] = [
         ]
     },
     {
-        name: "Frameworks",
+        name: "Frameworks & Librairies",
         icon: CogIcon,
         description: 'Langages serveur et frameworks applicatifs',
         show: true,
         skills: [
-
-            {
-                name: 'Laravel',
-                level: 85,
-                color: 'from-red-600 to-pink-600',
-                badge: 'https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white&fontSize=14',
-                width: 88,
-                height: 28, show: true
-            },
             {
                 name: 'Symfony',
                 level: 80,
                 color: 'from-black to-gray-700',
                 badge: 'https://img.shields.io/badge/Symfony-000000?style=for-the-badge&logo=symfony&logoColor=white&fontSize=14',
                 width: 100,
-                height: 28, show: true
+                height: 28,
+                show: true
+            },
+            {
+                name: 'Laravel',
+                level: 85,
+                color: 'from-red-600 to-pink-600',
+                badge: 'https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white&fontSize=14',
+                width: 88,
+                height: 28,
+                show: true
             },
             {
                 name: 'Spring Boot',
@@ -184,7 +187,8 @@ const skillCategories: SkillCategory[] = [
                 color: 'from-green-500 to-emerald-500',
                 badge: 'https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white&fontSize=14',
                 width: 127,
-                height: 28, show: true
+                height: 28,
+                show: false
             },
             {
                 name: 'Express.js',
@@ -192,7 +196,8 @@ const skillCategories: SkillCategory[] = [
                 color: 'from-gray-600 to-gray-700',
                 badge: 'https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white&fontSize=14',
                 width: 100,
-                height: 28, show: true
+                height: 28,
+                show: false
             },
             {
                 name: 'Next.js',
@@ -200,7 +205,8 @@ const skillCategories: SkillCategory[] = [
                 color: 'from-gray-700 to-black',
                 badge: 'https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white&fontSize=14',
                 width: 81,
-                height: 28, show: true
+                height: 28,
+                show: false
             },
             {
                 name: 'React',
@@ -220,10 +226,38 @@ const skillCategories: SkillCategory[] = [
                 height: 28,
                 show: true
             },
+            {
+                name: 'Bootstrap',
+                level: 88,
+                color: 'from-purple-600 to-purple-700',
+                badge: 'https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white&fontSize=14',
+                width: 100,
+                height: 28,
+                show: true
+            },
+            {
+                name: 'jQuery',
+                level: 70,
+                color: 'from-blue-600 to-blue-700',
+                badge: 'https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white&fontSize=14',
+                width: 78,
+                height: 28,
+                show: true
+            },
+            {
+                name: 'Twig',
+                level: 80,
+                color: 'from-blue-500 to-indigo-500',
+                badge: 'https://img.shields.io/badge/Twig-0094BC?style=for-the-badge&logo=twig&logoColor=white&fontSize=14',
+                width: 100,
+                height: 28,
+                show: true
+            }
         ]
     },
     {
-        name: "Big Data & Analytics",
+        // Big Data & Analytics
+        name: "Base de données",
         icon: ServerIcon,
         description: 'Analyse, pipelines et recherche',
         show: true,
@@ -242,7 +276,8 @@ const skillCategories: SkillCategory[] = [
                 color: 'from-green-600 to-green-700',
                 badge: 'https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white&fontSize=14',
                 width: 100,
-                height: 28, show: true
+                height: 28,
+                show: true
             },
             {
                 name: 'Elasticsearch',
@@ -250,7 +285,8 @@ const skillCategories: SkillCategory[] = [
                 color: 'from-yellow-500 to-orange-500',
                 badge: 'https://img.shields.io/badge/elasticsearch-%23005571.svg?style=for-the-badge&logo=elasticsearch&logoColor=white&fontSize=14',
                 width: 134,
-                height: 28, show: true
+                height: 28,
+                show: false
             },
             {
                 name: 'Logstash',
@@ -258,7 +294,8 @@ const skillCategories: SkillCategory[] = [
                 color: 'from-green-500 to-teal-500',
                 badge: 'https://img.shields.io/badge/logstash-%23005571.svg?style=for-the-badge&logo=logstash&logoColor=white&fontSize=14',
                 width: 93,
-                height: 28, show: true
+                height: 28,
+                show: false
             },
             {
                 name: 'Kibana',
@@ -267,7 +304,7 @@ const skillCategories: SkillCategory[] = [
                 badge: 'https://img.shields.io/badge/kibana-%23005571.svg?style=for-the-badge&logo=kibana&logoColor=white&fontSize=14',
                 width: 81,
                 height: 28,
-                show: true
+                show: false
             },
             {
                 name: "Power BI",
@@ -276,7 +313,7 @@ const skillCategories: SkillCategory[] = [
                 badge: 'https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=power-bi&logoColor=black&fontSize=14',
                 width: 93,
                 height: 28,
-                show: true
+                show: false
             },
             {
                 name: 'Hadoop',
@@ -373,7 +410,8 @@ const skillCategories: SkillCategory[] = [
                 color: 'from-purple-500 to-pink-500',
                 badge: 'https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white&fontSize=14',
                 width: 60,
-                height: 28, show: true
+                height: 28,
+                show: false
             }
         ]
     },
@@ -381,7 +419,7 @@ const skillCategories: SkillCategory[] = [
         name: "Mobile & Cloud",
         icon: DevicePhoneMobileIcon,
         description: 'Applications mobiles et services cloud',
-        show: true,
+        show: false,
         skills: [
             {
                 name: 'Flutter',
@@ -454,24 +492,33 @@ const additionalSkills: AdditionalSkillItem[] = [
 ]
 
 type ContractType = {
-    type: 'full-time' | 'part-time' | 'freelance' | 'internship' | 'contract',
+    type: 'full-time' | 'part-time' | 'freelance' | 'internship' | 'contract' | 'apprenticeship',
     label: string,
-    color: string
+    color: string,
+    rythm?: string,
+    duration?: string
 }
 
 const contractTypes: ContractType[] = [
     { type: 'full-time', label: 'CDI', color: 'bg-green-100 text-green-800' },
     { type: 'part-time', label: 'Temps partiel', color: 'bg-blue-100 text-blue-800' },
     { type: 'freelance', label: 'Freelance', color: 'bg-yellow-100 text-yellow-800' },
-    { type: 'internship', label: 'Stage', color: 'bg-purple-100 text-purple-800' },
+    { type: 'internship', label: 'Stage', color: 'bg-purple-100 text-purple-800', duration: "6 mois" },
+    {
+        type: 'apprenticeship', label: 'Alternance', color: 'bg-blue-100 text-blue-800',
+        rythm: "3 semaines à l'entreprise / 1 semaine à l'école",
+        duration: "12 mois"
+
+    },
     { type: 'contract', label: 'CDD', color: 'bg-red-100 text-red-800' }
 ]
 
 // Données du CV
 export const cvData: CVData = {
+    status: 'unavailable', // 'available' | 'unavailable' | 'open-to-offers'
     personalInfo: {
         name: "Soule Soumaré",
-        title: "Développeur Full Stack",
+        title: "Développeur FullStack",
         profile: "Développeur Full Stack passionné, créatif et orienté résultats. J’aime transformer des idées en solutions digitales performantes, du web au mobile. Curieux et autonome, j’ai mené à bien plusieurs projets innovants, alliant expertise technique et sens du produit.",
         contact: [
             {
@@ -506,12 +553,25 @@ export const cvData: CVData = {
             }
         ],
         contracts: contractTypes,
-        searchingFor: contractTypes[3],
-        availableFrom: "Disponible immédiatement"
+        searchingFor: contractTypes.find(c => c.type === 'internship'),
+        availableFrom: "En stage jusqu'en juin 2026",
 
     },
 
     experience: [
+        {
+            jobTitle: "Développeur Front-End - Stage",
+            company: "Opensee",
+            location: "Paris, France",
+            period: "11/2025 - 06/2026",
+            description: [
+                "Écriture de tests unitaires avec Jest & Vitest pour les composants React",
+                "Développement de tests E2E avec Playwright pour les parcours utilisateurs",
+                "Monitoring et maintenance des tests dans la pipeline GitLab CI/CD",
+                "Amélioration continue de la couverture de tests et qualité du code",
+                "Collaboration avec l'équipe Front-End et revues de code"
+            ]
+        },
         {
             jobTitle: "Développeur Mobile & API - Freelance",
             company: "HudHud Shipping",
@@ -528,7 +588,7 @@ export const cvData: CVData = {
             jobTitle: "Développeur Web & Administrateur",
             company: "APSJ.org (Association)",
             location: "Remote",
-            period: "08/2024 - Présent",
+            period: "08/2024 - 11/2025",
             description: [
                 "Développement complet du site web associatif avec WordPress et Elementor",
                 "Configuration et optimisation de la base de données MySQL",
@@ -536,18 +596,18 @@ export const cvData: CVData = {
                 "Administration continue du site et maintenance"
             ]
         },
-        {
-            jobTitle: "Développeur Full Stack - Projet Personnel",
-            company: "Data Vise SaaS",
-            location: "Projet académique",
-            period: "2024",
-            description: [
-                "Développement d'une plateforme de visualisation de données moderne",
-                "Interface React/TypeScript avec dashboard responsive drag & drop",
-                "Backend Node.js/Express avec intégration Elasticsearch",
-                "Authentification robuste et système de gestion des rôles"
-            ]
-        }
+        // {
+        //     jobTitle: "Développeur Full Stack - Projet Personnel",
+        //     company: "Data Vise SaaS",
+        //     location: "Projet académique",
+        //     period: "2024",
+        //     description: [
+        //         "Développement d'une plateforme de visualisation de données moderne",
+        //         "Interface React/TypeScript avec dashboard responsive drag & drop",
+        //         "Backend Node.js/Express avec intégration Elasticsearch",
+        //         "Authentification robuste et système de gestion des rôles"
+        //     ]
+        // }
     ],
     skills: skillCategories,
     additionalSkills: additionalSkills,
@@ -573,8 +633,8 @@ export const cvData: CVData = {
         { name: "Anglais", level: "Niveau professionnel" },
     ],
     qualities: [
-        "Esprit d’initiative",
-        "Résolution de problèmes",
+        "Esprit d’équipe",
+        "Rigueur",
         "Adaptabilité",
         "Communication",
         // "Leadership"
