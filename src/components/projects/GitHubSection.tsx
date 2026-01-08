@@ -1,4 +1,5 @@
 import { CodeBracketIcon } from '@heroicons/react/24/outline'
+import profileImage from '@/assets/sds.png'
 
 import Image from 'next/image'
 
@@ -18,7 +19,7 @@ const GitHubSection = () => {
             <div className="max-w-4xl mx-auto">
                 <div className="group relative glass dark:glass-dark rounded-3xl p-8 hover-lift transition-all duration-500 overflow-hidden">
                     {/* Arrière-plan animé */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 opacity-20 rounded-3xl"></div>
+                    <div className="absolute inset-0 bg-linear-to-br from-gray-900 via-purple-900 to-violet-900 opacity-20 rounded-3xl"></div>
 
                     <div className="relative z-10 text-center space-y-6">
                         {/* Avatar GitHub */}
@@ -26,7 +27,7 @@ const GitHubSection = () => {
                             <div className="relative">
                                 <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white/20 shadow-xl">
                                     <Image
-                                        src="https://github.com/Soule73.png"
+                                        src={profileImage}
                                         alt="Soule Soumare GitHub"
                                         width={96}
                                         height={96}
@@ -69,7 +70,7 @@ const GitHubSection = () => {
                             href="https://github.com/Soule73"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group inline-flex items-center space-x-3 glass dark:glass-dark rounded-2xl px-8 py-4 font-bold text-lg overflow-hidden hover-lift transition-all duration-300 relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-gray-800 before:to-gray-900 before:scale-x-0 group-hover:before:scale-x-100 before:transition-transform before:duration-500 before:origin-left before:rounded-2xl"
+                            className="group inline-flex items-center space-x-3 glass dark:glass-dark rounded-2xl px-8 py-4 font-bold text-lg overflow-hidden hover-lift transition-all duration-300 relative before:absolute before:inset-0 before:bg-linear-to-r before:from-gray-800 before:to-gray-900 before:scale-x-0 group-hover:before:scale-x-100 before:transition-transform before:duration-500 before:origin-left before:rounded-2xl"
                         >
                             <div className="relative z-10 flex items-center space-x-3 text-gray-700 dark:text-gray-200 group-hover:text-white">
                                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

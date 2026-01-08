@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import profileImage from '@/assets/sds.png'
 
 interface ProfileAvatarProps {
     size?: number
@@ -14,7 +15,7 @@ const ProfileAvatar = ({
     return (
         <div className={`relative overflow-hidden rounded-full ${className}`}>
             <Image
-                src="https://github.com/Soule73.png"
+                src={profileImage}
                 alt="Soule73 - Développeur Full Stack"
                 width={size}
                 height={size}
@@ -30,7 +31,7 @@ const ProfileAvatar = ({
             <div className="absolute inset-0 rounded-full border border-purple-500/20 animate-pulse-scale delay-500"></div>
 
             {/* Effet de lueur */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 animate-pulse opacity-50"></div>
+            <div className="absolute inset-0 rounded-full bg-linear-to-r from-indigo-500/20 to-purple-500/20 animate-pulse opacity-50"></div>
         </div>
     )
 }

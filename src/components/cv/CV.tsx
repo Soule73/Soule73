@@ -2,7 +2,7 @@
 
 import { useRef } from 'react'
 import usePDFExport from '@/hooks/usePDFExport'
-import profileImage from '@/assets/sds.jpg'
+import profileImage from '@/assets/sds.png'
 import { cvData, cvLabels } from '@/data/cvData'
 import './CV.css'
 import {
@@ -37,7 +37,7 @@ const CV = () => {
             <div className="max-w-6xl mx-auto px-4">
                 {/* Header Section */}
                 <div className="text-center mb-12">
-                    <h1 className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                    <h1 className="text-5xl lg:text-6xl font-black bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
                         Curriculum Vitae
                     </h1>
                     <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -48,7 +48,7 @@ const CV = () => {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <button
                             onClick={handlePDFExport}
-                            className="inline-flex cursor-pointer items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                            className="inline-flex cursor-pointer items-center space-x-2 bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                         >
                             {cvLabels.buttons.exportPDF}
                         </button>
