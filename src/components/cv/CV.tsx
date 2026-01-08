@@ -81,7 +81,7 @@ const CV = () => {
                                     <h1 className="cv-name">{cvData.personalInfo.name}</h1>
                                     <div className="cv-professional-info">
 
-                                        {cvData.personalInfo.searchingFor && (
+                                        {cvData.status == 'available' && cvData.personalInfo.searchingFor && (
                                             <span className="cv-searching-for">{cvData.personalInfo.searchingFor.label}</span>
                                         )}
                                         <span className="cv-title">{cvData.personalInfo.title}</span>
