@@ -10,26 +10,28 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Soulé Soumaré - Développeur Full Stack",
+    default: "Soulé Soumaré - Frontend / Full Stack Engineer",
     template: "%s | Soulé Soumaré"
   },
-  description: "Développeur Full Stack passionné spécialisé en React, Next.js, TypeScript et technologies modernes. Créateur d'expériences digitales innovantes et solutions web performantes.",
+  description: "Frontend / Full Stack Engineer spécialisé en React, TypeScript et Testing Automation. Expérience SaaS fintech chez Opensee. Disponible CDI à partir de juillet 2026 - Paris, France.",
   keywords: [
-    "développeur full stack",
+    "frontend engineer",
+    "full stack engineer",
     "react",
-    "nextjs",
     "typescript",
-    "javascript",
+    "testing automation",
+    "playwright",
+    "vitest",
+    "jest",
+    "nextjs",
     "nodejs",
-    "web développeur",
-    "frontend",
-    "backend",
+    "nestjs",
     "portfolio",
-    "soule soumaré",
+    "soulé soumaré",
     "développeur paris",
-    "freelance",
-    "création site web",
-    "application web"
+    "cdi juillet 2026",
+    "saas fintech",
+    "opensee"
   ],
   authors: [{ name: "Soulé Soumaré", url: "https://soulesoumare.dev" }],
   creator: "Soulé Soumaré",
@@ -63,24 +65,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     url: "https://soulesoumare.dev",
-    title: "Soulé Soumaré - Développeur Full Stack",
-    description: "Développeur Full Stack passionné spécialisé en React, Next.js, TypeScript et technologies modernes. Créateur d'expériences digitales innovantes et solutions web performantes.",
-    siteName: "Soulé Soumaré Portfolio",
+    title: "Soulé Soumaré - Frontend / Full Stack Engineer",
+    description: "Frontend / Full Stack Engineer spécialisé en React, TypeScript et Testing Automation. Expérience SaaS fintech chez Opensee. Disponible CDI juillet 2026 - Paris.",
+    siteName: "Soulé Soumaré - Portfolio",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Soulé Soumaré - Développeur Full Stack Portfolio",
-        type: "image/jpeg",
+        alt: "Soulé Soumaré - Frontend / Full Stack Engineer",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soulé Soumaré - Développeur Full Stack",
-    description: "Développeur Full Stack passionné spécialisé en React, Next.js, TypeScript et technologies modernes.",
-    images: ["/og-image.jpg"],
+    title: "Soulé Soumaré - Frontend / Full Stack Engineer",
+    description: "Frontend / Full Stack Engineer · React · TypeScript · Testing Automation · Disponible CDI juillet 2026",
+    images: ["/opengraph-image"],
     creator: "@soule73dev",
   },
   robots: {
@@ -110,10 +112,10 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Soulé Soumaré",
-    "jobTitle": "Développeur Full Stack",
-    "description": "Développeur Full Stack passionné spécialisé en React, Next.js, TypeScript et technologies modernes.",
+    "jobTitle": "Frontend / Full Stack Engineer",
+    "description": "Frontend / Full Stack Engineer spécialisé en React, TypeScript et Testing Automation. Expérience SaaS fintech chez Opensee. Disponible CDI à partir de juillet 2026.",
     "url": "https://soulesoumare.dev",
-    "image": "https://soulesoumare.dev/og-image.jpg",
+    "image": "https://soulesoumare.dev/sds.png",
     "sameAs": [
       "https://github.com/Soule73",
       "https://fr.linkedin.com/in/soulé-soumaré",
@@ -121,18 +123,23 @@ export default function RootLayout({
     ],
     "worksFor": {
       "@type": "Organization",
-      "name": "Freelance"
+      "name": "Opensee"
     },
     "knowsAbout": [
       "React",
-      "Next.js",
       "TypeScript",
+      "Testing Automation",
+      "Playwright",
+      "Vitest",
+      "Jest",
+      "Next.js",
       "Node.js",
+      "NestJS",
       "JavaScript",
-      "Full Stack Development",
       "Frontend Development",
-      "Backend Development",
-      "Web Development"
+      "Full Stack Development",
+      "CI/CD",
+      "Software Quality"
     ],
     "address": {
       "@type": "PostalAddress",

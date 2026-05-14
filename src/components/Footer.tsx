@@ -1,120 +1,99 @@
 import { HeartIcon } from "@heroicons/react/24/solid"
-import Image from "next/image"
+import { EnvelopeIcon, DocumentArrowDownIcon } from "@heroicons/react/24/outline"
+
+const LINKS = [
+    {
+        label: 'GitHub',
+        href: 'https://github.com/Soule73',
+        icon: (
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+        ),
+    },
+    {
+        label: 'LinkedIn',
+        href: 'https://linkedin.com/in/soulé-soumaré',
+        icon: (
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+        ),
+    },
+    {
+        label: 'Email',
+        href: 'mailto:sourtoumo@gmail.com',
+        icon: <EnvelopeIcon className="w-4 h-4" />,
+    },
+    {
+        label: 'CV',
+        href: '/cv',
+        icon: <DocumentArrowDownIcon className="w-4 h-4" />,
+    },
+]
 
 const Footer = () => {
     const currentYear = new Date().getFullYear()
-
-    const technologies = [
-        {
-            name: 'React',
-            badge: 'https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB',
-            color: 'from-cyan-400 to-blue-500',
-            width: 81,
-            height: 28
-        },
-        {
-            name: 'Next.js',
-            badge: 'https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white',
-            color: 'from-gray-700 to-black',
-            width: 81,
-            height: 28
-        },
-        {
-            name: 'TypeScript',
-            badge: 'https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white',
-            color: 'from-blue-600 to-indigo-600',
-            width: 117,
-            height: 28
-        },
-        {
-            name: 'Tailwind CSS',
-            badge: 'https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white',
-            color: 'from-teal-400 to-cyan-500',
-            width: 142,
-            height: 28
-        }
-    ]
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 
     return (
-        <footer className="relative particles-bg overflow-hidden">
-            {/* Éléments décoratifs */}
-            <div className="absolute inset-0">
-                <div className="absolute top-10 left-20 w-32 h-32 bg-blue-500/10 rounded-full animate-float blur-xl"></div>
-                <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-500/10 animate-morphing-blob blur-xl"></div>
+        <footer className="relative particles-bg overflow-hidden border-t border-gray-200/20 dark:border-gray-800/40">
+            <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute top-10 left-20 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl" />
+                <div className="absolute bottom-0 right-10 w-40 h-40 bg-purple-500/5 blur-2xl" />
             </div>
 
-            <div className="relative z-10 section-center">
-                {/* Technologies utilisées */}
-                <div className="py-8">
-                    <div className="text-center mb-6">
-                        <h4 className="text-lg font-bold gradient-text mb-4">Créé avec passion ❤️</h4>
+            <div className="relative z-10 section-center py-10">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+
+                    {/* Identité + statut */}
+                    <div className="text-center md:text-left">
+                        <p className="text-xl font-black gradient-text mb-1">Soulé Soumaré</p>
+                        <div className="flex items-center justify-center md:justify-start gap-2">
+                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                            <span className="text-sm text-gray-500 dark:text-gray-400">Disponible CDI - juillet 2026 · Paris</span>
+                        </div>
                     </div>
-                    <div className="flex flex-wrap justify-center gap-4">
-                        {technologies.map((tech, index) => (
-                            <div
-                                key={index}
-                                className={`group glass dark:glass-dark rounded-xl p-3 hover-lift transition-all duration-300 animate-fade-in-up delay-${index * 100}`}
+
+                    {/* Liens */}
+                    <div className="flex items-center gap-3">
+                        {LINKS.map((link) => (
+                            <a
+                                key={link.label}
+                                href={link.href}
+                                target={link.href.startsWith('http') ? '_blank' : undefined}
+                                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                aria-label={link.label}
+                                className="w-9 h-9 glass dark:glass-dark rounded-xl flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400 hover-lift transition-all duration-200"
                             >
-                                <div className="flex items-center space-x-3">
-                                    <Image
-                                        src={tech.badge}
-                                        alt={tech.name}
-                                        width={tech.width}
-                                        height={tech.height}
-                                        unoptimized
-                                        className="group-hover:scale-105 transition-transform duration-200 rounded"
-                                    />
-                                    <span className="font-semibold text-gray-700 dark:text-gray-200 group-hover:gradient-text transition-all duration-300">
-                                        {tech.name}
-                                    </span>
-                                </div>
-                            </div>
+                                {link.icon}
+                            </a>
                         ))}
+
+                        {/* Retour en haut */}
+                        <button
+                            onClick={scrollToTop}
+                            aria-label="Retour en haut"
+                            className="group w-9 h-9 glass dark:glass-dark rounded-xl flex items-center justify-center text-gray-500 dark:text-gray-400 hover-lift transition-all duration-200 relative overflow-hidden"
+                        >
+                            <svg className="w-4 h-4 relative z-10 group-hover:text-white transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                            </svg>
+                            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 scale-0 group-hover:scale-100 transition-transform duration-200 rounded-xl" />
+                        </button>
                     </div>
                 </div>
 
-                {/* Section finale */}
-                <div className="py-8 border-t border-gray-200/30 dark:border-gray-700/30">
-                    <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-                        <div className="text-center md:text-left">
-                            <p className="text-gray-600 dark:text-gray-400 font-semibold">
-                                © {currentYear} <span className="gradient-text">Soulé Soumaré</span>. Tous droits réservés.
-                            </p>
-                            <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">
-                                <span>
-
-                                    Fait avec
-                                </span>
-                                <HeartIcon className="w-4 h-4 inline-block text-red-500 mx-1" />
-                                <span>
-                                    | Paris, France 🇫🇷
-                                </span>
-                            </p>
-                        </div>
-
-                        <div className="flex items-center space-x-6">
-                            <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-                                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                                <span>Portfolio v2.0</span>
-                            </div>
-
-                            {/* Bouton retour en haut */}
-                            <button
-                                onClick={scrollToTop}
-                                className="group w-12 h-12 glass dark:glass-dark rounded-xl flex items-center justify-center text-gray-600 dark:text-gray-400 hover-lift  transition-all duration-300 relative overflow-hidden"
-                                aria-label="Retour en haut"
-                            >
-                                <svg className="w-5 h-5 relative z-10 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-                                </svg>
-                                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-xl"></div>
-                            </button>
-                        </div>
-                    </div>
+                {/* Copyright */}
+                <div className="mt-8 pt-6 border-t border-gray-200/20 dark:border-gray-700/20 text-center">
+                    <p className="text-xs text-gray-400 dark:text-gray-500 flex items-center justify-center gap-1">
+                        © {currentYear} Soulé Soumaré · Fait avec
+                        <HeartIcon className="w-3 h-3 text-red-400 inline" />
+                        à Paris
+                    </p>
                 </div>
             </div>
         </footer>

@@ -1,9 +1,44 @@
-import { CodeBracketIcon } from '@heroicons/react/24/outline'
-import profileImage from '@/assets/sds.png'
+'use client'
 
+import { useEffect, useState } from 'react'
+import { CodeBracketIcon, StarIcon, BookOpenIcon, UsersIcon } from '@heroicons/react/24/outline'
+import profileImage from '@/assets/sds.png'
 import Image from 'next/image'
 
+interface GitHubStats {
+    repos: number
+    stars: number
+    followers: number
+    topLanguages: string[]
+}
+
+const LANG_COLORS: Record<string, string> = {
+    TypeScript: '#3178c6',
+    JavaScript: '#f7df1e',
+    Dart: '#00b4ab',
+    Python: '#3572A5',
+    Java: '#b07219',
+    PHP: '#4F5D95',
+    HTML: '#e34c26',
+    CSS: '#563d7c',
+    Go: '#00ADD8',
+    Rust: '#dea584',
+    Kotlin: '#A97BFF',
+    Swift: '#F05138',
+}
+
+const FALLBACK_LANGS = ['TypeScript', 'Dart', 'JavaScript', 'PHP', 'Java']
+
 const GitHubSection = () => {
+    const [stats, setStats] = useState<GitHubStats | null>(null)
+
+    useEffect(() => {
+        fetch('/api/github-stats')
+            .then(r => r.ok ? r.json() : null)
+            .then(data => setStats(data))
+            .catch(() => null)
+    }, []) // tableau vide = une seule exécution au montage
+
     return (
         <div className="my-4 md:my-8 lg:my-12 px-4">
             <div className="text-center mb-12">
@@ -52,16 +87,31 @@ const GitHubSection = () => {
                         {/* Statistiques GitHub */}
                         <div className="grid grid-cols-3 gap-6 mb-8">
                             <div className="text-center">
-                                <div className="text-2xl font-black gradient-text mb-1">50+</div>
-                                <div className="text-sm text-gray-600 dark:text-gray-400">Repositories</div>
+                                <div className="text-2xl font-black gradient-text mb-1">
+                                    {stats ? `${stats.repos}` : '50+'}
+                                </div>
+                                <div className="text-sm text-gray-600 dark:text-gray-400 flex items-center justify-center gap-1">
+                                    <BookOpenIcon className="w-3.5 h-3.5" />
+                                    Repositories
+                                </div>
                             </div>
                             <div className="text-center">
-                                <div className="text-2xl font-black gradient-text mb-1">200+</div>
-                                <div className="text-sm text-gray-600 dark:text-gray-400">Commits</div>
+                                <div className="text-2xl font-black gradient-text mb-1">
+                                    {stats ? `${stats.stars}` : '—'}
+                                </div>
+                                <div className="text-sm text-gray-600 dark:text-gray-400 flex items-center justify-center gap-1">
+                                    <StarIcon className="w-3.5 h-3.5" />
+                                    Stars
+                                </div>
                             </div>
                             <div className="text-center">
-                                <div className="text-2xl font-black gradient-text mb-1">5+</div>
-                                <div className="text-sm text-gray-600 dark:text-gray-400">Languages</div>
+                                <div className="text-2xl font-black gradient-text mb-1">
+                                    {stats ? `${stats.followers}` : '—'}
+                                </div>
+                                <div className="text-sm text-gray-600 dark:text-gray-400 flex items-center justify-center gap-1">
+                                    <UsersIcon className="w-3.5 h-3.5" />
+                                    Followers
+                                </div>
                             </div>
                         </div>
 
@@ -85,31 +135,57 @@ const GitHubSection = () => {
 
                         {/* GitHub Stats Cards */}
                         <div className="grid md:grid-cols-2 gap-4 mt-8">
-                            <div className="glass dark:glass-dark rounded-xl p-4">
-                                <Image
-                                    src="https://github-readme-stats.vercel.app/api?username=Soule73&show_icons=true&theme=transparent&hide_border=true&text_color=6B7280&icon_color=8B5CF6&title_color=3B82F6"
-                                    alt="GitHub Stats"
-                                    width={500}
-                                    height={200}
-                                    unoptimized
-                                    className="w-full"
-                                />
+                            {/* Top Languages */}
+                            <div className="glass dark:glass-dark rounded-xl p-5 text-left">
+                                <div className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 uppercase tracking-wide">
+                                    Top Languages
+                                </div>
+                                <div className="space-y-2">
+                                    {(stats?.topLanguages ?? FALLBACK_LANGS).map((lang) => (
+                                        <div key={lang} className="flex items-center gap-3">
+                                            <div
+                                                className="w-3 h-3 rounded-full flex-shrink-0"
+                                                style={{ background: LANG_COLORS[lang] ?? '#6b7280' }}
+                                            />
+                                            <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">{lang}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                            <div className="glass dark:glass-dark rounded-xl p-4">
-                                <Image
-                                    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Soule73&layout=compact&theme=transparent&hide_border=true&text_color=6B7280&title_color=3B82F6"
-                                    alt="Top Languages"
-                                    width={500}
-                                    height={200}
-                                    unoptimized
-                                    className="w-full"
-                                />
+
+                            {/* Activité récente */}
+                            <div className="glass dark:glass-dark rounded-xl p-5 text-left flex flex-col justify-between">
+                                <div className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 uppercase tracking-wide">
+                                    Contributions récentes
+                                </div>
+                                {/* Grille de contribution stylisée — valeurs fixes pour éviter l'erreur d'hydratation */}
+                                <div className="grid grid-cols-12 gap-1 my-2">
+                                    {[0.1, 0.3, 0.6, 1, 0.1, 0.6, 0.3, 0.1, 1, 0.3, 0.1, 1,
+                                        0.6, 0.1, 0.3, 0.6, 0.1, 1, 0.3, 0.6, 0.1, 0.3, 1, 0.1,
+                                        0.3, 0.1, 0.6, 0.1, 1, 0.6, 0.1, 0.3, 0.1, 0.3, 0.1, 1,
+                                        0.6, 1, 0.1, 0.3, 0.6, 1, 0.1, 0.3, 0.1, 0.3, 0.1, 1
+                                    ].map((opacity, i) => (
+                                        <div
+                                            key={i}
+                                            className="h-3 rounded-sm bg-indigo-500"
+                                            style={{ opacity }}
+                                        />
+                                    ))}
+                                </div>
+                                <a
+                                    href="https://github.com/Soule73"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-xs text-indigo-500 dark:text-indigo-400 hover:underline mt-2"
+                                >
+                                    Voir l&apos;activité complète →
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

@@ -37,26 +37,28 @@ const CV = () => {
             <div className="max-w-6xl mx-auto px-4">
                 {/* Header Section */}
                 <div className="text-center mb-12">
-                    <h1 className="text-5xl lg:text-6xl font-black bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                    <h1 className="text-5xl lg:text-6xl font-black gradient-text mb-4">
                         Curriculum Vitae
                     </h1>
-                    <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                        Découvrez mon parcours professionnel, mes compétences et mes réalisations.
-                        Un <span className="text-blue-600 font-semibold">développeur passionné</span> prêt à relever
-                        de nouveaux défis et à contribuer au succès de votre équipe.
+                    <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-2 max-w-3xl mx-auto leading-relaxed">
+                        <span className="gradient-text font-semibold">Frontend / Full Stack Engineer</span> - React · TypeScript · Testing Automation
+                    </p>
+                    <p className="text-base text-gray-500 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+                        Spécialisé en testing automation (Playwright, Vitest, Jest) · Expérience SaaS fintech chez Opensee · Disponible CDI juillet 2026
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <button
                             onClick={handlePDFExport}
-                            className="inline-flex cursor-pointer items-center space-x-2 bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                            className="group relative inline-flex cursor-pointer items-center gap-2 px-8 py-4 rounded-2xl font-bold text-white overflow-hidden hover-lift transition-all duration-300"
                         >
-                            {cvLabels.buttons.exportPDF}
+                            <span className="relative z-10">{cvLabels.buttons.exportPDF}</span>
+                            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600" />
                         </button>
                         <Link
                             href="/"
-                            className="inline-flex items-center space-x-2 border-2 border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-blue-400 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300"
+                            className="inline-flex items-center gap-2 glass dark:glass-dark px-8 py-4 rounded-2xl font-bold text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 hover-lift transition-all duration-300"
                         >
-                            Voir Portfolio
+                            ← Portfolio
                         </Link>
                     </div>
                 </div>
@@ -177,48 +179,34 @@ const CV = () => {
                                         {cvLabels.sections.skills}
                                     </h2>
                                     <div className="cv-skills-compact">
-                                        {/* {cvData.skills.filter((category) => category.show).map((category) => (
-                                            <div key={category.name} className="cv-skill-row">
-                                                <span className="cv-skill-label">{category.name}</span>
-                                                <span className="cv-skill-list">
-                                                    {category.skills.filter((skill) => skill.show).map((skill) =>
-                                                        `${skill.name}`
-                                                    ).join(', ')}
-                                                </span>
-                                            </div>
-                                        ))} */}
                                         <div className="cv-skill-row">
-                                            <span className="cv-skill-label">Languages</span>
-                                            {/* <span className="cv-skill-separator"> : </span> */}
+                                            <span className="cv-skill-label">Testing & QA</span>
                                             <span className="cv-skill-list">
-                                                JavaScript, TypeScript, Python, PHP, Java, SQL.
+                                                Playwright, Vitest, Jest, React Testing Library, Supertest, GraphQL Request.
                                             </span>
                                         </div>
                                         <div className="cv-skill-row">
-                                            <span className="cv-skill-label">Framworks</span>
-                                            {/* <span className="cv-skill-separator"> : </span> */}
+                                            <span className="cv-skill-label">Frontend</span>
                                             <span className="cv-skill-list">
-                                                React.js, Tailwind CSS.
+                                                React, TypeScript, JavaScript, Next.js, Tailwind CSS, HTML/CSS.
                                             </span>
                                         </div>
                                         <div className="cv-skill-row">
                                             <span className="cv-skill-label">Backend</span>
                                             <span className="cv-skill-list">
-                                                Node.js, Express.js, Next.js, GraphQL.
+                                                Node.js, NestJS, Express.js, GraphQL, REST API, PostgreSQL, MySQL.
                                             </span>
                                         </div>
                                         <div className="cv-skill-row">
-                                            <span className="cv-skill-label">Base de données</span>
-                                            {/* <span className="cv-skill-separator"> : </span> */}
+                                            <span className="cv-skill-label">DevOps & Outils</span>
                                             <span className="cv-skill-list">
-                                                MySQL, PostgreSQL, MongoDB.
+                                                GitLab CI/CD, GitHub Actions, Docker, Git, GitHub, GitLab.
                                             </span>
                                         </div>
                                         <div className="cv-skill-row">
-                                            <span className="cv-skill-label">DevOps</span>
-                                            {/* <span className="cv-skill-separator"> : </span> */}
+                                            <span className="cv-skill-label">Autres</span>
                                             <span className="cv-skill-list">
-                                                Git, GitHub, GitLab, Docker, GitHub Actions, CI/CD.
+                                                Flutter, Spring Boot, WordPress, Agile/Scrum.
                                             </span>
                                         </div>
                                     </div>

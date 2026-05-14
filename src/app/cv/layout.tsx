@@ -2,36 +2,38 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
     title: "CV",
-    description: "Soulé Soumaré, développeur Full Stack. Découvrez mon parcours professionnel, mes compétences techniques et mes réalisations en développement web.",
+    description: "Curriculum Vitae de Soulé Soumaré - Frontend / Full Stack Engineer spécialisé React, TypeScript et Testing Automation. Expérience chez Opensee (SaaS fintech). Disponible CDI juillet 2026.",
     keywords: [
         "cv",
         "curriculum vitae",
         "soulé soumaré",
-        "développeur full stack",
-        "expérience professionnelle",
-        "compétences techniques",
+        "frontend engineer",
+        "full stack engineer",
+        "testing automation",
+        "playwright",
+        "vitest",
         "react",
-        "nodejs",
         "typescript",
-        "formation développeur"
+        "opensee",
+        "cdi juillet 2026"
     ],
     openGraph: {
-        title: "CV - Soulé Soumaré | Développeur Full Stack",
-        description: "Curriculum Vitae de Soulé Soumaré, développeur Full Stack. Découvrez mon parcours professionnel, mes compétences techniques et mes réalisations.",
+        title: "CV - Soulé Soumaré | Frontend / Full Stack Engineer",
+        description: "CV de Soulé Soumaré - Frontend / Full Stack Engineer · React · TypeScript · Testing Automation · Disponible CDI juillet 2026.",
         url: "https://soulesoumare.dev/cv",
         images: [
             {
-                url: "/cv-preview.jpg",
+                url: "/cv/opengraph-image",
                 width: 1200,
                 height: 630,
-                alt: "CV de Soulé Soumaré - Développeur Full Stack",
+                alt: "CV - Soulé Soumaré | Frontend / Full Stack Engineer",
             },
         ],
     },
     twitter: {
-        title: "CV - Soulé Soumaré | Développeur Full Stack",
-        description: "Curriculum Vitae de Soulé Soumaré, développeur Full Stack spécialisé en React et technologies modernes.",
-        images: ["/cv-preview.jpg"],
+        title: "CV - Soulé Soumaré | Frontend / Full Stack Engineer",
+        description: "CV de Soulé Soumaré - React · TypeScript · Testing Automation · Disponible CDI juillet 2026.",
+        images: ["/cv/opengraph-image"],
     },
     alternates: {
         canonical: "/cv",

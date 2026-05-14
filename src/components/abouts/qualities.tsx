@@ -1,6 +1,6 @@
 import {
     RocketLaunchIcon,
-    ClockIcon,
+    BeakerIcon,
     BoltIcon,
     PaintBrushIcon,
     BookOpenIcon,
@@ -11,61 +11,55 @@ import {
 
 const stats = [
     {
-        label: 'Projets réalisés',
-        value: '25+',
+        label: 'Applications testées',
+        value: '10+',
         icon: <RocketLaunchIcon className="w-8 h-8" />,
-        color: 'from-blue-500 to-cyan-500'
+        color: 'from-indigo-500 to-blue-500'
     },
     {
-        label: 'Années d\'expérience',
-        value: '5+',
-        icon: <ClockIcon className="w-8 h-8" />,
-        color: 'from-purple-500 to-pink-500'
+        label: 'Tests écrits / réécrits',
+        value: '500+',
+        icon: <BeakerIcon className="w-8 h-8" />,
+        color: 'from-purple-500 to-violet-500'
     },
-    // {
-    //     label: 'Clients satisfaits',
-    //     value: '15+',
-    //     icon: <FaceSmileIcon className="w-8 h-8" />,
-    //     color: 'from-green-500 to-emerald-500'
-    // },
     {
         label: 'Technologies maîtrisées',
-        value: '12+',
+        value: '15+',
         icon: <BoltIcon className="w-8 h-8" />,
-        color: 'from-orange-500 to-red-500'
+        color: 'from-emerald-500 to-teal-500'
     },
 ]
 
 const qualities = [
     {
-        icon: <PaintBrushIcon className="w-8 h-8 text-blue-500" />,
-        title: 'Créativité & Innovation',
-        description: 'Chaque projet est une toile vierge pour exprimer ma créativité'
+        icon: <EyeIcon className="w-8 h-8 text-blue-500" />,
+        title: 'Software Quality',
+        description: 'Testing unitaire, E2E et intégration - chaque ligne de code est validée'
     },
     {
         icon: <CodeBracketIcon className="w-8 h-8 text-purple-500" />,
-        title: 'Code de qualité',
-        description: 'Attention aux détails et aux bonnes pratiques de développement'
+        title: 'Engineering mindset',
+        description: 'Architecture solide, code maintenable et bonnes pratiques au quotidien'
     },
     {
         icon: <UserGroupIcon className="w-8 h-8 text-green-500" />,
         title: 'Collaboration',
-        description: 'Travail d\'équipe efficace et communication transparente'
+        description: 'Travail transversal avec les équipes frontend, backend, DevOps et IA'
     },
     {
         icon: <BookOpenIcon className="w-8 h-8 text-orange-500" />,
-        title: 'Apprentissage continu',
-        description: 'Veille technologique et formation continue'
+        title: 'Ownership',
+        description: 'Je prends en charge des sujets de bout en bout avec autonomie'
     },
     {
-        icon: <EyeIcon className="w-8 h-8 text-indigo-500" />,
-        title: 'Accessibilité',
-        description: 'Applications inclusives et accessibles à tous'
+        icon: <PaintBrushIcon className="w-8 h-8 text-indigo-500" />,
+        title: 'Adaptabilité',
+        description: 'Capacité à monter rapidement en compétence sur de nouveaux frameworks, contextes métier et environnements techniques'
     },
     {
         icon: <BoltIcon className="w-8 h-8 text-yellow-500" />,
-        title: 'Performance',
-        description: 'Optimisation et expérience utilisateur fluide'
+        title: 'Performance & CI/CD',
+        description: 'Pipelines GitLab CI/CD, optimisation et livraison continue fiable'
     }
 ]
 

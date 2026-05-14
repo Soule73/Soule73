@@ -1,8 +1,8 @@
 import { ImageResponse } from 'next/og'
+import { readFileSync } from 'fs'
+import path from 'path'
 
-export const runtime = 'edge'
-
-export const alt = 'Soulé Soumaré - Développeur Full Stack'
+export const alt = 'Soulé Soumaré - Frontend / Full Stack Engineer'
 export const size = {
     width: 1200,
     height: 630,
@@ -10,41 +10,133 @@ export const size = {
 export const contentType = 'image/png'
 
 export default async function Image() {
+    // Lecture de la photo depuis /public/sds.png (runtime Node.js)
+    let photoSrc: string | undefined
+    try {
+        const photoBuffer = readFileSync(path.join(process.cwd(), 'public/sds.png'))
+        photoSrc = `data:image/png;base64,${photoBuffer.toString('base64')}`
+    } catch {
+        // Fichier absent - OG sans photo
+        photoSrc = undefined
+    }
+
     return new ImageResponse(
         (
             <div
                 style={{
-                    fontSize: 60,
-                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                    background: 'linear-gradient(135deg, #0f0c29 0%, #1a1a2e 55%, #16213e 100%)',
                     width: '100%',
                     height: '100%',
                     display: 'flex',
-                    flexDirection: 'column',
+                    flexDirection: 'row',
                     alignItems: 'center',
-                    justifyContent: 'center',
+                    padding: '0 80px',
+                    gap: 64,
                     color: 'white',
-                    fontFamily: 'Inter',
+                    fontFamily: 'sans-serif',
+                    position: 'relative',
                 }}
             >
-                <div style={{ fontSize: 72, fontWeight: 'bold', marginBottom: 20 }}>
-                    Soulé Soumaré
-                </div>
-                <div style={{ fontSize: 36, fontWeight: 'normal', opacity: 0.9 }}>
-                    Développeur Full Stack
-                </div>
+                {/* Accent bar gauche */}
                 <div style={{
-                    fontSize: 24,
-                    fontWeight: 'normal',
-                    opacity: 0.8,
-                    marginTop: 20,
-                    textAlign: 'center'
-                }}>
-                    React • Next.js • TypeScript • Node.js
+                    position: 'absolute',
+                    left: 0, top: 0, bottom: 0,
+                    width: 8,
+                    background: 'linear-gradient(180deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%)',
+                }} />
+
+                {/* Photo de profil */}
+                {photoSrc && (
+                    <div style={{
+                        display: 'flex',
+                        flexShrink: 0,
+                        width: 220,
+                        height: 220,
+                        borderRadius: '50%',
+                        overflow: 'hidden',
+                        border: '5px solid #6366f1',
+                        boxShadow: '0 0 40px rgba(99,102,241,0.5)',
+                    }}>
+                        <img
+                            src={photoSrc}
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        />
+                    </div>
+                )}
+
+                {/* Texte */}
+                <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                    <div style={{ fontSize: 68, fontWeight: 800, lineHeight: 1.1 }}>
+                        Soulé Soumaré
+                    </div>
+                    <div style={{
+                        fontSize: 30,
+                        color: '#818cf8',
+                        marginTop: 12,
+                        fontWeight: 500,
+                    }}>
+                        Frontend / Full Stack Engineer
+                    </div>
+                    <div style={{
+                        fontSize: 22,
+                        color: '#94a3b8',
+                        marginTop: 14,
+                        letterSpacing: 0.5,
+                    }}>
+                        React · TypeScript · Testing Automation · Next.js
+                    </div>
+
+                    {/* Badge disponibilité */}
+                    <div style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        marginTop: 28,
+                        gap: 16,
+                    }}>
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 8,
+                            background: 'rgba(34,197,94,0.15)',
+                            border: '1.5px solid #22c55e',
+                            color: '#4ade80',
+                            padding: '8px 20px',
+                            borderRadius: 24,
+                            fontSize: 18,
+                            fontWeight: 600,
+                        }}>
+                            <div style={{
+                                width: 10,
+                                height: 10,
+                                borderRadius: '50%',
+                                background: '#22c55e',
+                            }} />
+                            Disponible - CDI · juillet 2026
+                        </div>
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 6,
+                            color: '#64748b',
+                            fontSize: 16,
+                        }}>
+                            📍 Paris, France
+                        </div>
+                    </div>
+
+                    {/* URL */}
+                    <div style={{
+                        marginTop: 24,
+                        fontSize: 18,
+                        color: '#475569',
+                        letterSpacing: 0.5,
+                    }}>
+                        soulesoumare.dev
+                    </div>
                 </div>
             </div>
         ),
-        {
-            ...size,
-        }
+        { ...size }
     )
 }

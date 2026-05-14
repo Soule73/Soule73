@@ -1,4 +1,4 @@
-import { BeakerIcon, BoltIcon, CodeBracketIcon, CogIcon, ComputerDesktopIcon, DevicePhoneMobileIcon, LinkIcon, MagnifyingGlassIcon, RocketLaunchIcon, ServerIcon, WrenchScrewdriverIcon } from "@heroicons/react/24/outline"
+import { BeakerIcon, BoltIcon, CodeBracketIcon, CogIcon, ComputerDesktopIcon, DevicePhoneMobileIcon, LinkIcon, MagnifyingGlassIcon, RocketLaunchIcon, ServerIcon, WrenchScrewdriverIcon, ShieldCheckIcon } from "@heroicons/react/24/outline"
 import React from "react"
 
 // Données centralisées du CV pour faciliter l'édition
@@ -96,9 +96,133 @@ export interface Language {
 
 const skillCategories: SkillCategory[] = [
     {
+        name: "Testing & Quality",
+        icon: ShieldCheckIcon,
+        description: 'Testing automation, qualité logicielle et CI/CD',
+        show: true,
+        skills: [
+            {
+                name: 'Playwright',
+                level: 85,
+                color: 'from-green-500 to-emerald-600',
+                badge: 'https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white',
+                width: 107,
+                height: 28,
+                show: true
+            },
+            {
+                name: 'Vitest',
+                level: 82,
+                color: 'from-yellow-400 to-green-500',
+                badge: 'https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white',
+                width: 78,
+                height: 28,
+                show: true
+            },
+            {
+                name: 'Jest',
+                level: 80,
+                color: 'from-red-500 to-pink-600',
+                badge: 'https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white',
+                width: 60,
+                height: 28,
+                show: true
+            },
+            {
+                name: 'React Testing Library',
+                level: 78,
+                color: 'from-red-400 to-pink-500',
+                badge: 'https://img.shields.io/badge/Testing_Library-E33332?style=for-the-badge&logo=testing-library&logoColor=white',
+                width: 165,
+                height: 28,
+                show: true
+            },
+            {
+                name: 'Supertest',
+                level: 75,
+                color: 'from-blue-500 to-indigo-600',
+                badge: 'https://img.shields.io/badge/Supertest-000000?style=for-the-badge&logo=node.js&logoColor=white',
+                width: 105,
+                height: 28,
+                show: true
+            },
+        ]
+    },
+    {
+        name: "Core Stack",
+        icon: ComputerDesktopIcon,
+        description: 'Technologies principales utilisées au quotidien',
+        show: true,
+        skills: [
+            {
+                name: 'React',
+                level: 90,
+                color: 'from-blue-500 to-cyan-500',
+                badge: 'https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB&fontSize=14',
+                width: 81,
+                height: 28,
+                show: true
+            },
+            {
+                name: 'TypeScript',
+                level: 85,
+                color: 'from-blue-600 to-indigo-600',
+                badge: 'https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&fontSize=14',
+                width: 117,
+                height: 28,
+                show: true
+            },
+            {
+                name: 'Next.js',
+                level: 85,
+                color: 'from-gray-700 to-black',
+                badge: 'https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white&fontSize=14',
+                width: 81,
+                height: 28,
+                show: true
+            },
+            {
+                name: 'Node.js',
+                level: 82,
+                color: 'from-green-600 to-green-700',
+                badge: 'https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white',
+                width: 90,
+                height: 28,
+                show: true
+            },
+            {
+                name: 'NestJS',
+                level: 75,
+                color: 'from-red-600 to-pink-600',
+                badge: 'https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white',
+                width: 84,
+                height: 28,
+                show: true
+            },
+            {
+                name: 'JavaScript',
+                level: 88,
+                color: 'from-yellow-400 to-yellow-600',
+                badge: 'https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E&fontSize=14',
+                width: 117,
+                height: 28,
+                show: true
+            },
+            {
+                name: 'Tailwind CSS',
+                level: 92,
+                color: 'from-teal-400 to-blue-500',
+                badge: 'https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white&fontSize=14',
+                width: 120,
+                height: 28,
+                show: true
+            },
+        ]
+    },
+    {
         name: "Langages",
         icon: ComputerDesktopIcon,
-        description: 'Technologies front-end, interfaces et design',
+        description: 'Autres langages maîtrisés',
         show: true,
         skills: [
             {
@@ -107,7 +231,7 @@ const skillCategories: SkillCategory[] = [
                 color: 'from-purple-500 to-indigo-600',
                 badge: 'https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white&fontSize=14',
                 width: 60,
-                height: 28, show: true
+                height: 28, show: false
             },
             {
                 name: 'Java',
@@ -160,7 +284,7 @@ const skillCategories: SkillCategory[] = [
     {
         name: "Frameworks & Librairies",
         icon: CogIcon,
-        description: 'Langages serveur et frameworks applicatifs',
+        description: 'Frameworks additionnels',
         show: true,
         skills: [
             {
@@ -170,7 +294,7 @@ const skillCategories: SkillCategory[] = [
                 badge: 'https://img.shields.io/badge/Symfony-000000?style=for-the-badge&logo=symfony&logoColor=white&fontSize=14',
                 width: 100,
                 height: 28,
-                show: true
+                show: false
             },
             {
                 name: 'Laravel',
@@ -179,7 +303,7 @@ const skillCategories: SkillCategory[] = [
                 badge: 'https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white&fontSize=14',
                 width: 88,
                 height: 28,
-                show: true
+                show: false
             },
             {
                 name: 'Spring Boot',
@@ -188,7 +312,7 @@ const skillCategories: SkillCategory[] = [
                 badge: 'https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white&fontSize=14',
                 width: 127,
                 height: 28,
-                show: false
+                show: true
             },
             {
                 name: 'Express.js',
@@ -196,33 +320,6 @@ const skillCategories: SkillCategory[] = [
                 color: 'from-gray-600 to-gray-700',
                 badge: 'https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white&fontSize=14',
                 width: 100,
-                height: 28,
-                show: false
-            },
-            {
-                name: 'Next.js',
-                level: 85,
-                color: 'from-gray-700 to-black',
-                badge: 'https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white&fontSize=14',
-                width: 81,
-                height: 28,
-                show: false
-            },
-            {
-                name: 'React',
-                level: 90,
-                color: 'from-blue-500 to-cyan-500',
-                badge: 'https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB&fontSize=14',
-                width: 81,
-                height: 28,
-                show: true
-            },
-            {
-                name: 'Tailwind CSS',
-                level: 92,
-                color: 'from-teal-400 to-blue-500',
-                badge: 'https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white&fontSize=14',
-                width: 120,
                 height: 28,
                 show: true
             },
@@ -233,7 +330,7 @@ const skillCategories: SkillCategory[] = [
                 badge: 'https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white&fontSize=14',
                 width: 100,
                 height: 28,
-                show: true
+                show: false
             },
             {
                 name: 'jQuery',
@@ -242,7 +339,7 @@ const skillCategories: SkillCategory[] = [
                 badge: 'https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white&fontSize=14',
                 width: 78,
                 height: 28,
-                show: true
+                show: false
             },
             {
                 name: 'Twig',
@@ -251,7 +348,7 @@ const skillCategories: SkillCategory[] = [
                 badge: 'https://img.shields.io/badge/Twig-0094BC?style=for-the-badge&logo=twig&logoColor=white&fontSize=14',
                 width: 100,
                 height: 28,
-                show: true
+                show: false
             }
         ]
     },
@@ -484,9 +581,11 @@ const skillCategories: SkillCategory[] = [
 
 const additionalSkills: AdditionalSkillItem[] = [
     { name: 'API REST', icon: LinkIcon, color: 'from-green-400 to-green-600', show: true },
-    { name: 'CI/CD', icon: RocketLaunchIcon, color: 'from-purple-400 to-purple-600', show: true },
+    { name: 'CI/CD GitLab', icon: RocketLaunchIcon, color: 'from-orange-400 to-orange-600', show: true },
+    { name: 'GraphQL', icon: CodeBracketIcon, color: 'from-pink-400 to-pink-600', show: true },
     { name: 'Agile/Scrum', icon: CodeBracketIcon, color: 'from-orange-400 to-orange-600', show: true },
-    { name: 'Testing', icon: BeakerIcon, color: 'from-red-400 to-red-600', show: true },
+    { name: 'PostgreSQL', icon: ServerIcon, color: 'from-blue-500 to-blue-700', show: true },
+    { name: 'Software Quality', icon: ShieldCheckIcon, color: 'from-emerald-400 to-emerald-600', show: true },
     { name: 'Performance', icon: BoltIcon, color: 'from-indigo-400 to-indigo-600', show: true },
     { name: 'SEO', icon: MagnifyingGlassIcon, color: 'from-yellow-400 to-yellow-600', show: true }
 ]
@@ -515,11 +614,11 @@ const contractTypes: ContractType[] = [
 
 // Données du CV
 export const cvData: CVData = {
-    status: 'unavailable', // 'available' | 'unavailable' | 'open-to-offers'
+    status: 'available', // 'available' | 'unavailable' | 'open-to-offers'
     personalInfo: {
         name: "Soule Soumaré",
-        title: "Développeur FullStack",
-        profile: "Développeur Full Stack passionné, créatif et orienté résultats. J’aime transformer des idées en solutions digitales performantes, du web au mobile. Curieux et autonome, j’ai mené à bien plusieurs projets innovants, alliant expertise technique et sens du produit.",
+        title: "Frontend / Full Stack Engineer",
+        profile: "Frontend / Full Stack Engineer spécialisé en React, TypeScript et Testing Automation. Expérience en environnement SaaS fintech chez Opensee, où j'ai reconstruit l'infrastructure de tests complète (unitaires + E2E) lors d'une migration Angular → React, réactivé les pipelines CI/CD GitLab et mis en place les tests d'un backend NestJS/PostgreSQL pris en charge par l'équipe frontend. Disponible pour un CDI à partir de juillet 2026.",
         contact: [
             {
                 type: 'phone',
@@ -553,23 +652,25 @@ export const cvData: CVData = {
             }
         ],
         contracts: contractTypes,
-        searchingFor: contractTypes.find(c => c.type === 'internship'),
-        availableFrom: "En stage jusqu'en juin 2026",
+        searchingFor: contractTypes.find(c => c.type === 'full-time'),
+        availableFrom: "Disponible pour CDI à partir de juillet 2026",
 
     },
 
     experience: [
         {
-            jobTitle: "Développeur Front-End - Stage",
+            jobTitle: "Frontend Engineer (Testing & Quality) - Stage",
             company: "Opensee",
             location: "Paris, France",
             period: "11/2025 - 06/2026",
             description: [
-                "Écriture de tests unitaires avec Jest & Vitest pour les composants React",
-                "Développement de tests E2E avec Playwright pour les parcours utilisateurs",
-                "Monitoring et maintenance des tests dans la pipeline GitLab CI/CD",
-                "Amélioration continue de la couverture de tests et qualité du code",
-                "Collaboration avec l'équipe Front-End et revues de code"
+                "Reprise et réécriture complète des tests unitaires de l'application web principale (React) dans un contexte de migration Angular → React",
+                "Réactivation et stabilisation des pipelines de tests GitLab CI/CD de l'application principale suspendus pendant la migration",
+                "Mise en place des tests unitaires (Vitest) et E2E (Supertest, GraphQL Request) sur un backend Node.js / NestJS / TypeScript / PostgreSQL pris en charge par l'équipe frontend",
+                "Ajout des tests unitaires (Vitest) et E2E (Playwright) pour une nouvelle application frontend dédiée à l'Agentic AI",
+                "Contribution au développement d'une application Settings centralisant les paramètres de plusieurs produits Opensee",
+                "Correction de bugs, optimisation de composants React existants et amélioration continue de la qualité du code",
+                "Collaboration transversale avec les équipes backend, DevOps, analytics et IA dans un environnement Agile"
             ]
         },
         {
