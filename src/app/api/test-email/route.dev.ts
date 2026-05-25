@@ -278,7 +278,7 @@ CEO - TechStartup Inc.`
                     ${(error as Error).message}
                 </div>
                 <a href="/api/test-email?list=true" class="back-link">
-                    ← Retour à la liste des templates
+                    Retour à la liste des templates
                 </a>
             </body>
             </html>

@@ -24,7 +24,7 @@ const experiences = [
         icon: <BeakerIcon className="w-6 h-6 text-indigo-500" />,
         tags: ['React', 'TypeScript', 'Vitest', 'Jest', 'Playwright', 'NestJS', 'PostgreSQL', 'GraphQL', 'GitLab CI/CD'],
         highlights: [
-            { text: 'Refonte complète de la suite de tests unitaires (Angular → React migration)' },
+            { text: 'Refonte complète de la suite de tests unitaires' },
             { text: 'Réactivation et stabilisation des pipelines CI/CD GitLab suspendus pendant la migration' },
             { text: 'Tests unitaires (Vitest) et E2E (Supertest, GraphQL Request) sur un backend NestJS / PostgreSQL' },
             { text: 'Tests unitaires et E2E Playwright pour une nouvelle application frontend IA Agentique' },
@@ -229,7 +229,7 @@ const AboutContent = () => (
         <p className="flex items-start space-x-3">
             <RocketLaunchIcon className="w-6 h-6 text-indigo-500 mt-0.5 flex-shrink-0" />
             <span>
-                En stage chez <span className="gradient-text font-semibold">Opensee</span> (Fintech SaaS, Paris), je travaille sur la migration <strong>Angular → React</strong>, les pipelines CI/CD GitLab et le développement backend <strong>NestJS</strong>.
+                En stage chez <span className="gradient-text font-semibold">Opensee</span> (Fintech SaaS, Paris), je travaille sur les tests Unitaire & E2E, les pipelines CI/CD GitLab et le développement backend <strong>NestJS</strong>.
             </span>
         </p>
         <p className="flex items-start space-x-3">

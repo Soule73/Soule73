@@ -97,7 +97,7 @@ const GitHubSection = () => {
                             </div>
                             <div className="text-center">
                                 <div className="text-2xl font-black gradient-text mb-1">
-                                    {stats ? `${stats.stars}` : '—'}
+                                    {stats ? `${stats.stars}` : '-'}
                                 </div>
                                 <div className="text-sm text-gray-600 dark:text-gray-400 flex items-center justify-center gap-1">
                                     <StarIcon className="w-3.5 h-3.5" />
@@ -106,7 +106,7 @@ const GitHubSection = () => {
                             </div>
                             <div className="text-center">
                                 <div className="text-2xl font-black gradient-text mb-1">
-                                    {stats ? `${stats.followers}` : '—'}
+                                    {stats ? `${stats.followers}` : '-'}
                                 </div>
                                 <div className="text-sm text-gray-600 dark:text-gray-400 flex items-center justify-center gap-1">
                                     <UsersIcon className="w-3.5 h-3.5" />
@@ -158,7 +158,7 @@ const GitHubSection = () => {
                                 <div className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 uppercase tracking-wide">
                                     Contributions récentes
                                 </div>
-                                {/* Grille de contribution stylisée — valeurs fixes pour éviter l'erreur d'hydratation */}
+                                {/* Grille de contribution stylisée -valeurs fixes pour éviter l'erreur d'hydratation */}
                                 <div className="grid grid-cols-12 gap-1 my-2">
                                     {[0.1, 0.3, 0.6, 1, 0.1, 0.6, 0.3, 0.1, 1, 0.3, 0.1, 1,
                                         0.6, 0.1, 0.3, 0.6, 0.1, 1, 0.3, 0.6, 0.1, 0.3, 1, 0.1,
@@ -178,7 +178,7 @@ const GitHubSection = () => {
                                     rel="noopener noreferrer"
                                     className="text-xs text-indigo-500 dark:text-indigo-400 hover:underline mt-2"
                                 >
-                                    Voir l&apos;activité complète →
+                                    Voir l'activité complète
                                 </a>
                             </div>
                         </div>

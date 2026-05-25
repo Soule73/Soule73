@@ -72,7 +72,7 @@ private async importTemplate(templateName: string): Promise<EmailTemplate> {
             return await import('@/templates/emails/contact-form.js');
         case 'contact-form-simple':
             return await import('@/templates/emails/contact-form-simple.js');
-        case 'mon-template':  // ← Ajoutez votre template ici
+        case 'mon-template':  // Ajoutez votre template ici
             return await import('@/templates/emails/mon-template.js');
         default:
             throw new Error(`Template "${templateName}" non supporté`);
@@ -83,7 +83,7 @@ getAvailableTemplates(): string[] {
     return [
         'contact-form',
         'contact-form-simple',
-        'mon-template'  // ← Et ici aussi
+        'mon-template'  // Et ici aussi
     ];
 }
 ```

@@ -37,7 +37,7 @@ const experiences: ExperienceItem[] = [
     highlights: [
       {
         icon: <CheckCircleIcon className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />,
-        text: 'Rebuilt the entire unit test suite of the main React web app during Angular → React migration'
+        text: 'Rebuilt the entire unit test suite of the main React web app'
       },
       {
         icon: <CheckCircleIcon className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />,

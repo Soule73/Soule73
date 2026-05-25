@@ -14,8 +14,8 @@ export const usePDFExport = () => {
 
         try {
 
-            // Créer une nouvelle fenêtre pour l'impression
-            const printWindow = window.open('', '_blank', 'width=800,height=600')
+            // A4 à 96dpi : 210mm x 297mm = 794px x 1123px
+            const printWindow = window.open('', '_blank', 'width=794,height=1123')
 
             if (!printWindow) {
                 throw new Error("Impossible d'ouvrir la fenêtre d'impression")

@@ -618,7 +618,7 @@ export const cvData: CVData = {
     personalInfo: {
         name: "Soule Soumaré",
         title: "Frontend / Full Stack Engineer",
-        profile: "Frontend / Full Stack Engineer spécialisé en React, TypeScript et Testing Automation. Expérience en environnement SaaS fintech chez Opensee, où j'ai reconstruit l'infrastructure de tests complète (unitaires + E2E) lors d'une migration Angular → React, réactivé les pipelines CI/CD GitLab et mis en place les tests d'un backend NestJS/PostgreSQL pris en charge par l'équipe frontend. Disponible pour un CDI à partir de juillet 2026.",
+        profile: "Full Stack Engineer spécialisé en React, TypeScript et Testing Automation. J'ai construit et livré des applications web et mobiles dans des contextes variés : startup fintech SaaS et missions freelance. Capable de prendre en charge un sujet de bout en bout : architecture de tests (unitaires, E2E, intégration), développement frontend et backend, pipelines CI/CD et déploiement.",
         contact: [
             {
                 type: 'phone',
@@ -653,7 +653,7 @@ export const cvData: CVData = {
         ],
         contracts: contractTypes,
         searchingFor: contractTypes.find(c => c.type === 'full-time'),
-        availableFrom: "Disponible pour CDI à partir de juillet 2026",
+        availableFrom: "Disponible - CDI a partir de juillet 2026",
 
     },
 
@@ -661,40 +661,34 @@ export const cvData: CVData = {
         {
             jobTitle: "Frontend Engineer (Testing & Quality) - Stage",
             company: "Opensee",
-            location: "Paris, France",
+            location: "Puteaux, France",
             period: "11/2025 - 06/2026",
             description: [
-                "Reprise et réécriture complète des tests unitaires de l'application web principale (React) dans un contexte de migration Angular → React",
-                "Réactivation et stabilisation des pipelines de tests GitLab CI/CD de l'application principale suspendus pendant la migration",
-                "Mise en place des tests unitaires (Vitest) et E2E (Supertest, GraphQL Request) sur un backend Node.js / NestJS / TypeScript / PostgreSQL pris en charge par l'équipe frontend",
-                "Ajout des tests unitaires (Vitest) et E2E (Playwright) pour une nouvelle application frontend dédiée à l'Agentic AI",
+                "Reprise et réécriture complète des tests unitaires de l'application web principale (React) dans un contexte de migration Angular vers React",
+                "Réactivation et stabilisation des pipelines de tests GitLab CI/CD suspendus pendant la migration",
+                "Mise en place des tests unitaires (Vitest) et E2E (Supertest, GraphQL Request) sur un backend NestJS pris en charge par le frontend",
+                "Ajout de tests Vitest et Playwright pour une nouvelle application frontend dédiée a l'Agentic AI",
                 "Contribution au développement d'une application Settings centralisant les paramètres de plusieurs produits Opensee",
-                "Correction de bugs, optimisation de composants React existants et amélioration continue de la qualité du code",
                 "Collaboration transversale avec les équipes backend, DevOps, analytics et IA dans un environnement Agile"
             ]
         },
         {
-            jobTitle: "Développeur Mobile & API - Freelance",
+            jobTitle: "Développeur Mobile et API - Freelance",
             company: "HudHud Shipping",
             location: "Remote",
             period: "03/2025 - 08/2025",
             description: [
-                "Développement complet de deux applications mobiles Flutter (client et livreur)",
-                "Création d'une API REST avec Spring Boot pour la gestion des livraisons",
-                "Développement d'une application web d'administration avec React",
+                "Développement de deux applications mobiles Flutter (client et livreur), d'une API REST Spring Boot et d'une application web d'administration React",
                 "Publication sur Google Play Store et App Store avec déploiement cloud"
             ]
         },
         {
-            jobTitle: "Développeur Web & Administrateur",
+            jobTitle: "Développeur Web - Indépendant",
             company: "APSJ.org (Association)",
             location: "Remote",
             period: "08/2024 - 11/2025",
             description: [
-                "Développement complet du site web associatif avec WordPress et Elementor",
-                "Configuration et optimisation de la base de données MySQL",
-                "Déploiement et gestion sur Hostinger avec optimisation SEO",
-                "Administration continue du site et maintenance"
+                "Développement du site associatif avec WordPress et Elementor, optimisation SEO et administration sur Hostinger"
             ]
         },
         // {
@@ -717,7 +711,7 @@ export const cvData: CVData = {
             degree: "Master, Expert IT, Développement & Big Data",
             school: "Ecole IRIS Paris",
             location: "Paris, France",
-            period: "2024 - 2026(en cours)",
+            period: "2024 - 2026 (en cours)",
             description: "Spécialisation en développement web full-stack, architecture logicielle et gestion de bases de données"
         },
         {
