@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
     title: "CV",
-    description: "Curriculum Vitae de Soulé Soumaré - Frontend / Full Stack Engineer spécialisé React, TypeScript et Testing Automation. Expérience chez Opensee (SaaS fintech). Disponible CDI juillet 2026.",
+    description: "Curriculum Vitae de Soulé Soumaré - Frontend Engineer chez Opensee (SaaS fintech). React, TypeScript et Testing Automation.",
     keywords: [
         "cv",
         "curriculum vitae",
@@ -14,12 +14,11 @@ export const metadata: Metadata = {
         "vitest",
         "react",
         "typescript",
-        "opensee",
-        "cdi juillet 2026"
+        "opensee"
     ],
     openGraph: {
-        title: "CV - Soulé Soumaré | Frontend / Full Stack Engineer",
-        description: "CV de Soulé Soumaré - Frontend / Full Stack Engineer · React · TypeScript · Testing Automation · Disponible CDI juillet 2026.",
+        title: "CV - Soulé Soumaré | Frontend Engineer",
+        description: "CV de Soulé Soumaré - Frontend Engineer @ Opensee · React · TypeScript · Testing Automation.",
         url: "https://soulesoumare.dev/cv",
         images: [
             {
@@ -31,8 +30,8 @@ export const metadata: Metadata = {
         ],
     },
     twitter: {
-        title: "CV - Soulé Soumaré | Frontend / Full Stack Engineer",
-        description: "CV de Soulé Soumaré - React · TypeScript · Testing Automation · Disponible CDI juillet 2026.",
+        title: "CV - Soulé Soumaré | Frontend Engineer",
+        description: "CV de Soulé Soumaré - Frontend Engineer @ Opensee · React · TypeScript · Testing Automation.",
         images: ["/cv/opengraph-image"],
     },
     alternates: {

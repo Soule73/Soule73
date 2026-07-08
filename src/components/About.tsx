@@ -14,26 +14,41 @@ import { qualities, stats } from './abouts/qualities'
 const experiences = [
     {
         id: 1,
-        period: 'Nov 2025 - Juin 2026',
-        jobTitle: 'Frontend Engineer - Testing & Quality',
+        period: 'Juin 2026 - présent',
+        jobTitle: 'Frontend Engineer',
         company: 'Opensee',
-        location: 'Paris, France',
-        type: 'Stage',
+        location: 'Puteaux, France',
+        type: 'CDI',
         typeColor: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-300',
         featured: true,
         icon: <BeakerIcon className="w-6 h-6 text-indigo-500" />,
-        tags: ['React', 'TypeScript', 'Vitest', 'Jest', 'Playwright', 'NestJS', 'PostgreSQL', 'GraphQL', 'GitLab CI/CD'],
+        tags: ['React', 'TypeScript', 'Vitest', 'Playwright', 'NestJS', 'PostgreSQL', 'GraphQL', 'GitLab CI/CD'],
         highlights: [
-            { text: 'Refonte complète de la suite de tests unitaires' },
-            { text: 'Réactivation et stabilisation des pipelines CI/CD GitLab suspendus pendant la migration' },
-            { text: 'Tests unitaires (Vitest) et E2E (Supertest, GraphQL Request) sur un backend NestJS / PostgreSQL' },
-            { text: 'Tests unitaires et E2E Playwright pour une nouvelle application frontend IA Agentique' },
-            { text: 'Contribution à une console Settings centralisée pour tous les produits Opensee' },
+            { text: 'Développement de fonctionnalités React/TypeScript sur les produits Opensee (Fintech SaaS)' },
+            { text: 'Maintien et évolution de la couverture de tests (Vitest, Playwright) sur frontend et API NestJS' },
             { text: 'Collaboration transverse avec backend, DevOps, analytics et équipes IA en Agile' },
         ],
     },
     {
         id: 2,
+        period: 'Nov 2025 - Juin 2026',
+        jobTitle: 'Frontend Engineer - Testing & Quality',
+        company: 'Opensee',
+        location: 'Puteaux, France',
+        type: 'Stage',
+        typeColor: 'bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300',
+        featured: false,
+        icon: <BeakerIcon className="w-6 h-6 text-purple-500" />,
+        tags: ['React', 'TypeScript', 'Vitest', 'Jest', 'Playwright', 'NestJS', 'PostgreSQL', 'GraphQL', 'GitLab CI/CD'],
+        highlights: [
+            { text: 'Refonte complète de la suite de tests unitaires (migration Angular → React)' },
+            { text: 'Réactivation et stabilisation des pipelines CI/CD GitLab' },
+            { text: 'Tests Vitest et Playwright pour une nouvelle application frontend IA Agentique' },
+            { text: 'Contribution à une console Settings centralisée pour tous les produits Opensee' },
+        ],
+    },
+    {
+        id: 3,
         period: 'Mar 2025 - Août 2025',
         jobTitle: 'Mobile Developer & API',
         company: 'HudHud Shipping',
@@ -48,7 +63,7 @@ const experiences = [
         ],
     },
     {
-        id: 3,
+        id: 4,
         period: 'Août 2024 - Nov 2025',
         jobTitle: 'Web Developer & Administrator',
         company: 'APSJ.org',
@@ -164,17 +179,17 @@ const About = () => {
                 <div className="mb-10 md:px-4">
                     <div className="glass dark:glass-dark rounded-3xl p-6 md:p-8 border border-green-400/30 flex flex-col sm:flex-row items-center justify-between gap-4">
                         <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 rounded-2xl bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                                <BriefcaseIcon className="w-6 h-6 text-green-500" />
+                            <div className="w-12 h-12 rounded-2xl bg-indigo-500/20 flex items-center justify-center flex-shrink-0">
+                                <BriefcaseIcon className="w-6 h-6 text-indigo-500" />
                             </div>
                             <div>
-                                <p className="font-black text-gray-800 dark:text-gray-100 text-lg">Disponible en CDI - dès juillet 2026</p>
-                                <p className="text-sm text-gray-500 dark:text-gray-400">Frontend / Full Stack Engineer · React · TypeScript · Testing · Paris</p>
+                                <p className="font-black text-gray-800 dark:text-gray-100 text-lg">Frontend Engineer @ Opensee</p>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">React · TypeScript · Testing Automation · Fintech SaaS · Paris</p>
                             </div>
                         </div>
                         <a href="#contact" className="group relative px-6 py-3 rounded-2xl font-bold text-sm overflow-hidden hover-lift transition-all duration-300 whitespace-nowrap glass dark:glass-dark">
                             <span className="relative z-10 text-gray-700 dark:text-gray-200 group-hover:text-white flex items-center gap-2">Me contacter</span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-2xl" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-violet-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-2xl" />
                         </a>
                     </div>
                 </div>
@@ -229,7 +244,7 @@ const AboutContent = () => (
         <p className="flex items-start space-x-3">
             <RocketLaunchIcon className="w-6 h-6 text-indigo-500 mt-0.5 flex-shrink-0" />
             <span>
-                En stage chez <span className="gradient-text font-semibold">Opensee</span> (Fintech SaaS, Paris), je travaille sur les tests Unitaire & E2E, les pipelines CI/CD GitLab et le développement backend <strong>NestJS</strong>.
+                Chez <span className="gradient-text font-semibold">Opensee</span> (Fintech SaaS, Puteaux) depuis juin 2026, je contribue au développement frontend React/TypeScript et à l’architecture de tests sur les produits en production.
             </span>
         </p>
         <p className="flex items-start space-x-3">
@@ -241,7 +256,7 @@ const AboutContent = () => (
         <p className="flex items-start space-x-3">
             <SparklesIcon className="w-6 h-6 text-emerald-500 mt-0.5 flex-shrink-0" />
             <span>
-                Diplômé d&apos;un <span className="gradient-text font-semibold">Master Expert IT</span> (IRIS Paris, 2026), je cherche un <strong>CDI à partir de juillet 2026</strong> pour contribuer à des produits ambitieux.
+                Diplômé d&apos;un <span className="gradient-text font-semibold">Master Expert IT</span> (IRIS Paris, 2026), j&apos;ai également une expérience en développement mobile (Flutter) et full stack (Node.js, Spring Boot).
             </span>
         </p>
     </div>

@@ -8,15 +8,12 @@ import {
     CheckCircleIcon,
     XCircleIcon,
     MapPinIcon,
-    PhoneIcon,
 } from '@heroicons/react/24/outline'
 import { Input } from './Input'
 import { socialLinks } from './contacts/solialLinks'
 
 const CONTACT_ITEMS = [
-    { icon: EnvelopeIcon, label: 'Email', value: 'sourtoumo@gmail.com', href: 'mailto:sourtoumo@gmail.com' },
     { icon: MapPinIcon, label: 'Localisation', value: 'Paris, France', href: '#' },
-    { icon: PhoneIcon, label: 'Téléphone', value: '+33 7 75 77 92 34', href: 'tel:+33775779234' },
 ]
 
 const Contact = () => {
@@ -80,7 +77,7 @@ const Contact = () => {
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-5xl lg:text-6xl font-black gradient-text mb-4">Contact</h2>
                     <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                        Une opportunité CDI ou une question ?{' '}
+                        Une question ?{' '}
                         <span className="gradient-text font-semibold">Écrivez-moi.</span>
                     </p>
                 </div>
@@ -90,15 +87,14 @@ const Contact = () => {
                     {/* ── Colonne gauche ── */}
                     <div className="lg:col-span-2 flex flex-col gap-8">
 
-                        {/* Disponibilité CDI */}
+                        {/* Disponibilité */}
                         <div className="glass dark:glass-dark rounded-2xl p-6">
                             <div className="flex items-center gap-2 mb-3">
-                                <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
-                                <span className="text-sm font-semibold text-green-600 dark:text-green-400">Disponible - CDI juillet 2026</span>
+                                <span className="w-2.5 h-2.5 rounded-full bg-indigo-500" />
+                                <span className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">Frontend Engineer @ Opensee</span>
                             </div>
                             <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                                En fin de stage chez <strong>Opensee</strong> (Fintech SaaS, Paris).
-                                Ouvert aux opportunités Frontend / Full Stack en CDI.
+                                En poste chez <strong>Opensee</strong> (Fintech SaaS, Paris) en tant que Frontend Engineer depuis juin 2026.
                             </p>
                         </div>
 
@@ -153,7 +149,7 @@ const Contact = () => {
                                     label="Email" icon={<EnvelopeIcon className="w-4 h-4" />} error={errors.email} />
                             </div>
                             <Input type="text" id="subject" name="subject" value={formData.subject}
-                                onChange={handleChange} placeholder="Opportunité CDI, question..."
+                                onChange={handleChange} placeholder="Question..."
                                 label="Sujet" icon={<LightBulbIcon className="w-4 h-4" />} error={errors.subject} />
                             <Input type="text" id="message" name="message" value={formData.message}
                                 onChange={handleChange} placeholder="Décrivez votre besoin ou votre message..."

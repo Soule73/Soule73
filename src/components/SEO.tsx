@@ -33,7 +33,7 @@ const SEO = ({
         "@type": "Person",
         "name": "Soulé Soumaré",
         "jobTitle": "Développeur Full Stack",
-        "description": "Développeur Full Stack passionné spécialisé en React, Next.js, TypeScript et technologies modernes.",
+        "description": "Développeur Full Stack passionné spécialisé en React, Nest.js, TypeScript et technologies modernes.",
         "url": "https://soulesoumare.dev",
         "sameAs": [
             "https://github.com/Soule73",
@@ -45,7 +45,7 @@ const SEO = ({
         },
         "knowsAbout": [
             "React",
-            "Next.js",
+            "Nest.js",
             "TypeScript",
             "Node.js",
             "JavaScript",

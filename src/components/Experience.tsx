@@ -211,12 +211,12 @@ const Experience = () => {
           {/* ── Banner CDI ── */}
           <div className="glass dark:glass-dark rounded-3xl p-6 md:p-8 border border-green-400/30 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                <BriefcaseIcon className="w-6 h-6 text-green-500" />
+              <div className="w-12 h-12 rounded-2xl bg-indigo-500/20 flex items-center justify-center flex-shrink-0">
+                <BriefcaseIcon className="w-6 h-6 text-indigo-500" />
               </div>
               <div>
-                <p className="font-black text-gray-800 dark:text-gray-100 text-lg">Disponible en CDI - dès juillet 2026</p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Frontend / Full Stack Engineer · React · TypeScript · Testing · Paris</p>
+                <p className="font-black text-gray-800 dark:text-gray-100 text-lg">Frontend Engineer en CDI @ Opensee</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">React · TypeScript · Testing Automation · Fintech SaaS · Paris</p>
               </div>
             </div>
             <a

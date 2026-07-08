@@ -13,8 +13,8 @@ const TERMINAL_LINES = [
     { type: 'key', label: '  role', value: '"Frontend / Full Stack Engineer"' },
     { type: 'key', label: '  stack', value: '["React", "TypeScript", "NestJS"]' },
     { type: 'key', label: '  testing', value: '["Playwright", "Vitest", "RTL"]' },
-    { type: 'key', label: '  current', value: '"Internship @ Opensee (Fintech SaaS)"' },
-    { type: 'key', label: '  available', value: '"CDI - July 2026"' },
+    { type: 'key', label: '  company', value: '"Opensee (Fintech SaaS)"' },
+    { type: 'key', label: '  contract', value: '"Frontend Engineer"' },
     { type: 'key', label: '  location', value: '"Paris, France 🇫🇷"' },
     { type: 'close', text: '}' },
 ]
@@ -64,9 +64,9 @@ const Hero = () => {
 
                         {/* Badge disponibilité */}
                         <div className="animate-fade-in-up">
-                            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800">
-                                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                                Disponible - CDI · juillet 2026
+                            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800">
+                                <span className="w-2 h-2 rounded-full bg-indigo-500" />
+                                Frontend Engineer @ Opensee
                             </span>
                         </div>
 
@@ -168,7 +168,7 @@ const Hero = () => {
 
                         {/* Stack badges */}
                         <div className="flex flex-wrap justify-center gap-2 w-full">
-                            {['React', 'TypeScript', 'Next.js', 'NestJS', 'Playwright', 'Vitest'].map((tech) => (
+                            {['React', 'TypeScript', 'Nest.js', 'Playwright', 'Vitest'].map((tech) => (
                                 <span key={tech} className="px-4 py-1.5 rounded-full text-sm font-semibold bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800">
                                     {tech}
                                 </span>

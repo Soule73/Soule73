@@ -83,7 +83,7 @@ export default async function Image() {
                         marginTop: 14,
                         letterSpacing: 0.5,
                     }}>
-                        React · TypeScript · Testing Automation · Next.js
+                        React · TypeScript · Testing Automation · Nest.js
                     </div>
 
                     {/* Badge disponibilité */}
@@ -107,12 +107,10 @@ export default async function Image() {
                             fontWeight: 600,
                         }}>
                             <div style={{
-                                width: 10,
-                                height: 10,
+                                background: '#6366f1',
                                 borderRadius: '50%',
-                                background: '#22c55e',
                             }} />
-                            Disponible - CDI · juillet 2026
+                            {process.env.NEXT_PUBLIC_PERSONAL_TITLE}
                         </div>
                         <div style={{
                             display: 'flex',
@@ -121,7 +119,7 @@ export default async function Image() {
                             color: '#64748b',
                             fontSize: 16,
                         }}>
-                            📍 Paris, France
+                            {process.env.NEXT_PUBLIC_LOCATION}
                         </div>
                     </div>
 
@@ -132,7 +130,7 @@ export default async function Image() {
                         color: '#475569',
                         letterSpacing: 0.5,
                     }}>
-                        soulesoumare.dev
+                        {process.env.NEXT_PUBLIC_SITE_URL?.replace(/^https?:\/\//, '')}
                     </div>
                 </div>
             </div>

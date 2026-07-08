@@ -34,10 +34,10 @@ const CV = () => {
                         Curriculum Vitae
                     </h1>
                     <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-2 max-w-3xl mx-auto leading-relaxed">
-                        <span className="gradient-text font-semibold">Frontend / Full Stack Engineer</span> - React · TypeScript · Testing Automation
+                        <span className="gradient-text font-semibold">Frontend Engineer @ Opensee</span> - React · TypeScript · Testing Automation
                     </p>
                     <p className="text-base text-gray-500 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-                        Spécialisé en testing automation (Playwright, Vitest, Jest) · Expérience SaaS fintech chez Opensee · Disponible CDI juillet 2026
+                        Spécialisé en testing automation (Playwright, Vitest) · Fintech SaaS · Paris
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <button
@@ -109,11 +109,11 @@ const CV = () => {
                                     </div>
                                     <div className="cv-skill-group">
                                         <span className="cv-skill-cat">Frontend</span>
-                                        <span className="cv-skill-tags">React, TypeScript, Next.js, Tailwind CSS</span>
+                                        <span className="cv-skill-tags">React, TypeScript, Nest.js, Tailwind CSS</span>
                                     </div>
                                     <div className="cv-skill-group">
                                         <span className="cv-skill-cat">Backend</span>
-                                        <span className="cv-skill-tags">Node.js, NestJS, GraphQL, PostgreSQL</span>
+                                        <span className="cv-skill-tags">Node.js, Nest.js, GraphQL, PostgreSQL</span>
                                     </div>
                                     <div className="cv-skill-group">
                                         <span className="cv-skill-cat">DevOps</span>

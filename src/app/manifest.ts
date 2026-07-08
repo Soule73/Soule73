@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
     return {
         name: 'Soulé Soumaré - Développeur Full Stack',
         short_name: 'Soulé Soumaré',
-        description: 'Portfolio professionnel de Soulé Soumaré, développeur Full Stack spécialisé en React, Next.js et technologies modernes.',
+        description: 'Portfolio professionnel de Soulé Soumaré, développeur Full Stack spécialisé en React, Nest.js et technologies modernes.',
         start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',

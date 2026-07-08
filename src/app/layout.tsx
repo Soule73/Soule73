@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { personal } from "../lib/personal";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     default: "Soulé Soumaré - Frontend / Full Stack Engineer",
     template: "%s | Soulé Soumaré"
   },
-  description: "Frontend / Full Stack Engineer spécialisé en React, TypeScript et Testing Automation. Expérience SaaS fintech chez Opensee. Disponible CDI à partir de juillet 2026 - Paris, France.",
+  description: "Frontend Engineer chez Opensee (Fintech SaaS), spécialisé en React, TypeScript et Testing Automation - Paris, France.",
   keywords: [
     "frontend engineer",
     "full stack engineer",
@@ -29,19 +30,18 @@ export const metadata: Metadata = {
     "portfolio",
     "soulé soumaré",
     "développeur paris",
-    "cdi juillet 2026",
     "saas fintech",
     "opensee"
   ],
-  authors: [{ name: "Soulé Soumaré", url: "https://soulesoumare.dev" }],
-  creator: "Soulé Soumaré",
-  publisher: "Soulé Soumaré",
+  authors: [{ name: personal.name, url: personal.siteUrl }],
+  creator: personal.name,
+  publisher: personal.name,
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://soulesoumare.dev"),
+  metadataBase: new URL(personal.siteUrl),
   alternates: {
     canonical: "/",
   },
@@ -64,9 +64,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://soulesoumare.dev",
-    title: "Soulé Soumaré - Frontend / Full Stack Engineer",
-    description: "Frontend / Full Stack Engineer spécialisé en React, TypeScript et Testing Automation. Expérience SaaS fintech chez Opensee. Disponible CDI juillet 2026 - Paris.",
+    url: personal.siteUrl,
+    title: `${personal.name} - Frontend / Full Stack Engineer`,
+    description: "Frontend Engineer chez Opensee (Fintech SaaS) · React · TypeScript · Testing Automation · Paris.",
     siteName: "Soulé Soumaré - Portfolio",
     images: [
       {
@@ -81,9 +81,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Soulé Soumaré - Frontend / Full Stack Engineer",
-    description: "Frontend / Full Stack Engineer · React · TypeScript · Testing Automation · Disponible CDI juillet 2026",
+    description: "Frontend Engineer @ Opensee · React · TypeScript · Testing Automation",
     images: ["/opengraph-image"],
-    creator: "@soule73dev",
+    creator: personal.twitterHandle,
   },
   robots: {
     index: true,
@@ -112,8 +112,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Soulé Soumaré",
-    "jobTitle": "Frontend / Full Stack Engineer",
-    "description": "Frontend / Full Stack Engineer spécialisé en React, TypeScript et Testing Automation. Expérience SaaS fintech chez Opensee. Disponible CDI à partir de juillet 2026.",
+    "jobTitle": "Frontend Engineer @ Opensee",
+    "description": "Frontend Engineer chez Opensee (Fintech SaaS), spécialisé en React, TypeScript et Testing Automation - Paris, France.",
     "url": "https://soulesoumare.dev",
     "image": "https://soulesoumare.dev/sds.png",
     "sameAs": [
@@ -132,9 +132,8 @@ export default function RootLayout({
       "Playwright",
       "Vitest",
       "Jest",
-      "Next.js",
       "Node.js",
-      "NestJS",
+      "Nest.js",
       "JavaScript",
       "Frontend Development",
       "Full Stack Development",

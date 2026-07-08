@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next'
+import { personal } from '../lib/personal'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://soulesoumare.dev'
+    const baseUrl = personal.siteUrl
 
     return [
         {

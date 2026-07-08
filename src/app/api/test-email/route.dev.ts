@@ -194,7 +194,7 @@ const htmlContent = await renderEmailTemplate('contact-form', {
 
 Je suis très impressionné par votre portfolio et votre travail. J'aimerais discuter d'une éventuelle collaboration sur un projet passionnant.
 
-Notre équipe recherche un développeur talentueux pour créer une application web innovante dans le domaine de la fintech. Votre expertise en React et Next.js correspond parfaitement à nos besoins.
+Notre équipe recherche un développeur talentueux pour créer une application web innovante dans le domaine de la fintech. Votre expertise en React et Nest.js correspond parfaitement à nos besoins.
 
 Seriez-vous disponible pour un appel cette semaine afin d'en discuter davantage ?
 
